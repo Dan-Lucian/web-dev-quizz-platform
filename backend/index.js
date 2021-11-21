@@ -2,14 +2,21 @@
 import dotenv from 'dotenv/config';
 import express from 'express';
 import morgan from 'morgan';
+import { Question } from './models/question.js';
+import mongoose from 'mongoose';
 
 const app = express();
 
 app.use(express.static('build'));
 app.use(express.json());
-app.use(
-  morgan('tiny')
-);
+app.use(morgan('tiny'));
+
+app.get('/questions', (req, res) => {
+  Question.find({}).then(result => {
+    res.json(result);
+    mongoose.connection.close();
+  });
+});
 
 const unknownEndpoint = (req, res) => {
   res.status(404).send({ error: 'unknown endpoint' });
@@ -31,7 +38,6 @@ const errorHandler = (err, req, res, next) => {
 
   next(err);
 };
-
 
 app.use(errorHandler);
 
