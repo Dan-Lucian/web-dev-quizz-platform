@@ -66,14 +66,14 @@ const App = () => (
       </Nav>
 
       <Header>
-        <Heading level={1} style={{ marginBottom: '30px', fontSize: '2em' }}>
+        <Heading level={1} style={{ marginBottom: '50px', fontSize: '2em' }}>
           Welcome there fellow believer
         </Heading>
         <ButtonStart text="Start the test" />
       </Header>
 
       <Body>
-        <Heading level={1} style={{ marginBottom: '20px' }}>
+        <Heading level={1} style={{ marginBottom: '20px', width: '100%' }}>
           Choose your topics
         </Heading>
         <Topics topics={topics} />

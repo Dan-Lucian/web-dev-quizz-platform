@@ -6,7 +6,7 @@ const StyledBody = styled.section`
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  padding: 30px 0;
+  padding: 120px 0;
 `;
 
 const Body = ({ children }) => <StyledBody>{children}</StyledBody>;

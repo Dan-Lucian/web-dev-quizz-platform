@@ -23,6 +23,10 @@ const StyledHamburger = styled.div`
   &::after {
     bottom: -10px;
   }
+
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    display: none;
+  }
 `;
 
 const Hamburger = () => <StyledHamburger />;

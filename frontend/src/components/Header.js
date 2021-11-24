@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledHeader = styled.header`
-  padding: 130px 30px 30px 30px;
+  padding: 200px 30px 30px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
