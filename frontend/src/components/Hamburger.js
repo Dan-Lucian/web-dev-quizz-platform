@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledHamburger = styled.div`
   width: 36px;
   height: 3px;
-  background-color: #000;
+  background-color: ${(props) => props.theme.colorHamburger};
   position: relative;
 
   &::before,
@@ -12,7 +12,7 @@ const StyledHamburger = styled.div`
     display: block;
     width: 36px;
     height: 3px;
-    background-color: #000;
+    background-color: ${(props) => props.theme.colorHamburger};
     position: absolute;
   }
 

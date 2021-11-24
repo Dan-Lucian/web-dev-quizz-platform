@@ -7,14 +7,16 @@ import Logo from './components/Logo';
 import Hamburger from './components/Hamburger';
 import Header from './components/Header';
 import Heading from './components/Heading';
-import Button from './components/Button';
+import ButtonStart from './components/ButtonStart';
 import Topics from './components/Topics';
 import Topic from './components/Topic';
 import Footer from './components/Footer';
+import Socials from './components/Socials';
 
 const theme = {
   colorBg: '#545E75',
   colorBgAccent: '#364057',
+  colorHamburger: '#1b202b',
   colorText: '#fff',
 };
 
@@ -49,18 +51,21 @@ const topics = [
 const App = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
+
     <Nav>
       <Logo />
       <Hamburger />
     </Nav>
 
     <Header>
-      <Heading level={1}>Welcome there fellow believer</Heading>
-      <Button type="start">Start the test</Button>
+      <Heading level={1} style={{ marginBottom: '30px' }}>
+        Welcome there fellow believer
+      </Heading>
+      <ButtonStart text="Start the test" />
     </Header>
 
     <Topics>
-      <Heading level={1} style={{ backgroundColor: theme.colorBg }}>
+      <Heading level={1} style={{ marginBottom: '20px' }}>
         Choose your topics
       </Heading>
       {topics.map((topic, idx) => (
@@ -68,7 +73,10 @@ const App = () => (
       ))}
     </Topics>
 
-    <Footer>Some text inside the footer</Footer>
+    <Footer>
+      <p>Author: </p>
+      <Socials />
+    </Footer>
   </ThemeProvider>
 );
 

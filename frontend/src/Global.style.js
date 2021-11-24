@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const global = `
+
   * {
     box-sizing: border-box;
   }
@@ -8,6 +9,7 @@ const global = `
   body {
     font-family: 'IBM Plex Mono', monospace;
     color: #fff;
+    background: #545E75;
   }
 `;
 
