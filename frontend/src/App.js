@@ -2,6 +2,7 @@
 /* eslint-disable import/no-named-as-default */
 import { ThemeProvider } from 'styled-components';
 
+import { useState } from 'react';
 import GlobalStyle from './Global.style';
 import Wrapper from './components/Wrapper';
 import Nav from './components/Nav';
@@ -56,35 +57,43 @@ const topics = [
   },
 ];
 
-const App = () => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <Wrapper>
-      <Nav>
-        <Logo />
-        <Hamburger />
-      </Nav>
+const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-      <Header>
-        <Heading level={1} style={{ marginBottom: '50px', fontSize: '2em' }}>
-          Welcome there fellow believer
-        </Heading>
-        <ButtonStart text="Start the test" />
-      </Header>
+  const toggleMenuOpen = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
 
-      <Body>
-        <Heading level={1} style={{ marginBottom: '20px', width: '100%' }}>
-          Choose your topics
-        </Heading>
-        <Topics topics={topics} />
-      </Body>
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Wrapper>
+        <Nav>
+          <Logo />
+          <Hamburger isMenuOpen={isMenuOpen} onClick={toggleMenuOpen} />
+        </Nav>
 
-      <Footer>
-        <p>Author: </p>
-        <Socials />
-      </Footer>
-    </Wrapper>
-  </ThemeProvider>
-);
+        <Header>
+          <Heading level={1} style={{ marginBottom: '50px', fontSize: '2em' }}>
+            Welcome there fellow believer
+          </Heading>
+          <ButtonStart text="Start the test" />
+        </Header>
+
+        <Body>
+          <Heading level={1} style={{ marginBottom: '20px', width: '100%' }}>
+            Choose your topics
+          </Heading>
+          <Topics topics={topics} />
+        </Body>
+
+        <Footer>
+          <p>Author: </p>
+          <Socials />
+        </Footer>
+      </Wrapper>
+    </ThemeProvider>
+  );
+};
 
 export default App;

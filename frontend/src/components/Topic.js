@@ -34,7 +34,7 @@ const Topic = ({ contents: { labels, colorText, colorBg } }) => (
 );
 
 Topic.propTypes = {
-  contents: PropTypes.array,
+  contents: PropTypes.object,
 };
 
 export default Topic;
