@@ -5,11 +5,13 @@ import Button from './Button';
 export const StyledTopic = styled.section`
   padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 98px 98px 98px;
+  grid-template-rows: 40px 40px;
   grid-gap: 20px;
 
   @media (min-width: ${(props) => props.theme.screen.med}) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 131px;
+    grid-template-rows: repeat(6, 45px);
   }
 `;
 

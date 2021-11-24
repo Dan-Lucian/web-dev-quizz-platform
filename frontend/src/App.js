@@ -1,7 +1,9 @@
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable import/no-named-as-default */
 import { ThemeProvider } from 'styled-components';
+
 import GlobalStyle from './Global.style';
+import Wrapper from './components/Wrapper';
 import Nav from './components/Nav';
 import Logo from './components/Logo';
 import Hamburger from './components/Hamburger';
@@ -20,7 +22,7 @@ const theme = {
   colorText: '#fff',
 
   screen: {
-    med: '700px',
+    med: '768px',
     lg: '1100px',
     xlg: '1440',
   },
@@ -57,30 +59,31 @@ const topics = [
 const App = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
+    <Wrapper>
+      <Nav>
+        <Logo />
+        <Hamburger />
+      </Nav>
 
-    <Nav>
-      <Logo />
-      <Hamburger />
-    </Nav>
+      <Header>
+        <Heading level={1} style={{ marginBottom: '30px', fontSize: '2em' }}>
+          Welcome there fellow believer
+        </Heading>
+        <ButtonStart text="Start the test" />
+      </Header>
 
-    <Header>
-      <Heading level={1} style={{ marginBottom: '30px' }}>
-        Welcome there fellow believer
-      </Heading>
-      <ButtonStart text="Start the test" />
-    </Header>
+      <Body>
+        <Heading level={1} style={{ marginBottom: '20px' }}>
+          Choose your topics
+        </Heading>
+        <Topics topics={topics} />
+      </Body>
 
-    <Body>
-      <Heading level={1} style={{ marginBottom: '20px' }}>
-        Choose your topics
-      </Heading>
-      <Topics topics={topics} />
-    </Body>
-
-    <Footer>
-      <p>Author: </p>
-      <Socials />
-    </Footer>
+      <Footer>
+        <p>Author: </p>
+        <Socials />
+      </Footer>
+    </Wrapper>
   </ThemeProvider>
 );
 

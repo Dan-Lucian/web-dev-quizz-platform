@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 const StyledBody = styled.section`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 30px 0;
 `;
 
