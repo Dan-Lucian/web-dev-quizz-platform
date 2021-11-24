@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import Button from './Button';
 
 export const StyledTopic = styled.section`
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+
+  @media (min-width: ${(props) => props.theme.screen.med}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Topic = ({ contents: { labels, colorText, colorBg } }) => (

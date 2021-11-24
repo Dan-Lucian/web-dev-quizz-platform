@@ -8,16 +8,22 @@ import Hamburger from './components/Hamburger';
 import Header from './components/Header';
 import Heading from './components/Heading';
 import ButtonStart from './components/ButtonStart';
-import Topics from './components/Topics';
-import Topic from './components/Topic';
+import Body from './components/Body';
 import Footer from './components/Footer';
 import Socials from './components/Socials';
+import Topics from './components/Topics';
 
 const theme = {
   colorBg: '#545E75',
   colorBgAccent: '#364057',
   colorHamburger: '#1b202b',
   colorText: '#fff',
+
+  screen: {
+    med: '700px',
+    lg: '1100px',
+    xlg: '1440',
+  },
 };
 
 const topics = [
@@ -64,14 +70,12 @@ const App = () => (
       <ButtonStart text="Start the test" />
     </Header>
 
-    <Topics>
+    <Body>
       <Heading level={1} style={{ marginBottom: '20px' }}>
         Choose your topics
       </Heading>
-      {topics.map((topic, idx) => (
-        <Topic key={idx} contents={topic} />
-      ))}
-    </Topics>
+      <Topics topics={topics} />
+    </Body>
 
     <Footer>
       <p>Author: </p>
