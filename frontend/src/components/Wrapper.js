@@ -5,6 +5,14 @@ const StyledWrapper = styled.div`
   @media (min-width: ${(props) => props.theme.screen.med}) {
     font-size: 20px;
   }
+
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    font-size: 22px;
+  }
+
+  @media (min-width: ${(props) => props.theme.screen.xlg}) {
+    font-size: 24px;
+  }
 `;
 
 const Wrapper = ({ children }) => <StyledWrapper>{children}</StyledWrapper>;

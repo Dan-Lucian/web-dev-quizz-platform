@@ -23,8 +23,8 @@ const theme = {
 
   screen: {
     med: '768px',
-    lg: '1100px',
-    xlg: '1440',
+    lg: '1200px',
+    xlg: '1800px',
   },
 };
 

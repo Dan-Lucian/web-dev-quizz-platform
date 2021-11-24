@@ -13,6 +13,16 @@ export const StyledTopic = styled.section`
     grid-template-columns: 131px;
     grid-template-rows: repeat(6, 45px);
   }
+
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    grid-template-columns: 171px;
+    grid-template-rows: repeat(6, 60px);
+  }
+
+  @media (min-width: ${(props) => props.theme.screen.xlg}) {
+    grid-template-columns: 188px;
+    grid-template-rows: repeat(6, 60px);
+  }
 `;
 
 const Topic = ({ contents: { labels, colorText, colorBg } }) => (
