@@ -18,7 +18,7 @@ const About = () => {
       </Header>
 
       <Body>
-        <section style={{ width: '100%' }}>
+        <section style={{ width: '100%', marginBottom: '6rem' }}>
           <HeadingStripe
             style={{
               backgroundColor: theme.colorGreen,
@@ -27,9 +27,7 @@ const About = () => {
           >
             Idea
           </HeadingStripe>
-          <TextContainer
-            style={{ backgroundColor: theme.colorGreen, marginBottom: '2rem' }}
-          >
+          <TextContainer style={{ backgroundColor: theme.colorGreen }}>
             <p>
               This is a platform that has access to a collection of questions
               about different web development related topics.
@@ -44,8 +42,9 @@ const About = () => {
             <br />
             <br />
             <p>
-              We are living in the Google era, it is easy to find stuff online,
-              but you cannot search for what you don’t even remember.
+              We are living in the Google era and it is fairly easy to find
+              stuff online, but you cannot search for what you don’t even
+              remember.
             </p>
             <br />
             <br />
@@ -55,15 +54,13 @@ const About = () => {
             </p>
           </TextContainer>
         </section>
-        <section style={{ width: '100%' }}>
+        <section style={{ width: '100%', marginBottom: '6rem' }}>
           <HeadingStripe
             style={{ backgroundColor: theme.colorRed, marginBottom: '2rem' }}
           >
             Mechanics
           </HeadingStripe>
-          <TextContainer
-            style={{ backgroundColor: theme.colorRed, marginBottom: '2rem' }}
-          >
+          <TextContainer style={{ backgroundColor: theme.colorRed }}>
             <p>
               The questions are chosen at random based on the selected topics
               then the chosen questions are presented in a form of a test.
