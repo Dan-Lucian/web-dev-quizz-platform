@@ -34,15 +34,25 @@ const topics = [
 
 const Home = () => (
   <>
-    {' '}
     <Header>
       <Heading level={1} style={{ marginBottom: '50px', fontSize: '2em' }}>
         Welcome there fellow believer
       </Heading>
       <ButtonStart text="Start the test" />
     </Header>
-    <Body>
-      <Heading level={1} style={{ marginBottom: '20px', width: '100%' }}>
+    <Body
+      style={{
+        paddingTop: '130px',
+        paddingBottom: '130px',
+      }}
+    >
+      <Heading
+        level={1}
+        style={{
+          marginBottom: '20px',
+          width: '100%',
+        }}
+      >
         Choose your topics
       </Heading>
       <Topics topics={topics} />

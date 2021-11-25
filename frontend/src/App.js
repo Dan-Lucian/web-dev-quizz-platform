@@ -17,6 +17,8 @@ const theme = {
   colorBgAccent: '#364057',
   colorHamburger: '#1b202b',
   colorText: '#fff',
+  colorRed: '#DA5C5C',
+  colorGreen: '#21A179',
 
   screen: {
     med: '768px',

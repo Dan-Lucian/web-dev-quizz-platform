@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
 const Header = ({ children }) => <StyledHeader>{children}</StyledHeader>;
 
 Header.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.node,
 };
 
 export default Header;
