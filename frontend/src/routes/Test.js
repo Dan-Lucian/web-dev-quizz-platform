@@ -27,23 +27,19 @@ const questions = [
   },
 ];
 
-const Test = () => {
-  const a = 20;
+const Test = () => (
+  <>
+    <Header style={{ paddingTop: '150px' }}>
+      <Question level={1}>{questions[0].question}</Question>
+    </Header>
 
-  return (
-    <>
-      <Header style={{ paddingTop: '150px' }}>
-        <Question level={1}>{questions[0].question}</Question>
-      </Header>
-
-      <AnswersWrapper>
-        <Button type="1" text={questions[0].correctAnswer} />
-        <Button type="1" text={questions[0].wrongAnswers[0]} />
-        <Button type="1" text={questions[0].wrongAnswers[1]} />
-        <Button type="1" text={questions[0].wrongAnswers[2]} />
-      </AnswersWrapper>
-    </>
-  );
-};
+    <AnswersWrapper>
+      <Button type="1" text={questions[0].correctAnswer} />
+      <Button type="1" text={questions[0].wrongAnswers[0]} />
+      <Button type="1" text={questions[0].wrongAnswers[1]} />
+      <Button type="1" text={questions[0].wrongAnswers[2]} />
+    </AnswersWrapper>
+  </>
+);
 
 export default Test;

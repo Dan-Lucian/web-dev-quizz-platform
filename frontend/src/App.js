@@ -57,7 +57,7 @@ const App = () => {
           <Links>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
-            <NavLink to="/test">Test</NavLink>
+            <NavLink to="/test">%test%</NavLink>
           </Links>
           <Hamburger isMenuOpen={isMenuOpen} onClick={toggleMenuOpen} />
           <HamburgerMenu isMenuOpen={isMenuOpen}>
@@ -66,6 +66,9 @@ const App = () => {
             </NavLink>
             <NavLink onClick={toggleMenuOpen} to="/about">
               About
+            </NavLink>
+            <NavLink onClick={toggleMenuOpen} to="/test">
+              %test%
             </NavLink>
           </HamburgerMenu>
         </Nav>
