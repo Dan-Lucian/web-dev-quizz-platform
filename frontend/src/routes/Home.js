@@ -7,34 +7,48 @@ import Topics from '../components/Topics';
 
 const dbTopics = [
   {
-    labels: ['HTTP', 'Internet', 'Websites', 'Security'],
+    mainTopic: 'Internet',
+    secondaryTopics: ['HTTP', 'Websites', 'Security'],
     colorText: '#fff',
     colorBg: '#2DD4A0',
   },
   {
-    labels: ['HTML', 'Semantics', 'Forms', 'Text'],
+    mainTopic: 'HTML',
+    secondaryTopics: ['Semantics', 'Forms', 'Text'],
     colorText: '#fff',
     colorBg: '#F16529',
   },
   {
-    labels: ['CSS', 'Selectors', 'Units', 'Layout'],
+    mainTopic: 'CSS',
+    secondaryTopics: ['Selectors', 'Units', 'Layout'],
     colorText: '#fff',
     colorBg: '#2965F1',
   },
   {
-    labels: ['JavaScript', 'Theory', 'Objects', 'Functions', 'Web data', 'DOM'],
+    mainTopic: 'JavaScript',
+    secondaryTopics: ['Theory', 'Objects', 'Functions', 'Web data', 'DOM'],
     colorText: '#282C34',
     colorBg: '#F7DF1E',
   },
   {
-    labels: ['React', 'Concepts', 'Hooks', 'Classes', 'CRA'],
+    mainTopic: 'React',
+    secondaryTopics: ['Concepts', 'Hooks', 'Classes', 'CRA'],
     colorText: '#282C34',
     colorBg: '#61DAFB',
   },
 ];
 
+const getTopicInfo = (topic) =>
+  dbTopics.find(
+    (t) =>
+      t.mainTopic.toLowerCase() === topic ||
+      t.secondaryTopics.map((st) => st.toLowerCase()).includes(topic)
+  );
+
 const Home = () => {
   const [selectedTopics, setSelectedTopics] = useState([]);
+
+  const mainTopics = dbTopics.map((topic) => topic.mainTopic);
 
   const toggleTopic = (e) => {
     const toggledTopic = e.target.textContent.toLowerCase();
@@ -43,8 +57,29 @@ const Home = () => {
       setSelectedTopics((prev) =>
         prev.filter((topic) => topic !== toggledTopic)
       );
+
+      return;
+    }
+
+    const topicInfo = getTopicInfo(toggledTopic);
+
+    if (topicInfo.mainTopic.toLowerCase() === toggledTopic) {
+      setSelectedTopics((prev) =>
+        prev
+          .filter(
+            (t) =>
+              !topicInfo.secondaryTopics
+                .map((st) => st.toLowerCase())
+                .includes(t)
+          )
+          .concat(toggledTopic)
+      );
     } else {
-      setSelectedTopics((prev) => [...prev, toggledTopic]);
+      setSelectedTopics((prev) =>
+        prev
+          .filter((t) => t !== topicInfo.mainTopic.toLowerCase())
+          .concat(toggledTopic)
+      );
     }
   };
 

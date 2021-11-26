@@ -3,23 +3,27 @@ import styled from 'styled-components';
 import Button from './Button';
 
 const Topic = ({
-  contents: { labels, colorText, colorBg },
+  contents: { mainTopic, secondaryTopics, colorText, colorBg },
   selectedTopics,
   toggleTopic,
-}) => (
-  <StyledTopic>
-    {labels.map((label, idx) => (
-      <Button
-        pressed={selectedTopics.includes(label.toLowerCase())}
-        key={idx}
-        text={label}
-        colorText={colorText}
-        colorBg={colorBg}
-        onClick={toggleTopic}
-      />
-    ))}
-  </StyledTopic>
-);
+}) => {
+  const labels = [mainTopic, ...secondaryTopics];
+
+  return (
+    <StyledTopic>
+      {labels.map((label, idx) => (
+        <Button
+          pressed={selectedTopics.includes(label.toLowerCase())}
+          key={idx}
+          text={label}
+          colorText={colorText}
+          colorBg={colorBg}
+          onClick={toggleTopic}
+        />
+      ))}
+    </StyledTopic>
+  );
+};
 
 Topic.propTypes = {
   contents: PropTypes.object,
