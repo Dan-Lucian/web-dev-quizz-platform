@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       <Header>
-        <Heading level={1} style={{ marginBottom: '50px', fontSize: '2em' }}>
+        <Heading level={1} style={{ marginBottom: '50px' }}>
           What is this all about ?
         </Heading>
       </Header>
@@ -21,13 +21,13 @@ const About = () => {
         <section style={{ width: '100%', marginBottom: '6rem' }}>
           <HeadingStripe
             style={{
-              backgroundColor: theme.colorGreen,
               marginBottom: '2rem',
             }}
+            color="green"
           >
             Idea
           </HeadingStripe>
-          <TextContainer style={{ backgroundColor: theme.colorGreen }}>
+          <TextContainer color="green">
             <p>
               This is a platform that has access to a collection of questions
               about different web development related topics.
@@ -55,12 +55,10 @@ const About = () => {
           </TextContainer>
         </section>
         <section style={{ width: '100%', marginBottom: '6rem' }}>
-          <HeadingStripe
-            style={{ backgroundColor: theme.colorRed, marginBottom: '2rem' }}
-          >
+          <HeadingStripe style={{ marginBottom: '2rem' }} color="red">
             Mechanics
           </HeadingStripe>
-          <TextContainer style={{ backgroundColor: theme.colorRed }}>
+          <TextContainer color="red">
             <p>
               The questions are chosen at random based on the selected topics
               then the chosen questions are presented in a form of a test.

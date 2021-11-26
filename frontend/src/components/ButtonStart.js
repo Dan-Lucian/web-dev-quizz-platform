@@ -5,10 +5,10 @@ const StyledButtonStart = styled.button`
   padding: 10px 30px;
   text-align: center;
   font-family: inherit;
-  border: 3px solid ${(props) => props.theme.colorText};
-  color: ${(props) => props.theme.colorText};
+  border: 3px solid ${(p) => p.theme.color.text};
+  color: ${(p) => p.theme.color.text};
   font-size: 1.5em;
-  background: ${(props) => props.theme.colorBg};
+  background: ${(p) => p.theme.color.bg};
 `;
 
 const ButtonStart = ({ text }) => <StyledButtonStart>{text}</StyledButtonStart>;

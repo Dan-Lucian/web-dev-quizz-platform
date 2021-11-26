@@ -13,12 +13,14 @@ import Footer from './components/Footer';
 import Socials from './components/Socials';
 
 const theme = {
-  colorBg: '#545E75',
-  colorBgAccent: '#364057',
-  colorHamburger: '#1b202b',
-  colorText: '#fff',
-  colorRed: '#DA5C5C',
-  colorGreen: '#21A179',
+  color: {
+    bg: '#545E75',
+    bgAccent: '#364057',
+    hamburger: '#1b202b',
+    text: '#fff',
+    red: '#DA5C5C',
+    green: '#21A179',
+  },
 
   screen: {
     med: '768px',

@@ -35,11 +35,12 @@ const topics = [
 const Home = () => (
   <>
     <Header>
-      <Heading level={1} style={{ marginBottom: '50px', fontSize: '2em' }}>
+      <Heading level={1} style={{ marginBottom: '50px' }}>
         Welcome there fellow believer
       </Heading>
       <ButtonStart text="Start the test" />
     </Header>
+
     <Body
       style={{
         paddingTop: '130px',
