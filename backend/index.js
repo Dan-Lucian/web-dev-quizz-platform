@@ -11,6 +11,12 @@ app.use(express.static('build'));
 app.use(express.json());
 app.use(morgan('tiny'));
 
+app.post('/', (req, res) => {
+  const body = req.body;
+  console.log('post received', body);
+  res.json({'responseFromServer': 'post received'});
+});
+
 app.get('/questions', (req, res) => {
   Question.find({}).then(result => {
     res.json(result);

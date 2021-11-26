@@ -4,6 +4,7 @@ import ButtonStart from '../components/ButtonStart';
 import Body from '../components/Body';
 import Topics from '../components/Topics';
 import { useLocalStorageState } from '../hooks/useLocalStorageState';
+import questions from '../services/questions';
 
 const dbTopics = [
   {
@@ -51,6 +52,14 @@ const Home = () => {
     []
   );
 
+  const say = () => {
+    console.log('post request sent');
+    questions
+      .send(selectedTopics)
+      .then((res) => console.log('response', res))
+      .catch((err) => console.log('reqest failed', err));
+  };
+
   const toggleTopic = (e) => {
     const toggledTopic = e.target.textContent.toLowerCase();
 
@@ -90,7 +99,7 @@ const Home = () => {
         <Heading level={1} style={{ marginBottom: '50px' }}>
           Welcome there fellow believer
         </Heading>
-        <ButtonStart text="Start the test" />
+        <ButtonStart onClick={say} text="Start the test" />
       </Header>
 
       <Body

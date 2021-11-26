@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const ButtonStart = ({ text }) => <StyledButtonStart>{text}</StyledButtonStart>;
+const ButtonStart = ({ text, onClick }) => (
+  <StyledButtonStart onClick={onClick}>{text}</StyledButtonStart>
+);
 
 ButtonStart.propTypes = {
   text: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 const StyledButtonStart = styled.button`
