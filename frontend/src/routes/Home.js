@@ -1,10 +1,11 @@
+import { useState } from 'react';
 import Header from '../components/Header';
 import Heading from '../components/Heading';
 import ButtonStart from '../components/ButtonStart';
 import Body from '../components/Body';
 import Topics from '../components/Topics';
 
-const topics = [
+const dbTopics = [
   {
     labels: ['HTTP', 'Internet', 'Websites', 'Security'],
     colorText: '#fff',
@@ -32,33 +33,53 @@ const topics = [
   },
 ];
 
-const Home = () => (
-  <>
-    <Header>
-      <Heading level={1} style={{ marginBottom: '50px' }}>
-        Welcome there fellow believer
-      </Heading>
-      <ButtonStart text="Start the test" />
-    </Header>
+const Home = () => {
+  const [selectedTopics, setSelectedTopics] = useState([]);
 
-    <Body
-      style={{
-        paddingTop: '130px',
-        paddingBottom: '130px',
-      }}
-    >
-      <Heading
-        level={1}
+  const toggleTopic = (e) => {
+    const toggledTopic = e.target.textContent.toLowerCase();
+
+    if (selectedTopics.includes(toggledTopic)) {
+      setSelectedTopics((prev) =>
+        prev.filter((topic) => topic !== toggledTopic)
+      );
+    } else {
+      setSelectedTopics((prev) => [...prev, toggledTopic]);
+    }
+  };
+
+  return (
+    <>
+      <Header>
+        <Heading level={1} style={{ marginBottom: '50px' }}>
+          Welcome there fellow believer
+        </Heading>
+        <ButtonStart text="Start the test" />
+      </Header>
+
+      <Body
         style={{
-          marginBottom: '20px',
-          width: '100%',
+          paddingTop: '130px',
+          paddingBottom: '130px',
         }}
       >
-        Choose your topics
-      </Heading>
-      <Topics topics={topics} />
-    </Body>
-  </>
-);
+        <Heading
+          level={1}
+          style={{
+            marginBottom: '20px',
+            width: '100%',
+          }}
+        >
+          Choose your topics
+        </Heading>
+        <Topics
+          dbTopics={dbTopics}
+          selectedTopics={selectedTopics}
+          toggleTopic={toggleTopic}
+        />
+      </Body>
+    </>
+  );
+};
 
 export default Home;

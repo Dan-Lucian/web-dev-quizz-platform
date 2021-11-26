@@ -2,16 +2,29 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from './Button';
 
-const Topic = ({ contents: { labels, colorText, colorBg } }) => (
+const Topic = ({
+  contents: { labels, colorText, colorBg },
+  selectedTopics,
+  toggleTopic,
+}) => (
   <StyledTopic>
     {labels.map((label, idx) => (
-      <Button key={idx} text={label} colorText={colorText} colorBg={colorBg} />
+      <Button
+        pressed={selectedTopics.includes(label.toLowerCase())}
+        key={idx}
+        text={label}
+        colorText={colorText}
+        colorBg={colorBg}
+        onClick={toggleTopic}
+      />
     ))}
   </StyledTopic>
 );
 
 Topic.propTypes = {
   contents: PropTypes.object,
+  selectedTopics: PropTypes.array,
+  toggleTopic: PropTypes.func,
 };
 
 export const StyledTopic = styled.section`

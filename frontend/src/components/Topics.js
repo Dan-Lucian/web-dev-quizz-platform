@@ -2,16 +2,23 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Topic from './Topic';
 
-const Topics = ({ topics }) => (
+const Topics = ({ dbTopics, selectedTopics, toggleTopic }) => (
   <StyledTopics>
-    {topics.map((topic, idx) => (
-      <Topic key={idx} contents={topic} />
+    {dbTopics.map((topic, idx) => (
+      <Topic
+        key={idx}
+        contents={topic}
+        selectedTopics={selectedTopics}
+        toggleTopic={toggleTopic}
+      />
     ))}
   </StyledTopics>
 );
 
 Topics.propTypes = {
-  topics: PropTypes.array,
+  dbTopics: PropTypes.array,
+  selectedTopics: PropTypes.array,
+  toggleTopic: PropTypes.func,
 };
 
 export const StyledTopics = styled.div`

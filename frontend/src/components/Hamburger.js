@@ -15,7 +15,7 @@ Hamburger.propTypes = {
 const StyledLines = styled.div`
   width: 36px;
   height: 3px;
-  background-color: ${(props) => props.theme.colorHamburger};
+  background-color: ${(p) => p.theme.color.hamburger};
   position: relative;
   transition: transform 0.075s ease;
 
@@ -25,7 +25,7 @@ const StyledLines = styled.div`
     display: block;
     width: 36px;
     height: 3px;
-    background-color: ${(props) => props.theme.colorHamburger};
+    background-color: ${(p) => p.theme.color.hamburger};
     position: absolute;
   }
 
@@ -39,8 +39,8 @@ const StyledLines = styled.div`
     transition: bottom 0.075s 0.12s ease, transform 0.075s ease;
   }
 
-  ${(props) =>
-    props.isMenuOpen &&
+  ${(p) =>
+    p.isMenuOpen &&
     `
     transform: rotate(45deg);
     transition-delay: 0.12s;
@@ -68,7 +68,7 @@ const StyledHamburgerContainer = styled.button`
   border: none;
   cursor: pointer;
 
-  @media (min-width: ${(props) => props.theme.screen.lg}) {
+  @media (min-width: ${(p) => p.theme.screen.lg}) {
     display: none;
   }
 `;
