@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import Header from '../components/Header';
 import Heading from '../components/Heading';
 import ButtonStart from '../components/ButtonStart';
 import Body from '../components/Body';
 import Topics from '../components/Topics';
+import { useLocalStorageState } from '../hooks/useLocalStorageState';
 
 const dbTopics = [
   {
@@ -46,7 +46,10 @@ const getTopicInfo = (topic) =>
   );
 
 const Home = () => {
-  const [selectedTopics, setSelectedTopics] = useState([]);
+  const [selectedTopics, setSelectedTopics] = useLocalStorageState(
+    'testTopics',
+    []
+  );
 
   const toggleTopic = (e) => {
     const toggledTopic = e.target.textContent.toLowerCase();
