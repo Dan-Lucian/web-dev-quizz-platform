@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+const Nav = ({ children }) => <StyledNav>{children}</StyledNav>;
+
+Nav.propTypes = {
+  children: PropTypes.array,
+};
+
 const StyledNav = styled.nav`
   position: fixed;
   z-index: 100;
@@ -11,10 +17,5 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
 `;
-
-const Nav = ({ children }) => <StyledNav>{children}</StyledNav>;
-Nav.propTypes = {
-  children: PropTypes.array,
-};
 
 export default Nav;

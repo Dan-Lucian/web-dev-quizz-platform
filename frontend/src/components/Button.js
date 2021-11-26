@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+const Button = ({ text, colorText, colorBg }) => (
+  <StyledButton style={{ color: colorText, backgroundColor: colorBg }}>
+    {text}
+  </StyledButton>
+);
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  colorText: PropTypes.string.isRequired,
+  colorBg: PropTypes.string.isRequired,
+};
+
 const StyledButton = styled.button`
   opacity: 0.5;
   text-align: center;
@@ -20,17 +32,5 @@ const StyledButton = styled.button`
     font-weight: 400;
   }
 `;
-
-const Button = ({ text, colorText, colorBg }) => (
-  <StyledButton style={{ color: colorText, backgroundColor: colorBg }}>
-    {text}
-  </StyledButton>
-);
-
-Button.propTypes = {
-  text: PropTypes.string.isRequired,
-  colorText: PropTypes.string.isRequired,
-  colorBg: PropTypes.string.isRequired,
-};
 
 export default Button;

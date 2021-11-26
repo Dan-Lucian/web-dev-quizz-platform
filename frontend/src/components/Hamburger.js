@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+const Hamburger = ({ isMenuOpen, onClick }) => (
+  <StyledHamburgerContainer onClick={onClick}>
+    <StyledLines isMenuOpen={isMenuOpen} />
+  </StyledHamburgerContainer>
+);
+
+Hamburger.propTypes = {
+  onClick: PropTypes.func,
+  isMenuOpen: PropTypes.bool,
+};
+
 const StyledLines = styled.div`
   width: 36px;
   height: 3px;
@@ -61,15 +72,5 @@ const StyledHamburgerContainer = styled.button`
     display: none;
   }
 `;
-
-const Hamburger = ({ isMenuOpen, onClick }) => (
-  <StyledHamburgerContainer onClick={onClick}>
-    <StyledLines isMenuOpen={isMenuOpen} />
-  </StyledHamburgerContainer>
-);
-Hamburger.propTypes = {
-  onClick: PropTypes.func,
-  isMenuOpen: PropTypes.bool,
-};
 
 export default Hamburger;

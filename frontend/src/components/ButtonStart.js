@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+const ButtonStart = ({ text }) => <StyledButtonStart>{text}</StyledButtonStart>;
+
+ButtonStart.propTypes = {
+  text: PropTypes.string,
+};
+
 const StyledButtonStart = styled.button`
   padding: 10px 30px;
   text-align: center;
@@ -23,11 +29,5 @@ const StyledButtonStart = styled.button`
     box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
   }
 `;
-
-const ButtonStart = ({ text }) => <StyledButtonStart>{text}</StyledButtonStart>;
-
-ButtonStart.propTypes = {
-  text: PropTypes.string,
-};
 
 export default ButtonStart;
