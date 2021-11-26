@@ -48,8 +48,6 @@ const getTopicInfo = (topic) =>
 const Home = () => {
   const [selectedTopics, setSelectedTopics] = useState([]);
 
-  const mainTopics = dbTopics.map((topic) => topic.mainTopic);
-
   const toggleTopic = (e) => {
     const toggledTopic = e.target.textContent.toLowerCase();
 
