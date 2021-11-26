@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { StyledAnswersWrapper } from './AnswersWrapper';
 
 const Button = ({ text, type, pressed, onClick }) => {
   const props = {
@@ -57,6 +58,16 @@ const StyledButton = styled.button`
 
   @media (min-width: ${(props) => props.theme.screen.med}) {
     font-weight: 400;
+  }
+
+  ${StyledAnswersWrapper} & {
+    opacity: 1;
+    font-weight: 700;
+    font-size: 1em;
+  }
+
+  ${StyledAnswersWrapper} &:hover {
+    opacity: 0.7;
   }
 `;
 

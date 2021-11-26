@@ -22,7 +22,13 @@ const About = () => (
         >
           Idea
         </HeadingStripe>
-        <TextContainer color="green">
+        <TextContainer>
+          <p>
+            We are living in the Google era and it is fairly easy to find stuff
+            online, but you cannot search for what you don’t even remember.
+          </p>
+          <br />
+          <br />
           <p>
             This is a platform that has access to a collection of questions
             about different web development related topics.
@@ -30,15 +36,9 @@ const About = () => (
           <br />
           <br />
           <p>
-            The purpose of this is to refresh the memory of developers about
+            The purpose of this is to keep the memory of developers fresh about
             certain topics that they might forget. The topics and the questions
             will be as “nitty-gritty” as possible.
-          </p>
-          <br />
-          <br />
-          <p>
-            We are living in the Google era and it is fairly easy to find stuff
-            online, but you cannot search for what you don’t even remember.
           </p>
           <br />
           <br />
@@ -52,7 +52,7 @@ const About = () => (
         <HeadingStripe style={{ marginBottom: '2rem' }} color="red">
           Mechanics
         </HeadingStripe>
-        <TextContainer color="red">
+        <TextContainer>
           <p>
             The questions are chosen at random based on the selected topics then
             the chosen questions are presented in a form of a test.
@@ -74,7 +74,7 @@ const About = () => (
             <li style={{ marginBottom: '0.7em' }}>
               It is possible to mix subtopics from different major topics.
             </li>
-            <li>It is possible to choose ALL topics and subtopics.</li>
+            <li>It is possible to choose ALL topics or ALL subtopics.</li>
           </ul>
           <br />
           <br />

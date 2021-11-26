@@ -57,6 +57,7 @@ const App = () => {
           <Links>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
+            <NavLink to="/test">Test</NavLink>
           </Links>
           <Hamburger isMenuOpen={isMenuOpen} onClick={toggleMenuOpen} />
           <HamburgerMenu isMenuOpen={isMenuOpen}>

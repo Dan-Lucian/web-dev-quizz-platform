@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Header = ({ children }) => <StyledHeader>{children}</StyledHeader>;
+const Header = ({ children, style }) => (
+  <StyledHeader style={style}>{children}</StyledHeader>
+);
 
 Header.propTypes = {
   children: PropTypes.node,
+  style: PropTypes.object,
 };
 
 const StyledHeader = styled.header`

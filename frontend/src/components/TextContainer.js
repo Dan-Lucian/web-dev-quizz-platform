@@ -34,6 +34,7 @@ const StyledTextContainer = styled.div`
   width: 100%;
   padding: 2em 1.5em;
   margin: 0 auto;
+  background-color: ${(p) => p.theme.color.bgAccent};
 
   @media (min-width: ${(p) => p.theme.screen.med}) {
     width: 725px;
