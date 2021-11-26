@@ -33,7 +33,7 @@ HeadingStripe.propTypes = {
 const StyledHeadingStripe = styled.h2`
   outline: 5px solid ${(props) => props.theme.colorText};
   width: 100%;
-  font-size: 2em;
+  font-size: 1.75em;
   height: 2.4em;
   display: flex;
   justify-content: center;

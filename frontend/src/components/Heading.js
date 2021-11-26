@@ -21,7 +21,7 @@ const StyledHeading = styled.h1`
   background: ${(p) => p.theme.color.bgAccent};
   text-align: center;
   display: block;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 700;
   padding: 20px 10px;
 `;
