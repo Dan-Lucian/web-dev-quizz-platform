@@ -20,6 +20,16 @@ const theme = {
     text: '#fff',
     red: '#DA5C5C',
     green: '#21A179',
+    bgBtn1: '#2DD4A0',
+    textBtn1: '#fff',
+    bgBtn2: '#F16529',
+    textBtn2: '#fff',
+    bgBtn3: '#2965F1',
+    textBtn3: '#fff',
+    bgBtn4: '#F7DF1E',
+    textBtn4: '#000',
+    bgBtn5: '#61DAFB',
+    textBtn5: '#000',
   },
 
   screen: {

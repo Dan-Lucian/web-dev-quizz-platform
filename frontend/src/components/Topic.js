@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import Button from './Button';
 
 const Topic = ({
-  contents: { mainTopic, secondaryTopics, colorText, colorBg },
+  contents: { mainTopic, secondaryTopics },
   selectedTopics,
   toggleTopic,
+  type,
 }) => {
   const labels = [mainTopic, ...secondaryTopics];
 
@@ -16,8 +17,7 @@ const Topic = ({
           pressed={selectedTopics.includes(label.toLowerCase())}
           key={idx}
           text={label}
-          colorText={colorText}
-          colorBg={colorBg}
+          type={type}
           onClick={toggleTopic}
         />
       ))}
@@ -29,6 +29,7 @@ Topic.propTypes = {
   contents: PropTypes.object,
   selectedTopics: PropTypes.array,
   toggleTopic: PropTypes.func,
+  type: PropTypes.string,
 };
 
 export const StyledTopic = styled.section`

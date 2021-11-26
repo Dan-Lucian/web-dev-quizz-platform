@@ -7,6 +7,7 @@ const Topics = ({ dbTopics, selectedTopics, toggleTopic }) => (
     {dbTopics.map((topic, idx) => (
       <Topic
         key={idx}
+        type={`${idx + 1}`}
         contents={topic}
         selectedTopics={selectedTopics}
         toggleTopic={toggleTopic}
