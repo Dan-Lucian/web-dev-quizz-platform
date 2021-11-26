@@ -68,7 +68,7 @@ const StyledHamburgerContainer = styled.button`
   border: none;
   cursor: pointer;
 
-  @media (min-width: ${(p) => p.theme.screen.lg}) {
+  @media (min-width: ${(p) => p.theme.screen.med}) {
     display: none;
   }
 `;

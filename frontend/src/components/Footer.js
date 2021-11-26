@@ -9,7 +9,7 @@ Footer.propTypes = {
 
 const StyledFooter = styled.footer`
   background: ${(p) => p.theme.color.bgAccent};
-  padding: 1.5em;
+  padding: 1em;
   display: flex;
   justify-content: center;
   align-items: center;

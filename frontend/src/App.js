@@ -11,6 +11,8 @@ import Logo from './components/Logo';
 import Hamburger from './components/Hamburger';
 import Footer from './components/Footer';
 import Socials from './components/Socials';
+import Links from './components/Links';
+import HamburgerMenu from './components/HamburgerMenu';
 
 const theme = {
   color: {
@@ -52,9 +54,19 @@ const App = () => {
       <Wrapper>
         <Nav>
           <Logo />
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
+          <Links>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
+          </Links>
           <Hamburger isMenuOpen={isMenuOpen} onClick={toggleMenuOpen} />
+          <HamburgerMenu isMenuOpen={isMenuOpen}>
+            <NavLink onClick={toggleMenuOpen} to="/">
+              Home
+            </NavLink>
+            <NavLink onClick={toggleMenuOpen} to="/about">
+              About
+            </NavLink>
+          </HamburgerMenu>
         </Nav>
 
         <Outlet />

@@ -7,8 +7,8 @@ const Logo = () => (
 
 const StyledLogo = styled.img`
   @media (min-width: 1440px) {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
 `;
 
