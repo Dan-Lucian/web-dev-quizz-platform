@@ -79,7 +79,7 @@ const Test = () => {
         {questions[currentQuestionNumber].answers.map((answer, idx) => (
           <Button
             key={idx}
-            type="1"
+            type="6"
             text={answer.answer}
             onClick={
               answer.correct
