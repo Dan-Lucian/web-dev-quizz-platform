@@ -1,33 +1,9 @@
-import { useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useState, useRef } from 'react';
 import Header from '../components/Header';
 import AnswersWrapper from '../components/AnswersWrapper';
 import Button from '../components/Button';
 import Question from '../components/Question';
-
-const questionsDemo = [
-  {
-    question:
-      'What selector is used for targeting a direct child of an alement ?',
-    correctAnswer: '>',
-    wrongAnswers: ['+', 'empty space', '~'],
-    learn: 'https://javascript.info',
-  },
-  {
-    question:
-      'What selector is used for targeting a direct child of an alement ?',
-    correctAnswer: '>',
-    wrongAnswers: ['+', 'empty space', '~'],
-    learn: 'https://javascript.info',
-  },
-  {
-    question:
-      'What selector is used for targeting a direct child of an alement ?',
-    correctAnswer: '>',
-    wrongAnswers: ['+', 'empty space', '~'],
-    learn: 'https://javascript.info',
-  },
-];
 
 const noQuestions = [
   {
@@ -56,17 +32,20 @@ const noQuestions = [
 
 const Test = () => {
   let { state: questions } = useLocation();
-  console.log('questions from useLocation: ', questions);
-  const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
+  questions = questions || noQuestions;
 
-  if (!questions) {
-    questions = noQuestions;
-    console.log(questions);
-  }
+  const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
+  const navigate = useNavigate();
+  const results = useRef(JSON.parse(JSON.stringify(questions)));
+
+  const [showFail, setShowFail] = useState(false);
 
   const nextQuestion = () => {
+    results.current[currentQuestionNumber].passed = true;
+
     if (currentQuestionNumber + 1 === questions.length) {
       console.log('questions ended');
+      navigate('/results', { state: results.current });
       return;
     }
 
@@ -74,6 +53,7 @@ const Test = () => {
   };
 
   const showLearn = () => {
+    results.current[currentQuestionNumber].passed = false;
     console.log('SHOWING LEARNIGN RESOURCE________________');
   };
 
