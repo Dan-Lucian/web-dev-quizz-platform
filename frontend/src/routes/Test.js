@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import AnswersWrapper from '../components/AnswersWrapper';
 import Button from '../components/Button';
 import Question from '../components/Question';
+import Fail from '../components/Fail';
 
 const noQuestions = [
   {
@@ -40,9 +41,15 @@ const Test = () => {
 
   const [showFail, setShowFail] = useState(false);
 
-  const nextQuestion = () => {
-    results.current[currentQuestionNumber].passed = true;
+  const failQuestion = () => {
+    results.current[currentQuestionNumber].passed = false;
+  };
 
+  const passQuestion = () => {
+    results.current[currentQuestionNumber].passed = true;
+  };
+
+  const nextQuestion = () => {
     if (currentQuestionNumber + 1 === questions.length) {
       console.log('questions ended');
       navigate('/results', { state: results.current });
@@ -52,9 +59,12 @@ const Test = () => {
     setCurrentQuestionNumber((prev) => prev + 1);
   };
 
-  const showLearn = () => {
-    results.current[currentQuestionNumber].passed = false;
-    console.log('SHOWING LEARNIGN RESOURCE________________');
+  const showFailWindow = () => {
+    setShowFail(true);
+  };
+
+  const hideFailWindow = () => {
+    setShowFail(false);
   };
 
   return (
@@ -71,10 +81,25 @@ const Test = () => {
             key={idx}
             type="1"
             text={answer.answer}
-            onClick={answer.correct ? nextQuestion : showLearn}
+            onClick={
+              answer.correct
+                ? () => {
+                    passQuestion();
+                    nextQuestion();
+                  }
+                : showFailWindow
+            }
           />
         ))}
       </AnswersWrapper>
+
+      {showFail && (
+        <Fail
+          moreInfo={questions[currentQuestionNumber].moreInfo}
+          nextQuestion={nextQuestion}
+          hideFailWindow={hideFailWindow}
+        />
+      )}
     </>
   );
 };

@@ -49,6 +49,7 @@ app.get('/create', (req, res) => {
       },
     ],
     topics: ['html', 'forms'],
+    moreInfo: 'https://javascript.info',
   });
 
   question

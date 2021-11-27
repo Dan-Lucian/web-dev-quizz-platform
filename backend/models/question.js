@@ -36,6 +36,10 @@ const questionSchema = new mongoose.Schema({
     type: [String],
     required: true,
   },
+  moreInfo: {
+    type: String,
+    required: true,
+  },
 });
 questionSchema.plugin(uniqueValidator);
 
