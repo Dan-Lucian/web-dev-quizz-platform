@@ -20,22 +20,16 @@ const questionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  correctAnswer: {
-    type: String,
-    required: true,
-  },
-  wrongAnswers: [
+  answers: [
     {
-      type: String,
-      required: true,
-    },
-    {
-      type: String,
-      required: true,
-    },
-    {
-      type: String,
-      required: true,
+      answer: {
+        type: String,
+        required: true,
+      },
+      correct: {
+        type: Boolean,
+        required: true,
+      },
     },
   ],
   topics: {

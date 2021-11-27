@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Heading from '../components/Heading';
 import ButtonStart from '../components/ButtonStart';
@@ -52,12 +53,16 @@ const Home = () => {
     []
   );
 
-  const say = () => {
+  const navigate = useNavigate();
+
+  const startTest = () => {
     console.log('post request sent');
     questions
       .send(selectedTopics)
-      .then((res) => console.log('response', res))
-      .catch((err) => console.log('reqest failed', err));
+      .then((res) => {
+        navigate('/test', { state: res });
+      })
+      .catch((err) => console.log('request failed', err));
   };
 
   const toggleTopic = (e) => {
@@ -99,7 +104,7 @@ const Home = () => {
         <Heading level={1} style={{ marginBottom: '50px' }}>
           Welcome there fellow believer
         </Heading>
-        <ButtonStart onClick={say} text="Start the test" />
+        <ButtonStart onClick={startTest} text="Start the test" />
       </Header>
 
       <Body

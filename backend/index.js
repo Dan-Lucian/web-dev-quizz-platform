@@ -29,10 +29,26 @@ app.get('/questions', (req, res) => {
 
 app.get('/create', (req, res) => {
   const question = new Question({
-    question: 'some question',
-    correctAnswer: 'correct answer',
-    wrongAnswers: ['wrong', 'wrong', 'wrong'],
-    topics: ['html', 'text'],
+    question: 'some question 3',
+    answers: [
+      {
+        answer: 'Correct',
+        correct: true,
+      },
+      {
+        answer: 'False',
+        correct: false,
+      },
+      {
+        answer: 'False',
+        correct: false,
+      },
+      {
+        answer: 'False',
+        correct: false,
+      },
+    ],
+    topics: ['html', 'forms'],
   });
 
   question
