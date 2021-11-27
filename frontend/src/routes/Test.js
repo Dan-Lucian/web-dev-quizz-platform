@@ -87,7 +87,10 @@ const Test = () => {
                     passQuestion();
                     nextQuestion();
                   }
-                : showFailWindow
+                : () => {
+                    failQuestion();
+                    showFailWindow();
+                  }
             }
           />
         ))}
