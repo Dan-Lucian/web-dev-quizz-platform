@@ -2,8 +2,8 @@
 import dotenv from 'dotenv/config';
 import express from 'express';
 import morgan from 'morgan';
-import { Question } from './models/question.js';
 import mongoose from 'mongoose';
+import { Question } from './models/question.js';
 
 const app = express();
 
@@ -12,16 +12,33 @@ app.use(express.json());
 app.use(morgan('tiny'));
 
 app.post('/', (req, res) => {
-  const body = req.body;
+  const { body } = req;
   console.log('post received', body);
-  res.json({'responseFromServer': 'post received'});
+
+  Question.find({ topics: { $in: body } }).then((result) => {
+    res.json(result);
+  });
 });
 
 app.get('/questions', (req, res) => {
-  Question.find({}).then(result => {
+  Question.find({}).then((result) => {
     res.json(result);
     mongoose.connection.close();
   });
+});
+
+app.get('/create', (req, res) => {
+  const question = new Question({
+    question: 'some question',
+    correctAnswer: 'correct answer',
+    wrongAnswers: ['wrong', 'wrong', 'wrong'],
+    topics: ['html', 'text'],
+  });
+
+  question
+    .save()
+    .then(() => res.json({ status: 'created successfuly' }))
+    .catch((err) => res.json({ status: 'create error', error: err }));
 });
 
 const unknownEndpoint = (req, res) => {
@@ -48,7 +65,7 @@ const errorHandler = (err, req, res, next) => {
 app.use(errorHandler);
 
 // eslint-disable-next-line no-undef
-let PORT = process.env.PORT;
+let { PORT } = process.env;
 if (!PORT) {
   PORT = 3001;
 }

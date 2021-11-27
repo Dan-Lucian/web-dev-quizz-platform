@@ -38,6 +38,10 @@ const questionSchema = new mongoose.Schema({
       required: true,
     },
   ],
+  topics: {
+    type: [String],
+    required: true,
+  },
 });
 questionSchema.plugin(uniqueValidator);
 

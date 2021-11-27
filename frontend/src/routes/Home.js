@@ -27,7 +27,7 @@ const dbTopics = [
   },
   {
     mainTopic: 'JavaScript',
-    secondaryTopics: ['Theory', 'Objects', 'Functions', 'Web data', 'DOM'],
+    secondaryTopics: ['Internals', 'Objects', 'Functions', 'Web data', 'DOM'],
     colorText: '#282C34',
     colorBg: '#F7DF1E',
   },
