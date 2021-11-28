@@ -1,9 +1,9 @@
 import { useLocation } from 'react-router-dom';
-import ResultsHeader from './ResultsHeader';
+import ResultsHeader from '../components/ResultsHeader';
 import QuestionResult from '../components/QuestionResult';
 import QuestionResultsWrapper from '../components/QuestionResultsWrapper';
-import HCenter from './HCenter';
-import ResultsWrapper from './ResultsWrapper';
+import HCenter from '../components/HCenter';
+import ResultsWrapper from '../components/ResultsWrapper';
 
 const Results = () => {
   const { state: results } = useLocation();
