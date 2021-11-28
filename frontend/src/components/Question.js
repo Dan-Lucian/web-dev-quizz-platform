@@ -9,16 +9,32 @@ Question.propTypes = {
 
 const StyledQuestion = styled.h1`
   background: ${(p) => p.theme.color.bgAccent};
-  text-align: center;
-  display: block;
-  font-size: 2em;
+  display: flex;
+  font-size: 1.5em;
   font-weight: 700;
-  padding: 20px 10px;
-  max-width: 80vw;
+  padding: 1.2em 0.7em;
+  width: 100%;
+
+  span {
+    display: block;
+    margin-right: 0.5em;
+  }
+
+  /* @media (min-width: ${(p) => p.theme.screen.lg}) {
+    width: 70vw;
+  }
+
+  @media (min-width: ${(p) => p.theme.screen.med}) {
+    width: 630px;
+  }
 
   @media (min-width: ${(p) => p.theme.screen.lg}) {
-    max-width: 70vw;
+    width: 960px;
   }
+
+  @media (min-width: ${(p) => p.theme.screen.xlg}) {
+    width: 1120px;
+  } */
 `;
 
 export default Question;

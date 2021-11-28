@@ -1,8 +1,9 @@
 import { useLocation } from 'react-router-dom';
-import Header from '../components/Header';
-import Question from '../components/Question';
+import ResultsHeader from './ResultsHeader';
 import QuestionResult from '../components/QuestionResult';
 import QuestionResultsWrapper from '../components/QuestionResultsWrapper';
+import HCenter from './HCenter';
+import ResultsWrapper from './ResultsWrapper';
 
 const Results = () => {
   const { state: results } = useLocation();
@@ -31,19 +32,19 @@ const Results = () => {
   }
 
   return (
-    <>
-      <Header style={{ paddingTop: '150px' }}>
-        <Question level={1}>
+    <HCenter>
+      <ResultsWrapper>
+        <ResultsHeader>
           {mark} <br /> {`You got ${stats.correct}/10`}
-        </Question>
-      </Header>
+        </ResultsHeader>
 
-      <QuestionResultsWrapper>
-        {results.map((result, idx) => (
-          <QuestionResult result={result} key={idx} number={idx + 1} />
-        ))}
-      </QuestionResultsWrapper>
-    </>
+        <QuestionResultsWrapper>
+          {results.map((result, idx) => (
+            <QuestionResult result={result} key={idx} number={idx + 1} />
+          ))}
+        </QuestionResultsWrapper>
+      </ResultsWrapper>
+    </HCenter>
   );
 };
 

@@ -80,6 +80,7 @@ const Test = () => {
     <>
       <Header style={{ paddingTop: '150px' }}>
         <Question level={1}>
+          <span>{currentQuestionNumber + 1}.</span>
           {questions[currentQuestionNumber].question}
         </Question>
       </Header>
