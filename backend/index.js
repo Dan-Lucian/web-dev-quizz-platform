@@ -29,7 +29,7 @@ app.get('/questions', (req, res) => {
 
 app.get('/create', (req, res) => {
   const question = new Question({
-    question: 'some question 3',
+    question: 'some question 6',
     answers: [
       {
         answer: 'Correct',
@@ -49,7 +49,7 @@ app.get('/create', (req, res) => {
       },
     ],
     topics: ['html', 'forms'],
-    moreInfo: 'https://javascript.info',
+    moreInfo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
   });
 
   question
