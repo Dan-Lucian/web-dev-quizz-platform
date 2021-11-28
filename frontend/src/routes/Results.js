@@ -3,7 +3,7 @@ import ResultsHeader from '../components/ResultsHeader';
 import QuestionResult from '../components/QuestionResult';
 import QuestionResultsWrapper from '../components/QuestionResultsWrapper';
 import HCenter from '../components/HCenter';
-import ResultsWrapper from '../components/ResultsWrapper';
+import ResultsPageWrapper from '../components/ResultsPageWrapper';
 
 const Results = () => {
   const { state: results } = useLocation();
@@ -33,7 +33,7 @@ const Results = () => {
 
   return (
     <HCenter>
-      <ResultsWrapper>
+      <ResultsPageWrapper>
         <ResultsHeader>
           {mark} <br /> {`You got ${stats.correct}/10`}
         </ResultsHeader>
@@ -43,7 +43,7 @@ const Results = () => {
             <QuestionResult result={result} key={idx} number={idx + 1} />
           ))}
         </QuestionResultsWrapper>
-      </ResultsWrapper>
+      </ResultsPageWrapper>
     </HCenter>
   );
 };
