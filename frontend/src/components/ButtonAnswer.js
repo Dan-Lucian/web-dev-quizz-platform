@@ -2,20 +2,24 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { StyledButton } from './Button';
 
-const ButtonAnswer = ({ text, onClick, isCorrect, isRevealed }) => {
+const ButtonAnswer = ({ text, onClick, isCorrect, isRevealed, disabled }) => {
   if (isRevealed) {
     return isCorrect ? (
-      <StyledButtonAnswerCorrect onClick={onClick}>
+      <StyledButtonAnswerCorrect disabled={disabled} onClick={onClick}>
         {text}
       </StyledButtonAnswerCorrect>
     ) : (
-      <StyledButtonAnswerWrong onClick={onClick}>
+      <StyledButtonAnswerWrong disabled={disabled} onClick={onClick}>
         {text}
       </StyledButtonAnswerWrong>
     );
   }
 
-  return <StyledButtonAnswer onClick={onClick}>{text}</StyledButtonAnswer>;
+  return (
+    <StyledButtonAnswer disabled={disabled} onClick={onClick}>
+      {text}
+    </StyledButtonAnswer>
+  );
 };
 
 ButtonAnswer.propTypes = {
@@ -23,6 +27,7 @@ ButtonAnswer.propTypes = {
   onClick: PropTypes.func,
   isCorrect: PropTypes.bool,
   isRevealed: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 const StyledButtonAnswer = styled(StyledButton)`

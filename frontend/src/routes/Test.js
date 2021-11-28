@@ -88,6 +88,7 @@ const Test = () => {
         <AnswersWrapper>
           {questions[currentQuestionNumber].answers.map((answer, idx) => (
             <ButtonAnswer
+              disabled={isRevealed}
               key={idx}
               text={answer.answer}
               onClick={
