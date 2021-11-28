@@ -1,9 +1,10 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import ResultsHeader from '../components/ResultsHeader';
 import QuestionResult from '../components/QuestionResult';
 import QuestionResultsWrapper from '../components/QuestionResultsWrapper';
 import HCenter from '../components/HCenter';
 import ResultsPageWrapper from '../components/ResultsPageWrapper';
+import ResultsInternalLinks from '../components/ResultsInternalLink';
 
 const Results = () => {
   const { state: results } = useLocation();
@@ -43,6 +44,10 @@ const Results = () => {
             <QuestionResult result={result} key={idx} number={idx + 1} />
           ))}
         </QuestionResultsWrapper>
+
+        <ResultsInternalLinks>
+          <Link to="/">Return to homepage</Link>
+        </ResultsInternalLinks>
       </ResultsPageWrapper>
     </HCenter>
   );
