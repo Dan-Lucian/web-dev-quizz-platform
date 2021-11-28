@@ -27,17 +27,22 @@ ButtonAnswer.propTypes = {
 
 const StyledButtonAnswer = styled(StyledButton)`
   box-shadow: 0 4px 0 rgba(255, 255, 255, 0.2);
+  opacity: 1;
 
   &:active {
     transform: translateY(2px);
     box-shadow: 0 2px 0 rgba(255, 255, 255, 0.2);
   }
 
+  &:hover {
+    outline: 3px solid ${(p) => p.theme.color.green};
+  }
+
   @media (min-width: ${(p) => p.theme.screen.lg}) {
     box-shadow: 0 6px 0 rgba(255, 255, 255, 0.2);
 
     &:active {
-      transform: translateY(6px);
+      transform: translateY(4px);
       box-shadow: 0 2px 0 rgba(255, 255, 255, 0.2);
     }
   }

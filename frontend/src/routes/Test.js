@@ -1,10 +1,11 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useRef } from 'react';
-import Header from '../components/Header';
+import TestPageWrapper from '../components/TestPageWrapper';
 import AnswersWrapper from '../components/AnswersWrapper';
-import Question from '../components/Question';
+import TestPageHeader from '../components/TestPageHeader';
 import Fail from '../components/Fail';
 import ButtonAnswer from '../components/ButtonAnswer';
+import HCenter from '../components/HCenter';
 
 const noQuestions = [
   {
@@ -77,46 +78,46 @@ const Test = () => {
   };
 
   return (
-    <>
-      <Header style={{ paddingTop: '150px' }}>
-        <Question level={1}>
+    <HCenter>
+      <TestPageWrapper>
+        <TestPageHeader level={1}>
           <span>{currentQuestionNumber + 1}.</span>
           {questions[currentQuestionNumber].question}
-        </Question>
-      </Header>
+        </TestPageHeader>
 
-      <AnswersWrapper>
-        {questions[currentQuestionNumber].answers.map((answer, idx) => (
-          <ButtonAnswer
-            key={idx}
-            text={answer.answer}
-            onClick={
-              answer.correct
-                ? () => {
-                    toggleRevealAnswers();
-                    passQuestion();
-                    nextQuestion(1000);
-                  }
-                : () => {
-                    toggleRevealAnswers();
-                    failQuestion();
-                    showFailWindow();
-                  }
-            }
-            isCorrect={answer.correct}
-            isRevealed={isRevealed}
+        <AnswersWrapper>
+          {questions[currentQuestionNumber].answers.map((answer, idx) => (
+            <ButtonAnswer
+              key={idx}
+              text={answer.answer}
+              onClick={
+                answer.correct
+                  ? () => {
+                      toggleRevealAnswers();
+                      passQuestion();
+                      nextQuestion(1000);
+                    }
+                  : () => {
+                      toggleRevealAnswers();
+                      failQuestion();
+                      showFailWindow();
+                    }
+              }
+              isCorrect={answer.correct}
+              isRevealed={isRevealed}
+            />
+          ))}
+        </AnswersWrapper>
+
+        {showFail && (
+          <Fail
+            moreInfo={questions[currentQuestionNumber].moreInfo}
+            nextQuestion={nextQuestion}
+            hideFailWindow={hideFailWindow}
           />
-        ))}
-      </AnswersWrapper>
-
-      {showFail && (
-        <Fail
-          moreInfo={questions[currentQuestionNumber].moreInfo}
-          nextQuestion={nextQuestion}
-          hideFailWindow={hideFailWindow}
-        />
-      )}
-    </>
+        )}
+      </TestPageWrapper>
+    </HCenter>
   );
 };
 

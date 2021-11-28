@@ -59,16 +59,6 @@ export const StyledButton = styled.button`
   @media (min-width: ${(props) => props.theme.screen.med}) {
     font-weight: 400;
   }
-
-  ${StyledAnswersWrapper} & {
-    opacity: 1;
-    font-weight: 700;
-    font-size: 1em;
-  }
-
-  ${StyledAnswersWrapper} &:hover {
-    opacity: 0.7;
-  }
 `;
 
 const StyledButton1 = styled(StyledButton)`

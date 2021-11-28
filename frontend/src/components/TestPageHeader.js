@@ -12,29 +12,15 @@ const StyledQuestion = styled.h1`
   display: flex;
   font-size: 1.5em;
   font-weight: 700;
-  padding: 1.2em 0.7em;
   width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1.3em;
+  line-height: 1.4em;
 
   span {
     display: block;
     margin-right: 0.5em;
   }
-
-  /* @media (min-width: ${(p) => p.theme.screen.lg}) {
-    width: 70vw;
-  }
-
-  @media (min-width: ${(p) => p.theme.screen.med}) {
-    width: 630px;
-  }
-
-  @media (min-width: ${(p) => p.theme.screen.lg}) {
-    width: 960px;
-  }
-
-  @media (min-width: ${(p) => p.theme.screen.xlg}) {
-    width: 1120px;
-  } */
 `;
 
 export default Question;
