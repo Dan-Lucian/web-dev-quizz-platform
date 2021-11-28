@@ -48,7 +48,7 @@ const About = () => (
           </p>
         </TextContainer>
       </section>
-      <section style={{ width: '100%', marginBottom: '6rem' }}>
+      <section style={{ width: '100%', marginBottom: '6em' }}>
         <HeadingStripe style={{ marginBottom: '2rem' }} color="red">
           Mechanics
         </HeadingStripe>
