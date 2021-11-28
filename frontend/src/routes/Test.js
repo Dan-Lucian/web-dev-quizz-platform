@@ -2,9 +2,9 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useRef } from 'react';
 import Header from '../components/Header';
 import AnswersWrapper from '../components/AnswersWrapper';
-import Button from '../components/Button';
 import Question from '../components/Question';
 import Fail from '../components/Fail';
+import ButtonAnswer from '../components/ButtonAnswer';
 
 const noQuestions = [
   {
@@ -36,10 +36,15 @@ const Test = () => {
   questions = questions || noQuestions;
 
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
+  const [isRevealed, setIsRevealed] = useState(false);
   const navigate = useNavigate();
   const results = useRef(JSON.parse(JSON.stringify(questions)));
 
   const [showFail, setShowFail] = useState(false);
+
+  const toggleRevealAnswers = () => {
+    setIsRevealed((prev) => !prev);
+  };
 
   const failQuestion = () => {
     results.current[currentQuestionNumber].passed = false;
@@ -49,14 +54,18 @@ const Test = () => {
     results.current[currentQuestionNumber].passed = true;
   };
 
-  const nextQuestion = () => {
-    if (currentQuestionNumber + 1 === questions.length) {
-      console.log('questions ended');
-      navigate('/results', { state: results.current });
-      return;
-    }
+  const nextQuestion = (delay) => {
+    setTimeout(() => {
+      toggleRevealAnswers();
 
-    setCurrentQuestionNumber((prev) => prev + 1);
+      if (currentQuestionNumber + 1 === questions.length) {
+        console.log('questions ended');
+        navigate('/results', { state: results.current });
+        return;
+      }
+
+      setCurrentQuestionNumber((prev) => prev + 1);
+    }, delay);
   };
 
   const showFailWindow = () => {
@@ -77,21 +86,24 @@ const Test = () => {
 
       <AnswersWrapper>
         {questions[currentQuestionNumber].answers.map((answer, idx) => (
-          <Button
+          <ButtonAnswer
             key={idx}
-            type="6"
             text={answer.answer}
             onClick={
               answer.correct
                 ? () => {
+                    toggleRevealAnswers();
                     passQuestion();
-                    nextQuestion();
+                    nextQuestion(1000);
                   }
                 : () => {
+                    toggleRevealAnswers();
                     failQuestion();
                     showFailWindow();
                   }
             }
+            isCorrect={answer.correct}
+            isRevealed={isRevealed}
           />
         ))}
       </AnswersWrapper>

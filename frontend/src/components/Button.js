@@ -27,9 +27,6 @@ const Button = ({ text, type, pressed, onClick }) => {
     case '5':
       return <StyledButton5 {...props}>{text}</StyledButton5>;
 
-    case '6':
-      return <StyledButton6 {...props}>{text}</StyledButton6>;
-
     default:
       return <StyledButton {...props}>{text}</StyledButton>;
   }
@@ -42,7 +39,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
 };
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   opacity: var(--btn-opacity, 0.5);
   text-align: center;
   font-family: inherit;
@@ -97,24 +94,6 @@ const StyledButton4 = styled(StyledButton)`
 const StyledButton5 = styled(StyledButton)`
   background-color: ${(p) => p.theme.color.bgBtn5};
   color: ${(p) => p.theme.color.textBtn5};
-`;
-
-const StyledButton6 = styled(StyledButton)`
-  box-shadow: 0 4px 0 rgba(255, 255, 255, 0.2);
-
-  &:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.2);
-  }
-
-  @media (min-width: ${(p) => p.theme.screen.lg}) {
-    box-shadow: 0 6px 0 rgba(255, 255, 255, 0.2);
-
-    &:active {
-      transform: translateY(6px);
-      box-shadow: 0 2px 0 rgba(255, 255, 255, 0.2);
-    }
-  }
 `;
 
 export default Button;
