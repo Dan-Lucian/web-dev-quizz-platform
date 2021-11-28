@@ -1,8 +1,10 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import ExternalLink from './ExternalLink';
+import { StyledFail } from './StyledFail';
+import Text from './Text';
 
-const Fail = ({ children, moreInfo, nextQuestion, hideFailWindow }) => {
+const Fail = ({ moreInfo, nextQuestion, hideFailWindow }) => {
   const handleClick = () => {
     hideFailWindow();
     nextQuestion();
@@ -10,26 +12,19 @@ const Fail = ({ children, moreInfo, nextQuestion, hideFailWindow }) => {
 
   return (
     <StyledFail>
-      More info at {moreInfo}
-      <Button text="Next question" type="1" onClick={handleClick} />
+      <Button text="Next question" onClick={handleClick} />
+      <Text>Seems like you need to recheck this.</Text>
+      <Text>
+        Here’s a useful <ExternalLink type="red" text="link" href={moreInfo} />
+      </Text>
     </StyledFail>
   );
 };
 
 Fail.propTypes = {
-  children: PropTypes.node,
   moreInfo: PropTypes.string,
   nextQuestion: PropTypes.func,
   hideFailWindow: PropTypes.func,
 };
-
-const StyledFail = styled.article`
-  height: 50vh;
-  background-color: ${(p) => p.theme.color.bgAccent};
-  position: fixed;
-  top: 20%;
-  right: 20%;
-  left: 20%;
-`;
 
 export default Fail;

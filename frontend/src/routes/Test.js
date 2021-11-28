@@ -69,8 +69,10 @@ const Test = () => {
     }, delay);
   };
 
-  const showFailWindow = () => {
-    setShowFail(true);
+  const showFailWindow = (delay) => {
+    setTimeout(() => {
+      setShowFail(true);
+    }, delay);
   };
 
   const hideFailWindow = () => {
@@ -101,7 +103,7 @@ const Test = () => {
                   : () => {
                       toggleRevealAnswers();
                       failQuestion();
-                      showFailWindow();
+                      showFailWindow(100);
                     }
               }
               isCorrect={answer.correct}

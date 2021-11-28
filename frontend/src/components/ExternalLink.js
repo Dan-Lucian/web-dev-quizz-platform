@@ -1,18 +1,24 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { StyledFail } from './StyledFail';
 
 const ExternalLink = ({ type, text, href }) => {
+  const props = {
+    target: '_blank',
+    href,
+  };
+
   switch (type) {
     case 'green':
       return (
-        <StyledExternalLinkGreen href={href}>{text}</StyledExternalLinkGreen>
+        <StyledExternalLinkGreen {...props}>{text}</StyledExternalLinkGreen>
       );
 
     case 'red':
-      return <StyledExternalLinkRed href={href}>{text}</StyledExternalLinkRed>;
+      return <StyledExternalLinkRed {...props}>{text}</StyledExternalLinkRed>;
 
     default:
-      return <StyledExternalLink href={href}>{text}</StyledExternalLink>;
+      return <StyledExternalLink {...props}>{text}</StyledExternalLink>;
   }
 };
 
@@ -33,6 +39,17 @@ const StyledExternalLink = styled.a`
   &:visited,
   &:active {
     color: ${(p) => p.theme.color.text};
+  }
+
+  &:hover {
+    background: ${(p) => p.theme.color.text};
+    color: ${(p) => p.theme.color.bgAccent};
+  }
+
+  ${StyledFail} & {
+    text-decoration: underline;
+    padding: 0.3em;
+    border: none;
   }
 `;
 

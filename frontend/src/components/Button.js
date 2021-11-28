@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { StyledAnswersWrapper } from './AnswersWrapper';
+import { StyledFail } from './StyledFail';
 
 const Button = ({ text, type, pressed, onClick }) => {
   const props = {
@@ -58,6 +58,17 @@ export const StyledButton = styled.button`
 
   @media (min-width: ${(props) => props.theme.screen.med}) {
     font-weight: 400;
+  }
+
+  ${StyledFail} & {
+    background-color: ${(p) => p.theme.color.bg};
+    width: 100%;
+    padding: 1em;
+    opacity: 1;
+
+    &:hover {
+      background: ${(p) => p.theme.color.green};
+    }
   }
 `;
 

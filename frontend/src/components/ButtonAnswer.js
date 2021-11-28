@@ -40,7 +40,8 @@ const StyledButtonAnswer = styled(StyledButton)`
   }
 
   &:hover {
-    outline: 3px solid ${(p) => p.theme.color.green};
+    background: rgba(255, 255, 255, 0.7);
+    color: ${(p) => p.theme.color.bgAccent};
   }
 
   @media (min-width: ${(p) => p.theme.screen.lg}) {
@@ -55,10 +56,20 @@ const StyledButtonAnswer = styled(StyledButton)`
 
 const StyledButtonAnswerCorrect = styled(StyledButtonAnswer)`
   background-color: ${(p) => p.theme.color.green};
+
+  &:hover {
+    background: ${(p) => p.theme.color.green};
+    color: ${(p) => p.theme.color.text};
+  }
 `;
 
 const StyledButtonAnswerWrong = styled(StyledButtonAnswer)`
   background-color: ${(p) => p.theme.color.red};
+
+  &:hover {
+    background: ${(p) => p.theme.color.red};
+    color: ${(p) => p.theme.color.text};
+  }
 `;
 
 export default ButtonAnswer;
