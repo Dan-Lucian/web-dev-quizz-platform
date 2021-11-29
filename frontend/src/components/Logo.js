@@ -20,7 +20,7 @@ const Logo = () => {
 const StyledLogo = styled.img`
   cursor: pointer;
 
-  @media (min-width: 1440px) {
+  @media (min-width: ${(p) => p.theme.screen.xlg}) {
     width: 60px;
     height: 60px;
   }
