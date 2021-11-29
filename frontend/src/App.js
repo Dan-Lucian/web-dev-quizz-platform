@@ -3,6 +3,7 @@
 import { ThemeProvider } from 'styled-components';
 import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import { useScrollDirection } from './hooks/useScrollDirection';
 
 import GlobalStyle from './Global.style';
 import Wrapper from './components/Wrapper';
@@ -43,16 +44,17 @@ const theme = {
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenuOpen = () => {
     setIsMenuOpen((prev) => !prev);
   };
+
+  const scrollDirection = useScrollDirection('up');
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Wrapper>
-        <Nav>
+        <Nav hidden={scrollDirection === 'down'}>
           <Logo />
           <Links>
             <NavLink to="/">Home</NavLink>
