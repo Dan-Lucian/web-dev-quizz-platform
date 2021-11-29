@@ -1,9 +1,6 @@
-// separate becuase imported by other files
-// Fail.js, Button.js, ExternalLink.js, Text.js
-
 import styled from 'styled-components';
 
-const StyledFail = styled.article`
+const StyledPopupFail = styled.article`
   padding: 1em 3em;
   margin-top: 2em;
   background-color: ${(p) => p.theme.color.bgAccent};
@@ -12,4 +9,5 @@ const StyledFail = styled.article`
   flex-direction: column;
 `;
 
-export { StyledFail };
+export { StyledPopupFail };
+// exported to PopupFail.js, Button.js, ExternalLink.js, Text.js

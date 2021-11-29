@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { StyledFail } from './StyledFail';
+import { StyledPopupFail } from '../routes/test/components/PopupFail.styles';
 
 const Text = ({ children }) => <StyledText>{children}</StyledText>;
 
@@ -9,7 +9,7 @@ Text.propTypes = {
 };
 
 const StyledText = styled.p`
-  ${StyledFail} &:nth-child(2) {
+  ${StyledPopupFail} &:nth-child(2) {
     margin: 1.5em 0;
   }
 `;

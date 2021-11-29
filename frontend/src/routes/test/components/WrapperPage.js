@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const ResultsPageWrapper = ({ children }) => (
-  <StyledResultsPageWrapper>{children}</StyledResultsPageWrapper>
+const WrapperPage = ({ children }) => (
+  <StyledWrapperPage>{children}</StyledWrapperPage>
 );
 
-ResultsPageWrapper.propTypes = {
+WrapperPage.propTypes = {
   children: PropTypes.node,
 };
 
-const StyledResultsPageWrapper = styled.main`
+const StyledWrapperPage = styled.main`
   margin-top: 6em;
   width: 85vw;
   max-width: 1320px;
-  margin-bottom: 6em;
+  margin-bottom: 10em;
 
   @media (min-width: ${(p) => p.theme.screen.med}) {
     width: 75vw;
@@ -24,4 +24,4 @@ const StyledResultsPageWrapper = styled.main`
   }
 `;
 
-export default ResultsPageWrapper;
+export default WrapperPage;

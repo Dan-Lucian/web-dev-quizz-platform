@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+
+// local components
 import Topic from './Topic';
 
-const Topics = ({ dbTopics, selectedTopics, toggleTopic }) => (
+const WrapperTopics = ({ dbTopics, selectedTopics, toggleTopic }) => (
   <StyledTopics>
     {dbTopics.map((topic, idx) => (
       <Topic
@@ -16,7 +18,7 @@ const Topics = ({ dbTopics, selectedTopics, toggleTopic }) => (
   </StyledTopics>
 );
 
-Topics.propTypes = {
+WrapperTopics.propTypes = {
   dbTopics: PropTypes.array,
   selectedTopics: PropTypes.array,
   toggleTopic: PropTypes.func,
@@ -32,4 +34,4 @@ export const StyledTopics = styled.div`
   }
 `;
 
-export default Topics;
+export default WrapperTopics;

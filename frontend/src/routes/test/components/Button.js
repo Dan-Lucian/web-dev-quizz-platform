@@ -1,28 +1,28 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { StyledButton } from './Button';
+import { StyledButtonShared } from '../../../components/Button';
 
-const ButtonAnswer = ({ text, onClick, isCorrect, isRevealed, disabled }) => {
+const Button = ({ text, onClick, isCorrect, isRevealed, disabled }) => {
   if (isRevealed) {
     return isCorrect ? (
-      <StyledButtonAnswerCorrect disabled={disabled} onClick={onClick}>
+      <StyledButtonCorrect disabled={disabled} onClick={onClick}>
         {text}
-      </StyledButtonAnswerCorrect>
+      </StyledButtonCorrect>
     ) : (
-      <StyledButtonAnswerWrong disabled={disabled} onClick={onClick}>
+      <StyledButtonWrong disabled={disabled} onClick={onClick}>
         {text}
-      </StyledButtonAnswerWrong>
+      </StyledButtonWrong>
     );
   }
 
   return (
-    <StyledButtonAnswer disabled={disabled} onClick={onClick}>
+    <StyledButton disabled={disabled} onClick={onClick}>
       {text}
-    </StyledButtonAnswer>
+    </StyledButton>
   );
 };
 
-ButtonAnswer.propTypes = {
+Button.propTypes = {
   text: PropTypes.string,
   onClick: PropTypes.func,
   isCorrect: PropTypes.bool,
@@ -30,7 +30,7 @@ ButtonAnswer.propTypes = {
   disabled: PropTypes.bool,
 };
 
-const StyledButtonAnswer = styled(StyledButton)`
+const StyledButton = styled(StyledButtonShared)`
   box-shadow: 0 4px 0 rgba(255, 255, 255, 0.2);
   opacity: 1;
 
@@ -54,7 +54,7 @@ const StyledButtonAnswer = styled(StyledButton)`
   }
 `;
 
-const StyledButtonAnswerCorrect = styled(StyledButtonAnswer)`
+const StyledButtonCorrect = styled(StyledButton)`
   background-color: ${(p) => p.theme.color.green};
 
   &:hover {
@@ -63,7 +63,7 @@ const StyledButtonAnswerCorrect = styled(StyledButtonAnswer)`
   }
 `;
 
-const StyledButtonAnswerWrong = styled(StyledButtonAnswer)`
+const StyledButtonWrong = styled(StyledButton)`
   background-color: ${(p) => p.theme.color.red};
 
   &:hover {
@@ -72,4 +72,4 @@ const StyledButtonAnswerWrong = styled(StyledButtonAnswer)`
   }
 `;
 
-export default ButtonAnswer;
+export default Button;

@@ -1,36 +1,36 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import ExternalLink from './ExternalLink';
+import ExternalLink from '../../../components/ExternalLink';
 
-const QuestionResult = ({ result, number }) => {
+const Question = ({ result, number }) => {
   if (result.passed) {
     return (
-      <StyledQuestionWrapper>
-        <StyledQuestionResultGreen>
+      <StyledWrapperQuestion>
+        <StyledQuestionGreen>
           <span>{number}.</span>
           {result.question}
-        </StyledQuestionResultGreen>
+        </StyledQuestionGreen>
         <ExternalLink text="learn more" type="green" href={result.moreInfo} />
-      </StyledQuestionWrapper>
+      </StyledWrapperQuestion>
     );
   }
   return (
-    <StyledQuestionWrapper>
-      <StyledQuestionResultRed>
+    <StyledWrapperQuestion>
+      <StyledQuestionRed>
         <span>{number}.</span>
         {result.question}
-      </StyledQuestionResultRed>
+      </StyledQuestionRed>
       <ExternalLink text="learn more" type="red" href={result.moreInfo} />
-    </StyledQuestionWrapper>
+    </StyledWrapperQuestion>
   );
 };
 
-QuestionResult.propTypes = {
+Question.propTypes = {
   result: PropTypes.object,
   number: PropTypes.number,
 };
 
-export const StyledQuestionWrapper = styled.li`
+export const StyledWrapperQuestion = styled.li`
   margin-bottom: 1.5em;
   position: relative;
   display: flex;
@@ -41,7 +41,7 @@ export const StyledQuestionWrapper = styled.li`
   }
 `;
 
-const StyledQuestionResult = styled.p`
+const StyledQuestion = styled.p`
   display: block;
   padding: 0.8em;
   line-height: 1.4em;
@@ -53,12 +53,12 @@ const StyledQuestionResult = styled.p`
   }
 `;
 
-const StyledQuestionResultGreen = styled(StyledQuestionResult)`
+const StyledQuestionGreen = styled(StyledQuestion)`
   background: ${(p) => p.theme.color.green};
 `;
 
-const StyledQuestionResultRed = styled(StyledQuestionResult)`
+const StyledQuestionRed = styled(StyledQuestion)`
   background: ${(p) => p.theme.color.red};
 `;
 
-export default QuestionResult;
+export default Question;

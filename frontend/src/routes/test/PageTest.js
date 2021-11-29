@@ -1,14 +1,18 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useRef } from 'react';
-import TestPageWrapper from '../components/TestPageWrapper';
-import AnswersWrapper from '../components/AnswersWrapper';
-import TestPageHeader from '../components/TestPageHeader';
-import Fail from '../components/Fail';
-import ButtonAnswer from '../components/ButtonAnswer';
-import HCenter from '../components/HCenter';
-import NotFound from './NotFound';
 
-const Test = () => {
+// shared components
+import PageNotFound from '../PageNotFound';
+import HCenter from '../../components/HCenter';
+
+// local components
+import PopupFail from './components/PopupFail';
+import WrapperPage from './components/WrapperPage';
+import WrapperAnswers from './components/WrapperAnswers';
+import Question from './components/Question';
+import Button from './components/Button';
+
+const PageTest = () => {
   const { state: questions } = useLocation();
 
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
@@ -44,29 +48,27 @@ const Test = () => {
     }, delay);
   };
 
-  const showFailWindow = (delay) => {
-    setTimeout(() => {
-      setShowFail(true);
-    }, delay);
+  const showFailWindow = () => {
+    setShowFail(true);
   };
 
   const hideFailWindow = () => {
     setShowFail(false);
   };
 
-  if (!questions) return <NotFound />;
+  if (!questions) return <PageNotFound />;
 
   return (
     <HCenter>
-      <TestPageWrapper>
-        <TestPageHeader level={1}>
+      <WrapperPage>
+        <Question level={1}>
           <span>{currentQuestionNumber + 1}.</span>
           {questions[currentQuestionNumber].question}
-        </TestPageHeader>
+        </Question>
 
-        <AnswersWrapper>
+        <WrapperAnswers>
           {questions[currentQuestionNumber].answers.map((answer, idx) => (
-            <ButtonAnswer
+            <Button
               disabled={isRevealed}
               key={idx}
               text={answer.answer}
@@ -80,25 +82,25 @@ const Test = () => {
                   : () => {
                       toggleRevealAnswers();
                       failQuestion();
-                      showFailWindow(100);
+                      showFailWindow();
                     }
               }
               isCorrect={answer.correct}
               isRevealed={isRevealed}
             />
           ))}
-        </AnswersWrapper>
+        </WrapperAnswers>
 
         {showFail && (
-          <Fail
+          <PopupFail
             moreInfo={questions[currentQuestionNumber].moreInfo}
             nextQuestion={nextQuestion}
             hideFailWindow={hideFailWindow}
           />
         )}
-      </TestPageWrapper>
+      </WrapperPage>
     </HCenter>
   );
 };
 
-export default Test;
+export default PageTest;

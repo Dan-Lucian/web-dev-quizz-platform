@@ -1,11 +1,19 @@
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
-import Heading from '../components/Heading';
-import ButtonStart from '../components/ButtonStart';
-import Body from '../components/Body';
-import Topics from '../components/Topics';
-import { useLocalStorageState } from '../hooks/useLocalStorageState';
-import questions from '../services/questions';
+
+// shared components
+import Header from '../../components/Header';
+import Heading from '../../components/Heading';
+import Body from '../../components/Body';
+
+// local components
+import ButtonStart from './components/ButtonStart';
+import WrapperTopics from './components/WrapperTopics';
+
+// shared hooks
+import { useLocalStorageState } from '../../hooks/useLocalStorageState';
+
+// shared services
+import questions from '../../services/questions';
 
 const dbTopics = [
   {
@@ -47,7 +55,7 @@ const getTopicInfo = (topic) =>
       t.secondaryTopics.map((st) => st.toLowerCase()).includes(topic)
   );
 
-const Home = () => {
+const PageIndex = () => {
   const [selectedTopics, setSelectedTopics] = useLocalStorageState(
     'testTopics',
     []
@@ -122,7 +130,7 @@ const Home = () => {
         >
           Choose your topics
         </Heading>
-        <Topics
+        <WrapperTopics
           dbTopics={dbTopics}
           selectedTopics={selectedTopics}
           toggleTopic={toggleTopic}
@@ -132,4 +140,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default PageIndex;

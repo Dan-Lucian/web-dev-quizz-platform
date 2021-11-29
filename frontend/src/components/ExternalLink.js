@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { StyledFail } from './StyledFail';
+import { StyledPopupFail } from '../routes/test/components/PopupFail.styles';
 
 const ExternalLink = ({ type, text, href }) => {
   const props = {
@@ -46,7 +46,7 @@ const StyledExternalLink = styled.a`
     color: ${(p) => p.theme.color.bgAccent};
   }
 
-  ${StyledFail} & {
+  ${StyledPopupFail} & {
     text-decoration: underline;
     padding: 0.3em;
     border: none;

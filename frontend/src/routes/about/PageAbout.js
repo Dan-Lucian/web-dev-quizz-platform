@@ -1,10 +1,13 @@
-import Header from '../components/Header';
-import Heading from '../components/Heading';
-import Body from '../components/Body';
-import HeadingStripe from '../components/HeadingStripe';
-import TextContainer from '../components/TextContainer';
+// shared components
+import Header from '../../components/Header';
+import Heading from '../../components/Heading';
+import Body from '../../components/Body';
+import TextContainer from '../../components/TextContainer';
 
-const About = () => (
+// local components
+import HeadingStripe from './components/HeadingStripe';
+
+const PageAbout = () => (
   <>
     <Header>
       <Heading level={1} style={{ marginBottom: '50px' }}>
@@ -88,4 +91,4 @@ const About = () => (
   </>
 );
 
-export default About;
+export default PageAbout;

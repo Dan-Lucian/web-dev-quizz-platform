@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { StyledFail } from './StyledFail';
+import { StyledPopupFail } from '../routes/test/components/PopupFail.styles';
 
 const Button = ({ text, type, pressed, onClick }) => {
   const props = {
@@ -13,22 +13,22 @@ const Button = ({ text, type, pressed, onClick }) => {
 
   switch (type) {
     case '1':
-      return <StyledButton1 {...props}>{text}</StyledButton1>;
+      return <StyledButtonShared1 {...props}>{text}</StyledButtonShared1>;
 
     case '2':
-      return <StyledButton2 {...props}>{text}</StyledButton2>;
+      return <StyledButtonShared2 {...props}>{text}</StyledButtonShared2>;
 
     case '3':
-      return <StyledButton3 {...props}>{text}</StyledButton3>;
+      return <StyledButtonShared3 {...props}>{text}</StyledButtonShared3>;
 
     case '4':
-      return <StyledButton4 {...props}>{text}</StyledButton4>;
+      return <StyledButtonShared4 {...props}>{text}</StyledButtonShared4>;
 
     case '5':
-      return <StyledButton5 {...props}>{text}</StyledButton5>;
+      return <StyledButtonShared5 {...props}>{text}</StyledButtonShared5>;
 
     default:
-      return <StyledButton {...props}>{text}</StyledButton>;
+      return <StyledButtonShared {...props}>{text}</StyledButtonShared>;
   }
 };
 
@@ -39,7 +39,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
 };
 
-export const StyledButton = styled.button`
+export const StyledButtonShared = styled.button`
   opacity: var(--btn-opacity, 0.5);
   text-align: center;
   font-family: inherit;
@@ -60,7 +60,7 @@ export const StyledButton = styled.button`
     font-weight: 400;
   }
 
-  ${StyledFail} & {
+  ${StyledPopupFail} & {
     background-color: ${(p) => p.theme.color.bg};
     width: 100%;
     padding: 1em;
@@ -72,27 +72,27 @@ export const StyledButton = styled.button`
   }
 `;
 
-const StyledButton1 = styled(StyledButton)`
+const StyledButtonShared1 = styled(StyledButtonShared)`
   background-color: ${(p) => p.theme.color.bgBtn1};
   color: ${(p) => p.theme.color.textBtn1};
 `;
 
-const StyledButton2 = styled(StyledButton)`
+const StyledButtonShared2 = styled(StyledButtonShared)`
   background-color: ${(p) => p.theme.color.bgBtn2};
   color: ${(p) => p.theme.color.textBtn2};
 `;
 
-const StyledButton3 = styled(StyledButton)`
+const StyledButtonShared3 = styled(StyledButtonShared)`
   background-color: ${(p) => p.theme.color.bgBtn3};
   color: ${(p) => p.theme.color.textBtn3};
 `;
 
-const StyledButton4 = styled(StyledButton)`
+const StyledButtonShared4 = styled(StyledButtonShared)`
   background-color: ${(p) => p.theme.color.bgBtn4};
   color: ${(p) => p.theme.color.textBtn4};
 `;
 
-const StyledButton5 = styled(StyledButton)`
+const StyledButtonShared5 = styled(StyledButtonShared)`
   background-color: ${(p) => p.theme.color.bgBtn5};
   color: ${(p) => p.theme.color.textBtn5};
 `;

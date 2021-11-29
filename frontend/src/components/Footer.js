@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { StyledNotFound } from '../routes/NotFound';
+import { StyledNotFound } from '../routes/PageNotFound';
 
 const Footer = ({ children }) => <StyledFooter>{children}</StyledFooter>;
 

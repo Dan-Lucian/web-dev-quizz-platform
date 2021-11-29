@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const AnswersWrapper = ({ children }) => (
-  <StyledAnswersWrapper>{children}</StyledAnswersWrapper>
+const WrapperAnswers = ({ children }) => (
+  <StyledWrapperAnswers>{children}</StyledWrapperAnswers>
 );
 
-AnswersWrapper.propTypes = {
+WrapperAnswers.propTypes = {
   children: PropTypes.node,
 };
 
-export const StyledAnswersWrapper = styled.section`
+export const StyledWrapperAnswers = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 60px 60px 60px 60px;
@@ -30,4 +30,4 @@ export const StyledAnswersWrapper = styled.section`
   }
 `;
 
-export default AnswersWrapper;
+export default WrapperAnswers;

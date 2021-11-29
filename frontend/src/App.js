@@ -2,7 +2,7 @@
 /* eslint-disable import/no-named-as-default */
 import { ThemeProvider } from 'styled-components';
 import { useState } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { useScrollDirection } from './hooks/useScrollDirection';
 
 import GlobalStyle from './Global.style';
@@ -42,6 +42,7 @@ const theme = {
   },
 };
 
+// renders nav, oulet, footer
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenuOpen = () => {
@@ -57,21 +58,21 @@ const App = () => {
         <Nav hidden={scrollDirection === 'down'}>
           <Logo />
           <Links>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/test">%test%</NavLink>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/test">%test%</Link>
           </Links>
           <Hamburger isMenuOpen={isMenuOpen} onClick={toggleMenuOpen} />
           <HamburgerMenu isMenuOpen={isMenuOpen}>
-            <NavLink onClick={toggleMenuOpen} to="/">
+            <Link onClick={toggleMenuOpen} to="/">
               Home
-            </NavLink>
-            <NavLink onClick={toggleMenuOpen} to="/about">
+            </Link>
+            <Link onClick={toggleMenuOpen} to="/about">
               About
-            </NavLink>
-            <NavLink onClick={toggleMenuOpen} to="/test">
+            </Link>
+            <Link onClick={toggleMenuOpen} to="/test">
               %test%
-            </NavLink>
+            </Link>
           </HamburgerMenu>
         </Nav>
 

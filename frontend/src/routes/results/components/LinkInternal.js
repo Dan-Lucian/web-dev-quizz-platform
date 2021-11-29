@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const ResultsInternalLinks = ({ children }) => (
-  <StyledResultsInternalLinks>{children}</StyledResultsInternalLinks>
+const LinkInternal = ({ children }) => (
+  <StyledLinkInternal>{children}</StyledLinkInternal>
 );
 
-ResultsInternalLinks.propTypes = {
+LinkInternal.propTypes = {
   children: PropTypes.node,
 };
 
-const StyledResultsInternalLinks = styled.ul`
+const StyledLinkInternal = styled.ul`
   display: flex;
   margin: 2em auto;
   justify-content: flex-end;
@@ -32,4 +32,4 @@ const StyledResultsInternalLinks = styled.ul`
   }
 `;
 
-export default ResultsInternalLinks;
+export default LinkInternal;

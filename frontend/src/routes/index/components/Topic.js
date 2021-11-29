@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Button from './Button';
+
+// shared components
+import Button from '../../../components/Button';
 
 const Topic = ({
   contents: { mainTopic, secondaryTopics },
