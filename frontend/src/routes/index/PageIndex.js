@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router-dom';
 // shared components
 import Header from '../../components/Header';
 import Heading from '../../components/Heading';
-import Body from '../../components/Body';
+import HCenter from '../../components/HCenter';
 
 // local components
 import ButtonStart from './components/ButtonStart';
 import WrapperTopics from './components/WrapperTopics';
+import WrapperPage from './components/WrapperPage';
 
 // shared hooks
 import { useLocalStorageState } from '../../hooks/useLocalStorageState';
@@ -107,36 +108,34 @@ const PageIndex = () => {
   };
 
   return (
-    <>
-      <Header>
-        <Heading level={1} style={{ marginBottom: '50px' }}>
-          Welcome there fellow believer
-        </Heading>
-        <ButtonStart onClick={startTest} text="Start the test" />
-      </Header>
+    <HCenter>
+      <WrapperPage>
+        <HCenter>
+          <Header>
+            <Heading level={1} style={{ marginBottom: '50px' }}>
+              Welcome there fellow believer
+            </Heading>
+            <ButtonStart onClick={startTest} text="Start the test" />
+          </Header>
 
-      <Body
-        style={{
-          paddingTop: '130px',
-          paddingBottom: '130px',
-        }}
-      >
-        <Heading
-          level={1}
-          style={{
-            marginBottom: '20px',
-            width: '100%',
-          }}
-        >
-          Choose your topics
-        </Heading>
-        <WrapperTopics
-          dbTopics={dbTopics}
-          selectedTopics={selectedTopics}
-          toggleTopic={toggleTopic}
-        />
-      </Body>
-    </>
+          <Heading
+            level={1}
+            style={{
+              marginBottom: '20px',
+              width: '100%',
+            }}
+          >
+            Choose your topics
+          </Heading>
+
+          <WrapperTopics
+            dbTopics={dbTopics}
+            selectedTopics={selectedTopics}
+            toggleTopic={toggleTopic}
+          />
+        </HCenter>
+      </WrapperPage>
+    </HCenter>
   );
 };
 

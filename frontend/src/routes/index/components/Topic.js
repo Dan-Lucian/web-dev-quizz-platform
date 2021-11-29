@@ -40,19 +40,20 @@ export const StyledTopic = styled.section`
   grid-template-columns: 98px 98px 98px;
   grid-template-rows: 40px 40px;
   grid-gap: 20px;
+  flex-grow: 1;
 
   @media (min-width: ${(p) => p.theme.screen.med}) {
-    grid-template-columns: 131px;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 45px);
   }
 
   @media (min-width: ${(p) => p.theme.screen.lg}) {
-    grid-template-columns: 171px;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 60px);
   }
 
   @media (min-width: ${(p) => p.theme.screen.xlg}) {
-    grid-template-columns: 188px;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 60px);
   }
 `;

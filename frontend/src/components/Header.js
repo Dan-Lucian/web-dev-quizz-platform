@@ -11,7 +11,7 @@ Header.propTypes = {
 };
 
 const StyledHeader = styled.header`
-  padding: 200px 30px 30px 30px;
+  margin-bottom: 5em;
   display: flex;
   flex-direction: column;
   align-items: center;

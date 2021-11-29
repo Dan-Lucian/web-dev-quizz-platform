@@ -27,6 +27,8 @@ WrapperTopics.propTypes = {
 export const StyledTopics = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
 
   @media (min-width: ${(props) => props.theme.screen.med}) {
     flex-direction: row;
