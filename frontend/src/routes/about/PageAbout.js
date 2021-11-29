@@ -1,31 +1,21 @@
 // shared components
-import Header from '../../components/Header';
 import Heading from '../../components/Heading';
-import Body from '../../components/Body';
-import TextContainer from '../../components/TextContainer';
+import HCenter from '../../components/HCenter';
 
 // local components
 import HeadingStripe from './components/HeadingStripe';
+import WrapperPage from './components/WrapperPage';
+import WrapperText from './components/WrapperText';
+import Section from './components/Section';
 
 const PageAbout = () => (
-  <>
-    <Header>
-      <Heading level={1} style={{ marginBottom: '50px' }}>
-        What is this all about ?
-      </Heading>
-    </Header>
+  <HCenter>
+    <WrapperPage>
+      <Heading level={1}>What is this all about ?</Heading>
 
-    <Body>
-      <section style={{ width: '100%', marginBottom: '6rem' }}>
-        <HeadingStripe
-          style={{
-            marginBottom: '2rem',
-          }}
-          color="green"
-        >
-          Idea
-        </HeadingStripe>
-        <TextContainer>
+      <Section>
+        <HeadingStripe color="green">Idea</HeadingStripe>
+        <WrapperText color="green">
           <p>
             We are living in the Google era and it is fairly easy to find stuff
             online, but you cannot search for what you don’t even remember.
@@ -49,13 +39,11 @@ const PageAbout = () => (
             This is not intended for learning purposes, but for periodic
             refreshments of your memory.
           </p>
-        </TextContainer>
-      </section>
-      <section style={{ width: '100%', marginBottom: '6em' }}>
-        <HeadingStripe style={{ marginBottom: '2rem' }} color="red">
-          Mechanics
-        </HeadingStripe>
-        <TextContainer>
+        </WrapperText>
+      </Section>
+      <Section style={{ width: '100%', marginBottom: '6em' }}>
+        <HeadingStripe color="red">Mechanics</HeadingStripe>
+        <WrapperText color="red">
           <p>
             The questions are chosen at random based on the selected topics then
             the chosen questions are presented in a form of a test.
@@ -85,10 +73,10 @@ const PageAbout = () => (
             This is not intended for learning purposes, but for periodic
             refreshments of your memory.
           </p>
-        </TextContainer>
-      </section>
-    </Body>
-  </>
+        </WrapperText>
+      </Section>
+    </WrapperPage>
+  </HCenter>
 );
 
 export default PageAbout;
