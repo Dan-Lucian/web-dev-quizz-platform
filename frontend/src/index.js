@@ -7,9 +7,11 @@ import About from './routes/About';
 import Test from './routes/Test';
 import Results from './routes/Results';
 import NotFound from './routes/NotFound';
+import ScrollToTop from './components/ScrollToTop';
 
 ReactDOM.render(
   <BrowserRouter>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
