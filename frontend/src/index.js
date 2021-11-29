@@ -5,7 +5,8 @@ import App from './App';
 import Home from './routes/Home';
 import About from './routes/About';
 import Test from './routes/Test';
-import Results from './routes/Results.js';
+import Results from './routes/Results';
+import NotFound from './routes/NotFound';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -15,6 +16,7 @@ ReactDOM.render(
         <Route path="about" element={<About />} />
         <Route path="test" element={<Test />} />
         <Route path="results" element={<Results />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   </BrowserRouter>,

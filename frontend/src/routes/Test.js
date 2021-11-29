@@ -6,35 +6,10 @@ import TestPageHeader from '../components/TestPageHeader';
 import Fail from '../components/Fail';
 import ButtonAnswer from '../components/ButtonAnswer';
 import HCenter from '../components/HCenter';
-
-const noQuestions = [
-  {
-    question: 'No question',
-    answers: [
-      {
-        answer: 'Exit',
-        correct: false,
-      },
-      {
-        answer: 'Exit',
-        correct: false,
-      },
-      {
-        answer: 'Exit',
-        correct: false,
-      },
-      {
-        answer: 'Exit',
-        correct: false,
-      },
-    ],
-    learn: 'Exit',
-  },
-];
+import NotFound from './NotFound';
 
 const Test = () => {
-  let { state: questions } = useLocation();
-  questions = questions || noQuestions;
+  const { state: questions } = useLocation();
 
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
@@ -78,6 +53,8 @@ const Test = () => {
   const hideFailWindow = () => {
     setShowFail(false);
   };
+
+  if (!questions) return <NotFound />;
 
   return (
     <HCenter>
