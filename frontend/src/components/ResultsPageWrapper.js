@@ -10,7 +10,7 @@ ResultsPageWrapper.propTypes = {
 };
 
 const StyledResultsPageWrapper = styled.main`
-  margin-top: 8em;
+  margin-top: 6em;
   width: 85vw;
   max-width: 1320px;
   margin-bottom: 6em;

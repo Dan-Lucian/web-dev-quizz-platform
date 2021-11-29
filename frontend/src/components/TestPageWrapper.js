@@ -10,7 +10,7 @@ TestPageWrapper.propTypes = {
 };
 
 const StyledTestPageWrapper = styled.main`
-  margin-top: 8em;
+  margin-top: 6em;
   width: 85vw;
   max-width: 1320px;
   margin-bottom: 10em;
