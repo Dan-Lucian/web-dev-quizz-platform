@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+
+// extension of
 import { StyledButtonShared } from '../../../components/Button';
+
+// specific parent environment
+import { StyledPopupFail } from './PopupFail.styles.js';
 
 const Button = ({ text, onClick, isCorrect, isRevealed, disabled }) => {
   if (isRevealed) {
@@ -50,6 +55,23 @@ const StyledButton = styled(StyledButtonShared)`
     &:active {
       transform: translateY(4px);
       box-shadow: 0 2px 0 rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  ${StyledPopupFail} & {
+    background-color: ${(p) => p.theme.color.bg};
+    color: ${(p) => p.theme.color.text};
+    width: 100%;
+    padding: 1em;
+    opacity: 1;
+    box-shadow: none;
+
+    &:hover {
+      background: ${(p) => p.theme.color.green};
+    }
+
+    &:active {
+      transform: none;
     }
   }
 `;

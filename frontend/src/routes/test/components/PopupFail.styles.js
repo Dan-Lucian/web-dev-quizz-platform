@@ -10,4 +10,4 @@ const StyledPopupFail = styled.article`
 `;
 
 export { StyledPopupFail };
-// exported to PopupFail.js, Button.js, ExternalLink.js, Text.js
+// imported by Button.js and PopupFail.js

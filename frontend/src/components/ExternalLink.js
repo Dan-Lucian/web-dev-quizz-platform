@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { StyledPopupFail } from '../routes/test/components/PopupFail.styles';
 
 const ExternalLink = ({ type, text, href }) => {
   const props = {
@@ -44,12 +43,6 @@ const StyledExternalLink = styled.a`
   &:hover {
     background: ${(p) => p.theme.color.text};
     color: ${(p) => p.theme.color.bgAccent};
-  }
-
-  ${StyledPopupFail} & {
-    text-decoration: underline;
-    padding: 0.3em;
-    border: none;
   }
 `;
 
