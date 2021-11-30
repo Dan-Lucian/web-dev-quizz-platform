@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Header = ({ children, style }) => (
-  <StyledHeader style={style}>{children}</StyledHeader>
+  <StyledHeaderShared style={style}>{children}</StyledHeaderShared>
 );
 
 Header.propTypes = {
@@ -10,7 +10,7 @@ Header.propTypes = {
   style: PropTypes.object,
 };
 
-const StyledHeader = styled.header`
+const StyledHeaderShared = styled.header`
   margin-bottom: 5em;
   display: flex;
   flex-direction: column;
@@ -18,5 +18,7 @@ const StyledHeader = styled.header`
   justify-content: center;
   background-color: ${(props) => props.theme.colorBg};
 `;
+
+export { StyledHeaderShared };
 
 export default Header;

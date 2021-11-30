@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 // shared components
-import Header from '../../components/Header';
 import Heading from '../../components/Heading';
 import HCenter from '../../components/HCenter';
 
@@ -10,6 +9,8 @@ import HCenter from '../../components/HCenter';
 import ButtonStart from './components/ButtonStart';
 import WrapperTopics from './components/WrapperTopics';
 import WrapperPage from './components/WrapperPage';
+import StatusRequest from './components/StatusRequest';
+import Header from './components/Header';
 
 // shared hooks
 import { useLocalStorageState } from '../../hooks/useLocalStorageState';
@@ -117,8 +118,8 @@ const PageIndex = () => {
             <Heading level={1} style={{ marginBottom: '50px' }}>
               Welcome there fellow believer
             </Heading>
-            {status === 'pending' && 'Loading'}
             <ButtonStart onClick={startTest} text="Start the test" />
+            <StatusRequest status={status} />
           </Header>
 
           <Heading
