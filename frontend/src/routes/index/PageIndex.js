@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 // shared components
 import Header from '../../components/Header';
@@ -12,6 +13,7 @@ import WrapperPage from './components/WrapperPage';
 
 // shared hooks
 import { useLocalStorageState } from '../../hooks/useLocalStorageState';
+import { useAsync } from '../../hooks/useAsync';
 
 // shared services
 import questions from '../../services/questions';
@@ -61,17 +63,17 @@ const PageIndex = () => {
     'testTopics',
     []
   );
-
+  const { data: receivedQuestions, status, run } = useAsync({ status: 'idle' });
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (status === 'resolved') {
+      navigate('/test', { state: receivedQuestions });
+    }
+  }, [navigate, receivedQuestions, status]);
+
   const startTest = () => {
-    console.log('post request sent');
-    questions
-      .send(selectedTopics)
-      .then((res) => {
-        navigate('/test', { state: res });
-      })
-      .catch((err) => console.log('request failed', err));
+    run(questions.send(selectedTopics));
   };
 
   const toggleTopic = (e) => {
@@ -115,6 +117,7 @@ const PageIndex = () => {
             <Heading level={1} style={{ marginBottom: '50px' }}>
               Welcome there fellow believer
             </Heading>
+            {status === 'pending' && 'Loading'}
             <ButtonStart onClick={startTest} text="Start the test" />
           </Header>
 
