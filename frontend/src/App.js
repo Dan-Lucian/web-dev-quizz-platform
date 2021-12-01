@@ -58,8 +58,8 @@ const App = () => {
         <Nav hidden={scrollDirection === 'down'}>
           <Logo />
           <Links>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <Link to="/">_Home</Link>
+            <Link to="/about">_About</Link>
             <Link to="/test">%test%</Link>
           </Links>
           <Hamburger isMenuOpen={isMenuOpen} onClick={toggleMenuOpen} />

@@ -4,8 +4,8 @@ import Heading from '../components/Heading';
 
 const PageNotFound = () => (
   <StyledNotFound>
-    <Header>
-      <Heading>No such page</Heading>
+    <Header style={{ paddingTop: '8em' }}>
+      <Heading level={2}>No such page :(</Heading>
     </Header>
   </StyledNotFound>
 );
