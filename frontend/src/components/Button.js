@@ -53,7 +53,7 @@ export const StyledButtonShared = styled.button`
 
   @media (hover: hover) {
     &:hover {
-      opacity: 1;
+      opacity: ${(p) => (p.theme.isTouch ? 'none' : '1')};
     }
   }
 

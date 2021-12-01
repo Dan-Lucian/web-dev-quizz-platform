@@ -35,18 +35,21 @@ const theme = {
     bgBtn5: '#61DAFB',
     textBtn5: '#000',
   },
-
   screen: {
     med: '768px',
     lg: '1200px',
     xlg: '1800px',
   },
+  isTouch: false,
 };
 
 // renders nav, oulet, footer
 const App = () => {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
   const scrollDirection = useScrollDirection('up');
+
+  theme.isTouch =
+    !!('ontouchstart' in window) || window.navigator.msMaxTouchPoints > 0;
 
   return (
     <ThemeProvider theme={theme}>
