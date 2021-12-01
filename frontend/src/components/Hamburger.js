@@ -29,6 +29,10 @@ Hamburger.propTypes = {
   toggleMenuOpen: PropTypes.func,
 };
 
-const StyledHamburger = styled.div``;
+const StyledHamburger = styled.div`
+  @media (min-width: ${(p) => p.theme.screen.med}) {
+    display: none;
+  }
+`;
 
 export default Hamburger;
