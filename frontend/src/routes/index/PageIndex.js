@@ -19,6 +19,9 @@ import { useAsync } from '../../hooks/useAsync';
 // shared services
 import questions from '../../services/questions';
 
+// shared utils
+import { shuffleArray } from '../../utils/shuffleArray';
+
 const dbTopics = [
   {
     mainTopic: 'Internet',
@@ -69,6 +72,10 @@ const PageIndex = () => {
 
   useEffect(() => {
     if (status === 'resolved') {
+      receivedQuestions.forEach((question) => {
+        const shuffledAnswers = shuffleArray(question.answers);
+        question.answers = shuffledAnswers;
+      });
       navigate('/test', { state: receivedQuestions });
     }
   }, [navigate, receivedQuestions, status]);
