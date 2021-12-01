@@ -1,76 +1,34 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { useRef } from 'react';
 
-const Hamburger = ({ isMenuOpen, onClick }) => (
-  <StyledHamburgerContainer onClick={onClick}>
-    <StyledLines isMenuOpen={isMenuOpen} />
-  </StyledHamburgerContainer>
-);
+// shared components
+import HamburgerIcon from './HamburgerIcon';
+import HamburgerMenu from './HamburgerMenu';
 
-Hamburger.propTypes = {
-  onClick: PropTypes.func,
-  isMenuOpen: PropTypes.bool,
+// shared hooks
+import { useOutsideClick } from '../hooks/useOutsideClick';
+
+const Hamburger = ({ children, isMenuOpen, toggleMenuOpen }) => {
+  const refHamburger = useRef(null);
+  useOutsideClick(refHamburger, () => toggleMenuOpen(false));
+
+  return (
+    <StyledHamburger ref={refHamburger}>
+      <HamburgerIcon isMenuOpen={isMenuOpen} onClick={toggleMenuOpen} />
+      <HamburgerMenu isMenuOpen={isMenuOpen} toggleMenuOpen={toggleMenuOpen}>
+        {children}
+      </HamburgerMenu>
+    </StyledHamburger>
+  );
 };
 
-const StyledLines = styled.div`
-  width: 36px;
-  height: 3px;
-  background-color: ${(p) => p.theme.color.hamburger};
-  position: relative;
-  transition: transform 0.075s ease;
+Hamburger.propTypes = {
+  children: PropTypes.node,
+  isMenuOpen: PropTypes.bool,
+  toggleMenuOpen: PropTypes.func,
+};
 
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    width: 36px;
-    height: 3px;
-    background-color: ${(p) => p.theme.color.hamburger};
-    position: absolute;
-  }
-
-  &::before {
-    bottom: 10px;
-    transition: bottom 0.075s 0.12s ease;
-  }
-
-  &::after {
-    bottom: -10px;
-    transition: bottom 0.075s 0.12s ease, transform 0.075s ease;
-  }
-
-  ${(p) =>
-    p.isMenuOpen &&
-    `
-    transform: rotate(45deg);
-    transition-delay: 0.12s;
-
-    &::before {
-      bottom: 0;
-      transition: bottom 0.075s ease;
-    }
-
-    &::after {
-      bottom: 0;
-      transform: rotate(-90deg);
-      transition: bottom 0.075s ease, transform 0.075s 0.12s ease;
-    }
-  `}
-`;
-
-const StyledHamburgerContainer = styled.button`
-  height: 40px;
-  width: 50px;
-  background: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-
-  @media (min-width: ${(p) => p.theme.screen.med}) {
-    display: none;
-  }
-`;
+const StyledHamburger = styled.div``;
 
 export default Hamburger;

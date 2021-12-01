@@ -1,19 +1,20 @@
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable import/no-named-as-default */
 import { ThemeProvider } from 'styled-components';
-import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { useScrollDirection } from './hooks/useScrollDirection';
 
 import GlobalStyle from './Global.style';
 import Wrapper from './components/Wrapper';
 import Nav from './components/Nav';
 import Logo from './components/Logo';
-import Hamburger from './components/Hamburger';
 import Footer from './components/Footer';
 import Socials from './components/Socials';
 import Links from './components/Links';
-import HamburgerMenu from './components/HamburgerMenu';
+import Hamburger from './components/Hamburger';
+
+// shared hooks
+import { useScrollDirection } from './hooks/useScrollDirection';
+import { useToggle } from './hooks/useToggle';
 
 const theme = {
   color: {
@@ -44,11 +45,7 @@ const theme = {
 
 // renders nav, oulet, footer
 const App = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenuOpen = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
-
+  const [isMenuOpen, toggleMenuOpen] = useToggle(false);
   const scrollDirection = useScrollDirection('up');
 
   return (
@@ -60,20 +57,15 @@ const App = () => {
           <Links>
             <Link to="/">_Home</Link>
             <Link to="/about">_About</Link>
-            <Link to="/test">%test%</Link>
           </Links>
-          <Hamburger isMenuOpen={isMenuOpen} onClick={toggleMenuOpen} />
-          <HamburgerMenu isMenuOpen={isMenuOpen}>
+          <Hamburger isMenuOpen={isMenuOpen} toggleMenuOpen={toggleMenuOpen}>
             <Link onClick={toggleMenuOpen} to="/">
               Home
             </Link>
             <Link onClick={toggleMenuOpen} to="/about">
               About
             </Link>
-            <Link onClick={toggleMenuOpen} to="/test">
-              %test%
-            </Link>
-          </HamburgerMenu>
+          </Hamburger>
         </Nav>
 
         <Outlet />

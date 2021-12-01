@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 // extends shared component
 import { StyledHeaderShared } from '../../../components/Header';
 
-console.log(StyledHeaderShared);
-
 const Header = ({ children }) => <StyledHeader>{children}</StyledHeader>;
 
 Header.propTypes = {

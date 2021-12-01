@@ -1,6 +1,19 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+const HamburgerMenu = ({ children, isMenuOpen }) => (
+  <StyledHamburgerMenu
+    style={{ '--display-menu': isMenuOpen ? 'flex' : 'none' }}
+  >
+    {children}
+  </StyledHamburgerMenu>
+);
+
+HamburgerMenu.propTypes = {
+  children: PropTypes.node,
+  isMenuOpen: PropTypes.bool,
+};
+
 const StyledHamburgerMenu = styled.div`
   background-color: ${(p) => p.theme.color.text};
   color: ${(p) => p.theme.color.bgAccent};
@@ -31,18 +44,5 @@ const StyledHamburgerMenu = styled.div`
     background-color: ${(p) => p.theme.color.bgAccent};
   }
 `;
-
-const HamburgerMenu = ({ children, isMenuOpen }) => (
-  <StyledHamburgerMenu
-    style={{ '--display-menu': isMenuOpen ? 'flex' : 'none' }}
-  >
-    {children}
-  </StyledHamburgerMenu>
-);
-
-HamburgerMenu.propTypes = {
-  children: PropTypes.node,
-  isMenuOpen: PropTypes.bool,
-};
 
 export default HamburgerMenu;
