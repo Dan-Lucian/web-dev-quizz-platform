@@ -47,10 +47,6 @@ const PageIndex = () => {
   };
 
   const toggleTopic = (e) => {
-    // for mobile devices
-    // on mobile the focused state cannot be difed from pressed
-    e.target.blur();
-
     const toggledTopic = e.target.textContent.toLowerCase();
 
     if (selectedTopics.includes(toggledTopic)) {

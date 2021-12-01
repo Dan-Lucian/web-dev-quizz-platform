@@ -21,10 +21,12 @@ const StyledButtonStart = styled.button`
   box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
 
-  &:hover {
-    background: ${(p) => p.theme.color.text};
-    border: 3px solid ${(p) => p.theme.color.bg};
-    color: ${(p) => p.theme.color.bg};
+  @media (hover: hover) {
+    &:hover {
+      background: ${(p) => p.theme.color.text};
+      border: 3px solid ${(p) => p.theme.color.bg};
+      color: ${(p) => p.theme.color.bg};
+    }
   }
 
   &:active {

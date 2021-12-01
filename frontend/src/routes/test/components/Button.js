@@ -44,9 +44,11 @@ const StyledButton = styled(StyledButtonShared)`
     box-shadow: 0 2px 0 rgba(255, 255, 255, 0.2);
   }
 
-  &:hover {
-    background: rgba(255, 255, 255, 0.8);
-    color: ${(p) => p.theme.color.bgAccent};
+  @media (hover: hover) {
+    &:hover {
+      background: rgba(255, 255, 255, 0.8);
+      color: ${(p) => p.theme.color.bgAccent};
+    }
   }
 
   @media (min-width: ${(p) => p.theme.screen.lg}) {
@@ -79,18 +81,22 @@ const StyledButton = styled(StyledButtonShared)`
 const StyledButtonCorrect = styled(StyledButton)`
   background-color: ${(p) => p.theme.color.green};
 
-  &:hover {
-    background: ${(p) => p.theme.color.green};
-    color: ${(p) => p.theme.color.text};
+  @media (hover: hover) {
+    &:hover {
+      background: ${(p) => p.theme.color.green};
+      color: ${(p) => p.theme.color.text};
+    }
   }
 `;
 
 const StyledButtonWrong = styled(StyledButton)`
   background-color: ${(p) => p.theme.color.red};
 
-  &:hover {
-    background: ${(p) => p.theme.color.red};
-    color: ${(p) => p.theme.color.text};
+  @media (hover: hover) {
+    &:hover {
+      background: ${(p) => p.theme.color.red};
+      color: ${(p) => p.theme.color.text};
+    }
   }
 `;
 

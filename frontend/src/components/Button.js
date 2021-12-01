@@ -51,8 +51,10 @@ export const StyledButtonShared = styled.button`
   background-color: ${(p) => p.theme.color.bgAccent};
   color: #fff;
 
-  &:hover {
-    opacity: 1;
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+    }
   }
 
   @media (min-width: ${(props) => props.theme.screen.med}) {
