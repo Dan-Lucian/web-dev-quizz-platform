@@ -14,7 +14,7 @@ import Header from './components/Header';
 import StatusUnselected from './components/StatusUnselected';
 
 // shared hooks
-import { useLocalStorageState } from '../../hooks/useLocalStorageState';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 import { useAsync } from '../../hooks/useAsync';
 
 // shared services
@@ -23,51 +23,11 @@ import questions from '../../services/questions';
 // shared utils
 import { shuffleArray } from '../../utils/shuffleArray';
 
-const dbTopics = [
-  {
-    mainTopic: 'Internet',
-    secondaryTopics: ['HTTP', 'Websites', 'Security'],
-    colorText: '#fff',
-    colorBg: '#2DD4A0',
-  },
-  {
-    mainTopic: 'HTML',
-    secondaryTopics: ['Semantics', 'Forms', 'Text'],
-    colorText: '#fff',
-    colorBg: '#F16529',
-  },
-  {
-    mainTopic: 'CSS',
-    secondaryTopics: ['Selectors', 'Units', 'Layout'],
-    colorText: '#fff',
-    colorBg: '#2965F1',
-  },
-  {
-    mainTopic: 'JavaScript',
-    secondaryTopics: ['Internals', 'Objects', 'Functions', 'Web data', 'DOM'],
-    colorText: '#282C34',
-    colorBg: '#F7DF1E',
-  },
-  {
-    mainTopic: 'React',
-    secondaryTopics: ['Concepts', 'Hooks', 'Classes', 'CRA'],
-    colorText: '#282C34',
-    colorBg: '#61DAFB',
-  },
-];
-
-const getTopicInfo = (topic) =>
-  dbTopics.find(
-    (t) =>
-      t.mainTopic.toLowerCase() === topic ||
-      t.secondaryTopics.map((st) => st.toLowerCase()).includes(topic)
-  );
+// local utils
+import { dbTopics, getTopicInfo } from './utils/dbTopics';
 
 const PageIndex = () => {
-  const [selectedTopics, setSelectedTopics] = useLocalStorageState(
-    'testTopics',
-    []
-  );
+  const [selectedTopics, setSelectedTopics] = useLocalStorage('testTopics', []);
   const { data: receivedQuestions, status, run } = useAsync({ status: 'idle' });
   const navigate = useNavigate();
 

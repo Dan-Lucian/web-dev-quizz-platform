@@ -7,7 +7,7 @@ import { useState, useRef, useEffect } from 'react';
  * @param {{serialize: Function, deserialize: Function}} options The serialize and deserialize functions to use (defaults to JSON.stringify and JSON.parse respectively)
  */
 
-function useLocalStorageState(
+function useLocalStorage(
   key,
   defaultValue = '',
   { serialize = JSON.stringify, deserialize = JSON.parse } = {}
@@ -34,4 +34,4 @@ function useLocalStorageState(
   return [state, setState];
 }
 
-export { useLocalStorageState };
+export { useLocalStorage };
