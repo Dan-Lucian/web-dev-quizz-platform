@@ -11,6 +11,7 @@ import WrapperTopics from './components/WrapperTopics';
 import WrapperPage from './components/WrapperPage';
 import StatusRequest from './components/StatusRequest';
 import Header from './components/Header';
+import StatusUnselected from './components/StatusUnselected';
 
 // shared hooks
 import { useLocalStorageState } from '../../hooks/useLocalStorageState';
@@ -81,6 +82,7 @@ const PageIndex = () => {
   }, [navigate, receivedQuestions, status]);
 
   const startTest = () => {
+    if (selectedTopics.length === 0) return;
     run(questions.send(selectedTopics));
   };
 
@@ -127,6 +129,7 @@ const PageIndex = () => {
             </Heading>
             <ButtonStart onClick={startTest} text="Start the test" />
             <StatusRequest status={status} />
+            {selectedTopics.length === 0 && <StatusUnselected />}
           </Header>
 
           <Heading
