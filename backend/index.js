@@ -2,7 +2,6 @@
 import dotenv from 'dotenv/config';
 import express from 'express';
 import morgan from 'morgan';
-import mongoose from 'mongoose';
 import { Question } from './models/question.js';
 
 const app = express();
@@ -13,17 +12,17 @@ app.use(morgan('tiny'));
 
 app.post('/', (req, res) => {
   const { body } = req;
-  console.log('post received', body);
 
-  Question.find({ topics: { $in: body } }).then((result) => {
-    res.json(result);
-  });
+  Question.find({ topics: { $in: body } })
+    .then((result) => {
+      res.json(result);
+    })
+    .catch(() => res.status(500).end());
 });
 
 app.get('/questions', (req, res) => {
   Question.find({}).then((result) => {
     res.json(result);
-    mongoose.connection.close();
   });
 });
 
@@ -67,15 +66,6 @@ app.use(unknownEndpoint);
 
 const errorHandler = (err, req, res, next) => {
   console.error(err.message);
-
-  // switch (err.name) {
-  // case 'CastError':
-  //   return res.status(400).send({ error: 'malformatted id' });
-
-  // case 'ValidationError':
-  //   return res.status(400).send({ error: err.message });
-  // }
-
   next(err);
 };
 
