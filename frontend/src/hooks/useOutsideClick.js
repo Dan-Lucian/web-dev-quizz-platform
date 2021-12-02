@@ -1,10 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-const useOutsideClick = (ref, callback) => {
+const useOutsideClick = (ref) => {
+  const [isClickOutside, setIsClickOutside] = useState(false);
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (ref.current && !ref.current.contains(e.target)) {
-        callback();
+        setIsClickOutside(true);
+      } else {
+        setIsClickOutside(false);
       }
     };
 
@@ -12,7 +16,9 @@ const useOutsideClick = (ref, callback) => {
     return () => {
       document.removeEventListener('pointerdown', handleClickOutside);
     };
-  }, [callback, ref]);
+  }, [ref]);
+
+  return isClickOutside;
 };
 
 export { useOutsideClick };

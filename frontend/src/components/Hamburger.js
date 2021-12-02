@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 // shared components
 import HamburgerIcon from './HamburgerIcon';
@@ -11,7 +11,11 @@ import { useOutsideClick } from '../hooks/useOutsideClick';
 
 const Hamburger = ({ children, isMenuOpen, toggleMenuOpen }) => {
   const refHamburger = useRef(null);
-  useOutsideClick(refHamburger, () => toggleMenuOpen(false));
+  const isClickOutside = useOutsideClick(refHamburger);
+
+  useEffect(() => {
+    if (isClickOutside) toggleMenuOpen(false);
+  }, [isClickOutside, toggleMenuOpen]);
 
   return (
     <StyledHamburger ref={refHamburger}>
