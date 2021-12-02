@@ -1,10 +1,13 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const StatusUnselected = () => (
-  <StyledStatusUnselected>No topic selected</StyledStatusUnselected>
-);
+const Error = ({ text }) => <StyledError>{text}</StyledError>;
 
-const StyledStatusUnselected = styled.p`
+Error.propTypes = {
+  text: PropTypes.string,
+};
+
+const StyledError = styled.p`
   position: absolute;
   bottom: -3em;
   background-color: ${(p) => p.theme.color.bgAccent};
@@ -13,4 +16,4 @@ const StyledStatusUnselected = styled.p`
   color: ${(p) => p.theme.color.red};
 `;
 
-export default StatusUnselected;
+export default Error;

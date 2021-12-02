@@ -11,7 +11,7 @@ import WrapperTopics from './components/WrapperTopics';
 import WrapperPage from './components/WrapperPage';
 import StatusRequest from './components/StatusRequest';
 import Header from './components/Header';
-import StatusUnselected from './components/StatusUnselected';
+import Error from './components/Error';
 
 // shared hooks
 import { useLocalStorage } from '../../hooks/useLocalStorage';
@@ -28,18 +28,29 @@ import { dbTopics, getTopicInfo } from './utils/dbTopics';
 
 const PageIndex = () => {
   const [selectedTopics, setSelectedTopics] = useLocalStorage('testTopics', []);
-  const { data: receivedQuestions, status, run } = useAsync({ status: 'idle' });
+  const {
+    data: receivedQuestions,
+    status,
+    run,
+    error,
+    setError,
+  } = useAsync({ status: 'idle' });
   const navigate = useNavigate();
 
   useEffect(() => {
     if (status === 'resolved') {
+      if (receivedQuestions.length === 0) {
+        console.log('received empty array');
+        setError({ message: 'Received empty array' });
+        return;
+      }
       receivedQuestions.forEach((question) => {
         const shuffledAnswers = shuffleArray(question.answers);
         question.answers = shuffledAnswers;
       });
       navigate('/test', { state: receivedQuestions });
     }
-  }, [navigate, receivedQuestions, status]);
+  }, [navigate, receivedQuestions, setError, status]);
 
   const startTest = () => {
     if (selectedTopics.length === 0) return;
@@ -89,7 +100,8 @@ const PageIndex = () => {
             </Heading>
             <ButtonStart onClick={startTest} text="Start the test" />
             <StatusRequest status={status} />
-            {selectedTopics.length === 0 && <StatusUnselected />}
+            {selectedTopics.length === 0 && <Error text="No topics selected" />}
+            {error && <Error text={error.message} />}
           </Header>
 
           <Heading
