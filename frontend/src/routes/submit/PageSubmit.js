@@ -48,7 +48,7 @@ const PageSubmit = () => {
         { answer: answerWrong2, correct: false },
         { answer: answerWrong3, correct: false },
       ],
-      topics: topics.split(','),
+      topics: topics.split(',').map((topic) => topic.trim()),
       moreInfo,
     };
 
@@ -105,7 +105,7 @@ const PageSubmit = () => {
           />
           <input type="submit" value="Submit" />
           <p>Status: {status}</p>
-          <p>Reponse: {receivedData}</p>
+          <p>Reponse: {JSON.stringify(receivedData)}</p>
         </form>
       </WrapperPage>
     </HCenter>
