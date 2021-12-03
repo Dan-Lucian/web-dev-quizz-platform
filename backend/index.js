@@ -26,30 +26,10 @@ app.get('/questions', (req, res) => {
   });
 });
 
-app.get('/create', (req, res) => {
-  const question = new Question({
-    question: 'some question 6',
-    answers: [
-      {
-        answer: 'Correct',
-        correct: true,
-      },
-      {
-        answer: 'False',
-        correct: false,
-      },
-      {
-        answer: 'False',
-        correct: false,
-      },
-      {
-        answer: 'False',
-        correct: false,
-      },
-    ],
-    topics: ['html', 'forms'],
-    moreInfo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-  });
+app.post('/submit', (req, res) => {
+  const { body } = req;
+
+  const question = new Question(body);
 
   question
     .save()
