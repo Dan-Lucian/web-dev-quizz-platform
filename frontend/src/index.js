@@ -8,6 +8,7 @@ import PageTest from './routes/test/PageTest';
 import PageResults from './routes/results/PageResults';
 import PageNotFound from './routes/PageNotFound';
 import ScrollToTop from './components/ScrollToTop';
+import PageSubmit from './routes/submit/PageSubmit';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path="about" element={<PageAbout />} />
         <Route path="test" element={<PageTest />} />
         <Route path="results" element={<PageResults />} />
+        <Route path="submit" element={<PageSubmit />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
