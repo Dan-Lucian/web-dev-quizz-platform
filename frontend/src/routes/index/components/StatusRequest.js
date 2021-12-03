@@ -5,7 +5,7 @@ const StatusRequest = ({ status, error, selectedTopics }) => {
   if (selectedTopics.length === 0) {
     return (
       <StyledStatusRequestRejected>
-        No selected topics
+        No topics selected
       </StyledStatusRequestRejected>
     );
   }

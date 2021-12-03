@@ -13,6 +13,9 @@ import { useAsync } from '../../hooks/useAsync';
 // shared services
 import questions from '../../services/questions';
 
+// shared utils
+import { getTopicInfo } from '../index/utils/dbTopics';
+
 const PageSubmit = () => {
   const [question, setQuestion] = useState('');
   const [answerCorrect, setAnswerCorrect] = useState('');
@@ -23,6 +26,16 @@ const PageSubmit = () => {
   const [moreInfo, setMoreInfo] = useState('');
 
   const { data: receivedData, status, run } = useAsync();
+
+  const resetForm = () => {
+    setQuestion('');
+    setAnswerCorrect('');
+    setAnswerWrong1('');
+    setAnswerWrong2('');
+    setAnswerWrong3('');
+    setTopics('');
+    setMoreInfo('');
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,9 +49,13 @@ const PageSubmit = () => {
       topics.length === 0 ||
       moreInfo.length === 0
     ) {
-      console.log('one input was empty');
-      return;
+      throw new Error('one input was empty');
     }
+
+    const splitTopics = topics.split(',').map((topic) => topic.trim());
+    splitTopics.forEach((topic) => {
+      if (!getTopicInfo(topic)) throw new Error(`invalid topic: ${topic}`);
+    });
 
     const data = {
       question,
@@ -48,7 +65,7 @@ const PageSubmit = () => {
         { answer: answerWrong2, correct: false },
         { answer: answerWrong3, correct: false },
       ],
-      topics: topics.split(',').map((topic) => topic.trim()),
+      topics: splitTopics,
       moreInfo,
     };
 
@@ -104,6 +121,7 @@ const PageSubmit = () => {
             id="more-info"
           />
           <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" onClick={resetForm} />
           <p>Status: {status}</p>
           <p>Reponse: {JSON.stringify(receivedData)}</p>
         </form>

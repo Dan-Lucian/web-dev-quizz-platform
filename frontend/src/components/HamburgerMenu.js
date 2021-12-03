@@ -18,8 +18,8 @@ const StyledHamburgerMenu = styled.div`
   background-color: ${(p) => p.theme.color.text};
   color: ${(p) => p.theme.color.bgAccent};
   position: absolute;
-  right: 0;
-  top: 100%;
+  right: 0.5em;
+  top: 80%;
   display: var(--display-menu, none);
   flex-direction: column;
   padding: 1.5em;

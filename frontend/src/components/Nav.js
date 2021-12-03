@@ -15,7 +15,7 @@ Nav.propTypes = {
 const StyledNav = styled.nav`
   position: fixed;
   z-index: 100;
-  padding: 16px 10%;
+  padding: 16px 6%;
   left: 0;
   right: 0;
   display: flex;
