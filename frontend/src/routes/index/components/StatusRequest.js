@@ -1,7 +1,15 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const StatusRequest = ({ status }) => {
+const StatusRequest = ({ status, error, selectedTopics }) => {
+  if (selectedTopics.length === 0) {
+    return (
+      <StyledStatusRequestRejected>
+        No selected topics
+      </StyledStatusRequestRejected>
+    );
+  }
+
   switch (status) {
     case 'pending':
       return (
@@ -13,7 +21,7 @@ const StatusRequest = ({ status }) => {
     case 'rejected':
       return (
         <StyledStatusRequestRejected>
-          An error occurred :(
+          {error?.response.data || error.message}
         </StyledStatusRequestRejected>
       );
 
@@ -24,6 +32,8 @@ const StatusRequest = ({ status }) => {
 
 StatusRequest.propTypes = {
   status: PropTypes.string,
+  error: PropTypes.object,
+  selectedTopics: PropTypes.array,
 };
 
 const StyledStatusRequest = styled.div`

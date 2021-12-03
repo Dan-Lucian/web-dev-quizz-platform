@@ -11,7 +11,6 @@ import WrapperTopics from './components/WrapperTopics';
 import WrapperPage from './components/WrapperPage';
 import StatusRequest from './components/StatusRequest';
 import Header from './components/Header';
-import Error from './components/Error';
 
 // shared hooks
 import { useLocalStorage } from '../../hooks/useLocalStorage';
@@ -39,15 +38,11 @@ const PageIndex = () => {
 
   useEffect(() => {
     if (status === 'resolved') {
-      if (receivedQuestions.length === 0) {
-        console.log('received empty array');
-        setError({ message: 'Received empty array' });
-        return;
-      }
       receivedQuestions.forEach((question) => {
         const shuffledAnswers = shuffleArray(question.answers);
         question.answers = shuffledAnswers;
       });
+
       navigate('/test', { state: receivedQuestions });
     }
   }, [navigate, receivedQuestions, setError, status]);
@@ -99,9 +94,12 @@ const PageIndex = () => {
               Welcome there fellow believer
             </Heading>
             <ButtonStart onClick={startTest} text="Start the test" />
-            <StatusRequest status={status} />
-            {selectedTopics.length === 0 && <Error text="No topics selected" />}
-            {error && <Error text={error.message} />}
+            <StatusRequest
+              selectedTopics={selectedTopics}
+              status={status}
+              error={error}
+              data={receivedQuestions}
+            />
           </Header>
 
           <Heading
