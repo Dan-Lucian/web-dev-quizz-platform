@@ -8,6 +8,7 @@ const Button = ({ text, type, pressed, onClick }) => {
     style: {
       '--btn-opacity': pressed ? '1' : '0.5',
     },
+    type: 'button',
   };
 
   switch (type) {

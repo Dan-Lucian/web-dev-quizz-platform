@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Wrapper = ({ children }) => <StyledWrapper>{children}</StyledWrapper>;
+const Wrapper = ({ children }) => (
+  <StyledWrapper aria-hidden="true">{children}</StyledWrapper>
+);
 
 Wrapper.propTypes = {
   children: PropTypes.node,

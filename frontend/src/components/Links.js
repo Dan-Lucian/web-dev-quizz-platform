@@ -2,12 +2,11 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledLinks = styled.ul`
-  display: flex;
   justify-content: flex-end;
   display: none;
 
   @media (min-width: ${(p) => p.theme.screen.med}) {
-    display: block;
+    display: flex;
   }
 
   a {

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Topic from './Topic';
 
 const WrapperTopics = ({ dbTopics, selectedTopics, toggleTopic }) => (
-  <StyledTopics>
+  <StyledTopics aria-hidden="true">
     {dbTopics.map((topic, idx) => (
       <Topic
         key={idx}

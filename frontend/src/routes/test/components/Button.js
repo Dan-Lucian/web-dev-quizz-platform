@@ -8,23 +8,21 @@ import { StyledButtonShared } from '../../../components/Button';
 import { StyledPopupFail } from './PopupFail.styles.js';
 
 const Button = ({ text, onClick, isCorrect, isRevealed, disabled }) => {
+  const props = {
+    disabled,
+    onClick,
+    type: 'button',
+  };
+
   if (isRevealed) {
     return isCorrect ? (
-      <StyledButtonCorrect disabled={disabled} onClick={onClick}>
-        {text}
-      </StyledButtonCorrect>
+      <StyledButtonCorrect {...props}>{text}</StyledButtonCorrect>
     ) : (
-      <StyledButtonWrong disabled={disabled} onClick={onClick}>
-        {text}
-      </StyledButtonWrong>
+      <StyledButtonWrong {...props}>{text}</StyledButtonWrong>
     );
   }
 
-  return (
-    <StyledButton disabled={disabled} onClick={onClick}>
-      {text}
-    </StyledButton>
-  );
+  return <StyledButton {...props}>{text}</StyledButton>;
 };
 
 Button.propTypes = {
