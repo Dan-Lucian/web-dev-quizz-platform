@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 // shared components
 import Button from '../../../components/Button';
+import HeadingFakeHidden from '../../../components/HeadingFakeHidden';
 
 const Topic = ({
   contents: { mainTopic, secondaryTopics },
@@ -14,6 +15,7 @@ const Topic = ({
 
   return (
     <StyledTopic>
+      <HeadingFakeHidden>Topics related to {mainTopic}</HeadingFakeHidden>
       {labels.map((label, idx) => (
         <Button
           pressed={selectedTopics.includes(label.toLowerCase())}
@@ -26,6 +28,9 @@ const Topic = ({
     </StyledTopic>
   );
 };
+// the HeadingFakeHidden will not be shown
+// it is only there because a section ought to have a heading
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section#using_a_section_without_a_heading
 
 Topic.propTypes = {
   contents: PropTypes.object,

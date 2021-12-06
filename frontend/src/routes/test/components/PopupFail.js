@@ -19,7 +19,8 @@ const PopupFail = ({ moreInfo, nextQuestion, hideFailWindow }) => {
       <Button text="Next question" onClick={handleClick} />
       <Text>Seems like you need to recheck this.</Text>
       <Text>
-        Here’s a useful <LinkExternal text="link" href={moreInfo} />
+        Here you can find{' '}
+        <LinkExternal text="more information" href={moreInfo} />
       </Text>
     </StyledPopupFail>
   );

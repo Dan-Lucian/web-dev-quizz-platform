@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const ExternalLink = ({ type, text, href }) => {
   const props = {
     target: '_blank',
+    rel: 'noopener noreferrer',
     href,
   };
 

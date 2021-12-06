@@ -1,7 +1,7 @@
 import { getRandomInt } from './getRandomInt.js';
 
 const getRandomInts = (amount, min, max) => {
-  if (amount > max - min) {
+  if (amount > max + 1 - min) {
     console.log('amount bigger than max - min');
     return;
   }

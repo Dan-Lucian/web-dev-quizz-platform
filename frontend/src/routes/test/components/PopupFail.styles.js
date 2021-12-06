@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledPopupFail = styled.article`
+const StyledPopupFail = styled.aside`
   padding: 1em 3em;
   margin-top: 2em;
   background-color: ${(p) => p.theme.color.bgAccent};

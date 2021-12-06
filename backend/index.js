@@ -25,7 +25,7 @@ app.post('/', (req, res) => {
       // get array of 10 random numbers to select the questions later
       const randomNumbers = getRandomInts(10, 0, result.length - 1);
       if (!randomNumbers) {
-        res.status(500).send('Amount too big');
+        res.status(500).send(`Not enough questions: ${result.length}`);
         return;
       }
 

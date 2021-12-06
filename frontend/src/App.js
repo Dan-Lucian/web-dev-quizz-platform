@@ -78,8 +78,10 @@ const App = () => {
         <Outlet />
 
         <Footer>
-          <p>Author: </p>
-          <Socials />
+          <address>
+            <p>Author: </p>
+            <Socials />
+          </address>
         </Footer>
       </Wrapper>
     </ThemeProvider>

@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const LinkExternal = ({ text, href }) => (
-  <StyledLinkExternal href={href}>{text}</StyledLinkExternal>
+  <StyledLinkExternal target="_blank" rel="noopener noreferrer" href={href}>
+    {text}
+  </StyledLinkExternal>
 );
 
 LinkExternal.propTypes = {
