@@ -51,6 +51,7 @@ export const StyledButtonShared = styled.button`
   cursor: pointer;
   background-color: ${(p) => p.theme.color.bgAccent};
   color: #fff;
+  overflow: hidden;
 
   @media (hover: hover) {
     &:hover {

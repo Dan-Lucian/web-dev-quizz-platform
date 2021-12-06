@@ -7,7 +7,13 @@ const dbTopics = [
   },
   {
     mainTopic: 'HTML',
-    secondaryTopics: ['Tags', 'Forms', 'Attributes', 'General'],
+    secondaryTopics: [
+      'Tags',
+      'Forms',
+      'Attributes',
+      'General',
+      'Accessibility',
+    ],
     colorText: '#fff',
     colorBg: '#F16529',
   },
