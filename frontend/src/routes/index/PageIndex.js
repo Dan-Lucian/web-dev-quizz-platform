@@ -103,7 +103,7 @@ const PageIndex = () => {
           </Header>
 
           <Heading
-            level={1}
+            level={2}
             style={{
               marginBottom: '20px',
               width: '100%',

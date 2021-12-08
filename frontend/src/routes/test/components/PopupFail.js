@@ -15,7 +15,7 @@ const PopupFail = ({ moreInfo, nextQuestion, hideFailWindow }) => {
   };
 
   return (
-    <StyledPopupFail>
+    <StyledPopupFail open>
       <Button text="Next question" onClick={handleClick} />
       <Text>Seems like you need to recheck this.</Text>
       <Text>

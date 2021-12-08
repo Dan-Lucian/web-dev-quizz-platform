@@ -19,7 +19,7 @@ const dbTopics = [
   },
   {
     mainTopic: 'CSS',
-    secondaryTopics: ['Selectors', 'Units', 'Layout'],
+    secondaryTopics: ['Properties', 'Selectors', 'Units', 'Layout'],
     colorText: '#fff',
     colorBg: '#2965F1',
   },
