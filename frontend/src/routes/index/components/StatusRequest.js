@@ -2,9 +2,13 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StatusRequest = ({ status, error, selectedTopics }) => {
+  const props = {
+    htmlFor: 'button-start',
+  };
+
   if (selectedTopics.length === 0) {
     return (
-      <StyledStatusRequestRejected>
+      <StyledStatusRequestRejected {...props}>
         No topics selected
       </StyledStatusRequestRejected>
     );
@@ -13,14 +17,14 @@ const StatusRequest = ({ status, error, selectedTopics }) => {
   switch (status) {
     case 'pending':
       return (
-        <StyledStatusRequestPending>
+        <StyledStatusRequestPending {...props}>
           Making the test...
         </StyledStatusRequestPending>
       );
 
     case 'rejected':
       return (
-        <StyledStatusRequestRejected>
+        <StyledStatusRequestRejected {...props}>
           {error?.response.data || error.message}
         </StyledStatusRequestRejected>
       );
@@ -36,7 +40,7 @@ StatusRequest.propTypes = {
   selectedTopics: PropTypes.array,
 };
 
-const StyledStatusRequest = styled.div`
+const StyledStatusRequest = styled.output`
   position: absolute;
   bottom: -3em;
   background-color: ${(p) => p.theme.color.bgAccent};
