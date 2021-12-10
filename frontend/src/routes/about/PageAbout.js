@@ -24,20 +24,22 @@ const PageAbout = () => (
           <br />
           <p>
             This is a platform that has access to a collection of questions
-            about different web development related topics.
+            about various web development related topics. For now this platform
+            has questions about internet, html, css, javascript and react.
           </p>
           <br />
           <br />
           <p>
-            The purpose of this is to keep the memory of developers fresh about
-            certain topics that they might forget. The topics and the questions
-            will be as “nitty-gritty” as possible.
+            The purpose of this platform is to remind developers about certain
+            bits of information that they might forget. If during the tests you
+            find yourself thinking - "Oh right, that's an actual thing.", then
+            the planned purpose has been achieved!
           </p>
           <br />
           <br />
           <p>
             This is not intended for learning purposes, but for periodic
-            refreshments of your memory.
+            reminders.
           </p>
         </WrapperText>
       </Section>
@@ -45,17 +47,21 @@ const PageAbout = () => (
         <HeadingStripe color="red">Mechanics</HeadingStripe>
         <WrapperText color="red">
           <p>
-            The questions are chosen at random based on the selected topics then
-            the chosen questions are presented in a form of a test.
+            10 questions will be chosen at random based on the selected topics,
+            then the chosen questions will be presented in a form of a test.
           </p>
           <br />
           <br />
-          <p>There are several major topics with their subtopics:</p>
+          <p>Instructions:</p>
           <br />
           <br />
           <ul style={{ paddingLeft: '40px', listStyleType: 'disc' }}>
             <li style={{ marginBottom: '0.7em' }}>
-              In case you select a major topic (ex: javascript) the questions
+              Each topic has a main topic (ex: javascript) and some respective
+              subtopics (ex: functions).
+            </li>
+            <li style={{ marginBottom: '0.7em' }}>
+              In case you select a main topic (ex: javascript) the questions
               will be about the whole topic.
             </li>
             <li style={{ marginBottom: '0.7em' }}>
@@ -63,16 +69,23 @@ const PageAbout = () => (
               only about that subtopic.
             </li>
             <li style={{ marginBottom: '0.7em' }}>
-              It is possible to mix subtopics from different major topics.
+              But it is not possible to choose a main topic and a subtopic at
+              the same time.
             </li>
-            <li>It is possible to choose ALL topics or ALL subtopics.</li>
+            <li style={{ marginBottom: '0.7em' }}>
+              It is possible to mix subtopics from different main topics.
+            </li>
+            <li>It is possible to choose ALL main topics or ALL subtopics.</li>
           </ul>
           <br />
           <br />
           <p>
-            This is not intended for learning purposes, but for periodic
+            Notice: This is not intended for learning purposes, but for periodic
             refreshments of your memory.
           </p>
+          <br />
+          <br />
+          <p style={{ textAlign: 'center' }}>gl hf</p>
         </WrapperText>
       </Section>
     </WrapperPage>
