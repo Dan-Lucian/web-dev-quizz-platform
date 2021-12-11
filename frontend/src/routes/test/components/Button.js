@@ -82,10 +82,26 @@ const StyledButton = styled(StyledButtonShared)`
 
 const StyledButtonCorrect = styled(StyledButton)`
   background-color: ${(p) => p.theme.color.green};
+
+  // if user-agent supports hover then nulify hover effects after reveal
+  @media (hover: hover) {
+    &:hover {
+      background: ${(p) => p.theme.color.green};
+      color: ${(p) => p.theme.color.text};
+    }
+  }
 `;
 
 const StyledButtonWrong = styled(StyledButton)`
   background-color: ${(p) => p.theme.color.red};
+
+  // if user-agent supports hover then nulify hover effects after reveal
+  @media (hover: hover) {
+    &:hover {
+      background: ${(p) => p.theme.color.red};
+      color: ${(p) => p.theme.color.text};
+    }
+  }
 `;
 
 export default Button;
