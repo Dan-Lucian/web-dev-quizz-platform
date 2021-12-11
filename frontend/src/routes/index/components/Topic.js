@@ -6,22 +6,22 @@ import Button from '../../../components/Button';
 import HeadingFakeHidden from '../../../components/HeadingFakeHidden';
 
 const Topic = ({
-  contents: { mainTopic, secondaryTopics },
+  contents: { main, secondary },
   selectedTopics,
   toggleTopic,
-  type,
+  color,
 }) => {
-  const labels = [mainTopic, ...secondaryTopics];
+  const labels = [main, ...secondary];
 
   return (
     <StyledTopic>
-      <HeadingFakeHidden>Topics related to {mainTopic}</HeadingFakeHidden>
+      <HeadingFakeHidden>Topics related to {main}</HeadingFakeHidden>
       {labels.map((label, idx) => (
         <Button
           pressed={selectedTopics.includes(label.toLowerCase())}
           key={idx}
           text={label}
-          type={type}
+          color={color}
           onClick={toggleTopic}
         />
       ))}
@@ -36,7 +36,7 @@ Topic.propTypes = {
   contents: PropTypes.object,
   selectedTopics: PropTypes.array,
   toggleTopic: PropTypes.func,
-  type: PropTypes.string,
+  color: PropTypes.object,
 };
 
 export const StyledTopic = styled.section`

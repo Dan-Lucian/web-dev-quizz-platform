@@ -14,24 +14,14 @@ import Button from './components/Button';
 
 const PageTest = () => {
   const { state: questions } = useLocation();
-
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
   const navigate = useNavigate();
   const results = useRef(JSON.parse(JSON.stringify(questions)));
-
   const [showFail, setShowFail] = useState(false);
 
   const toggleRevealAnswers = () => {
     setIsRevealed((prev) => !prev);
-  };
-
-  const failQuestion = () => {
-    results.current[currentQuestionNumber].passed = false;
-  };
-
-  const passQuestion = () => {
-    results.current[currentQuestionNumber].passed = true;
   };
 
   const nextQuestion = (delay) => {
@@ -48,12 +38,35 @@ const PageTest = () => {
     }, delay);
   };
 
-  const showFailWindow = () => {
-    setShowFail(true);
-  };
-
   const hideFailWindow = () => {
     setShowFail(false);
+  };
+
+  const handleButtonClick = (isCorrect) => {
+    const failQuestion = () => {
+      results.current[currentQuestionNumber].passed = false;
+    };
+
+    const passQuestion = () => {
+      results.current[currentQuestionNumber].passed = true;
+    };
+
+    const showFailWindow = () => {
+      setShowFail(true);
+    };
+
+    if (isCorrect)
+      return () => {
+        toggleRevealAnswers();
+        passQuestion();
+        nextQuestion(1000);
+      };
+
+    return () => {
+      toggleRevealAnswers();
+      failQuestion();
+      showFailWindow();
+    };
   };
 
   if (!questions) return <PageNotFound />;
@@ -69,22 +82,9 @@ const PageTest = () => {
         <WrapperAnswers>
           {questions[currentQuestionNumber].answers.map((answer, idx) => (
             <Button
-              disabled={isRevealed}
               key={idx}
               text={answer.answer}
-              onClick={
-                answer.correct
-                  ? () => {
-                      toggleRevealAnswers();
-                      passQuestion();
-                      nextQuestion(1000);
-                    }
-                  : () => {
-                      toggleRevealAnswers();
-                      failQuestion();
-                      showFailWindow();
-                    }
-              }
+              onClick={handleButtonClick(answer.correct)}
               isCorrect={answer.correct}
               isRevealed={isRevealed}
             />

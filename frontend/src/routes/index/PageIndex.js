@@ -7,7 +7,7 @@ import HCenter from '../../components/HCenter';
 
 // local components
 import ButtonStart from './components/ButtonStart';
-import WrapperTopics from './components/WrapperTopics';
+import Topics from './components/Topics';
 import WrapperPage from './components/WrapperPage';
 import StatusRequest from './components/StatusRequest';
 import Header from './components/Header';
@@ -65,21 +65,19 @@ const PageIndex = () => {
 
     const topicInfo = getTopicInfo(toggledTopic);
 
-    if (topicInfo.mainTopic.toLowerCase() === toggledTopic) {
+    if (topicInfo.main.toLowerCase() === toggledTopic) {
       setSelectedTopics((prev) =>
         prev
           .filter(
             (t) =>
-              !topicInfo.secondaryTopics
-                .map((st) => st.toLowerCase())
-                .includes(t)
+              !topicInfo.secondary.map((st) => st.toLowerCase()).includes(t)
           )
           .concat(toggledTopic)
       );
     } else {
       setSelectedTopics((prev) =>
         prev
-          .filter((t) => t !== topicInfo.mainTopic.toLowerCase())
+          .filter((t) => t !== topicInfo.main.toLowerCase())
           .concat(toggledTopic)
       );
     }
@@ -112,7 +110,7 @@ const PageIndex = () => {
             Choose your topics
           </Heading>
 
-          <WrapperTopics
+          <Topics
             dbTopics={dbTopics}
             selectedTopics={selectedTopics}
             toggleTopic={toggleTopic}

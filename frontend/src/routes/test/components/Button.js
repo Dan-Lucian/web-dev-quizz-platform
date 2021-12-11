@@ -7,19 +7,18 @@ import { StyledButtonShared } from '../../../components/Button';
 // specific parent environment
 import { StyledPopupFail } from './PopupFail.styles.js';
 
-const Button = ({ text, onClick, isCorrect, isRevealed, disabled }) => {
+const Button = ({ text, onClick, isCorrect, isRevealed }) => {
   const props = {
-    disabled,
+    disabled: isRevealed,
     onClick,
     type: 'button',
   };
 
   if (isRevealed) {
-    return isCorrect ? (
-      <StyledButtonCorrect {...props}>{text}</StyledButtonCorrect>
-    ) : (
-      <StyledButtonWrong {...props}>{text}</StyledButtonWrong>
-    );
+    if (isCorrect)
+      return <StyledButtonCorrect {...props}>{text}</StyledButtonCorrect>;
+
+    return <StyledButtonWrong {...props}>{text}</StyledButtonWrong>;
   }
 
   return <StyledButton {...props}>{text}</StyledButton>;
@@ -30,7 +29,6 @@ Button.propTypes = {
   onClick: PropTypes.func,
   isCorrect: PropTypes.bool,
   isRevealed: PropTypes.bool,
-  disabled: PropTypes.bool,
 };
 
 const StyledButton = styled(StyledButtonShared)`
