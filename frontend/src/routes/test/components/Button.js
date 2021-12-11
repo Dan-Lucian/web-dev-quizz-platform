@@ -12,6 +12,10 @@ const Button = ({ text, onClick, isCorrect, isRevealed }) => {
     disabled: isRevealed,
     onClick,
     type: 'button',
+    color: {
+      bg: 'initial',
+      color: 'initial',
+    },
   };
 
   if (isRevealed) {
@@ -34,6 +38,8 @@ Button.propTypes = {
 const StyledButton = styled(StyledButtonShared)`
   box-shadow: 0 4px 0 rgba(255, 255, 255, 0.2);
   opacity: 1;
+  color: ${(p) => p.theme.color.text};
+  background: ${(p) => p.theme.color.bgAccent};
 
   &:active {
     transform: translateY(2px);
@@ -76,24 +82,10 @@ const StyledButton = styled(StyledButtonShared)`
 
 const StyledButtonCorrect = styled(StyledButton)`
   background-color: ${(p) => p.theme.color.green};
-
-  @media (hover: hover) {
-    &:hover {
-      background: ${(p) => p.theme.color.green};
-      color: ${(p) => p.theme.color.text};
-    }
-  }
 `;
 
 const StyledButtonWrong = styled(StyledButton)`
   background-color: ${(p) => p.theme.color.red};
-
-  @media (hover: hover) {
-    &:hover {
-      background: ${(p) => p.theme.color.red};
-      color: ${(p) => p.theme.color.text};
-    }
-  }
 `;
 
 export default Button;
