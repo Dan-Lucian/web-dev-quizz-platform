@@ -9,6 +9,10 @@ Section.propTypes = {
 
 const StyledSection = styled.section`
   margin-top: 4em;
+
+  &:last-child {
+    margin-bottom: '6em';
+  }
 `;
 
 export default Section;
