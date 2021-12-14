@@ -2,9 +2,26 @@ import { createGlobalStyle } from 'styled-components';
 
 const global = `
 
-  * {
+  html {
     box-sizing: border-box;
   }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  img {
+    max-height: 100%;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font-family : inherit;
+    font-size : 100%;
+  }
+
 
   body {
     font-family: 'IBM Plex Mono', monospace;

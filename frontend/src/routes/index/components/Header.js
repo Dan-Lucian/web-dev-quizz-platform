@@ -11,7 +11,7 @@ Header.propTypes = {
 };
 
 const StyledHeader = styled(StyledHeaderShared)`
-  margin-bottom: 8em;
+  margin: 8em 0;
   position: relative;
 `;
 

@@ -10,10 +10,9 @@ WrapperPage.propTypes = {
 };
 
 const StyledWrapperPage = styled.main`
-  margin-top: 6em;
+  padding: 6em 0 10em 0;
   width: 85vw;
   max-width: 1320px;
-  margin-bottom: 10em;
 
   @media (min-width: ${(p) => p.theme.screen.med}) {
     width: 75vw;

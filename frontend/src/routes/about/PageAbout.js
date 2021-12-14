@@ -9,12 +9,14 @@ import WrapperText from './components/WrapperText';
 import Section from './components/Section';
 import Text from './components/Text';
 import List from './components/List';
+import Playground from './components/Playground';
 
 const PageAbout = () => (
   <HCenter>
     <WrapperPage>
       <Heading level={1}>What is this all about ?</Heading>
 
+      <Playground />
       <Section>
         <HeadingStripe color="green">Idea</HeadingStripe>
         <WrapperText color="green">
