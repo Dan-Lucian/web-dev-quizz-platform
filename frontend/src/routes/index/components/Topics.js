@@ -9,12 +9,12 @@ const Topics = ({ dbTopics, selectedTopics, toggleTopic }) => {
   const theme = useTheme();
 
   const getColor = (topicName) => {
-    const normalizedTopicName =
+    const capitalizedTopicName =
       topicName[0].toUpperCase() + topicName.slice(1).toLowerCase();
 
     return {
-      bg: theme.color[`bgBtn${normalizedTopicName}`],
-      text: theme.color[`textBtn${normalizedTopicName}`],
+      bg: theme.color[`bgBtn${capitalizedTopicName}`],
+      text: theme.color[`textBtn${capitalizedTopicName}`],
     };
   };
 

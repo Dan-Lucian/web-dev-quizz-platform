@@ -6,12 +6,18 @@ import Button from '../../../components/Button';
 import HeadingFakeHidden from '../../../components/HeadingFakeHidden';
 
 const Topic = ({
-  contents: { main, secondary },
+  contents: { main, secondary, inactive },
   selectedTopics,
   toggleTopic,
   color,
 }) => {
   const labels = [main, ...secondary];
+
+  const isTopicInactive = (topic) => {
+    if (!inactive) return false;
+
+    return inactive.find((inactiveTopic) => topic === inactiveTopic);
+  };
 
   return (
     <StyledTopic>
@@ -21,7 +27,7 @@ const Topic = ({
           pressed={selectedTopics.includes(label.toLowerCase())}
           key={idx}
           text={label}
-          color={color}
+          color={isTopicInactive(label) ? null : color}
           onClick={toggleTopic}
         />
       ))}

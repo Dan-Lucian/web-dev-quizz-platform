@@ -2,6 +2,7 @@ const dbTopics = [
   {
     main: 'Internet',
     secondary: ['Websites', 'HTTP', 'Security'],
+    inactive: ['Internet', 'Websites', 'HTTP', 'Security'],
     colorText: '#fff',
     colorBg: '#2DD4A0',
   },
@@ -12,14 +13,24 @@ const dbTopics = [
   {
     main: 'CSS',
     secondary: ['Selectors', 'Properties', 'Values', 'Layout'],
+    inactive: ['Values', 'Layout'],
   },
   {
     main: 'JavaScript',
     secondary: ['Internals', 'Objects', 'Functions', 'DOM', 'Web data'],
+    inactive: [
+      'JavaScript',
+      'Internals',
+      'Objects',
+      'Functions',
+      'DOM',
+      'Web data',
+    ],
   },
   {
     main: 'React',
     secondary: ['Concepts', 'Classes', 'Hooks', 'CRA'],
+    inactive: ['React', 'Concepts', 'Classes', 'Hooks', 'CRA'],
   },
 ];
 

@@ -8,7 +8,10 @@ const Button = ({ text, color, pressed, onClick }) => {
     style: {
       '--btn-opacity': pressed ? '1' : '0.5',
     },
-    color,
+    color: color || {
+      bg: '#ddd',
+      text: '#000',
+    },
     type: 'button',
   };
 
