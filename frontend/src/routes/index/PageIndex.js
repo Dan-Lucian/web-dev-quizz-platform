@@ -52,35 +52,46 @@ const PageIndex = () => {
     run(questions.send(selectedTopics));
   };
 
-  const toggleTopic = (e) => {
-    const toggledTopic = e.target.textContent.toLowerCase();
+  // returns button toggler func that either
+  // deselects all secondary topics if main selected or
+  // deselects main if any secondary selected
+  const getTopicToggler = (topicName) => {
+    const { main: mainTopic, secondary: secondaryTopics } =
+      getTopicInfo(topicName);
 
-    if (selectedTopics.includes(toggledTopic)) {
-      setSelectedTopics((prev) =>
-        prev.filter((topic) => topic !== toggledTopic)
-      );
+    const isMain = topicName === mainTopic;
 
-      return;
+    if (isMain) {
+      return () => {
+        // deselects if topic already selected and quits
+        if (selectedTopics.includes(topicName)) {
+          setSelectedTopics((prev) =>
+            prev.filter((topic) => topic !== topicName)
+          );
+
+          return;
+        }
+
+        setSelectedTopics((prev) =>
+          prev.filter((t) => !secondaryTopics.includes(t)).concat(topicName)
+        );
+      };
     }
 
-    const topicInfo = getTopicInfo(toggledTopic);
+    return () => {
+      // deselects if topic already selected and quits
+      if (selectedTopics.includes(topicName)) {
+        setSelectedTopics((prev) =>
+          prev.filter((topic) => topic !== topicName)
+        );
 
-    if (topicInfo.main.toLowerCase() === toggledTopic) {
+        return;
+      }
+
       setSelectedTopics((prev) =>
-        prev
-          .filter(
-            (t) =>
-              !topicInfo.secondary.map((st) => st.toLowerCase()).includes(t)
-          )
-          .concat(toggledTopic)
+        prev.filter((t) => t !== mainTopic).concat(topicName)
       );
-    } else {
-      setSelectedTopics((prev) =>
-        prev
-          .filter((t) => t !== topicInfo.main.toLowerCase())
-          .concat(toggledTopic)
-      );
-    }
+    };
   };
 
   return (
@@ -113,7 +124,7 @@ const PageIndex = () => {
           <Topics
             dbTopics={dbTopics}
             selectedTopics={selectedTopics}
-            toggleTopic={toggleTopic}
+            getTopicToggler={getTopicToggler}
           />
         </HCenter>
       </WrapperPage>

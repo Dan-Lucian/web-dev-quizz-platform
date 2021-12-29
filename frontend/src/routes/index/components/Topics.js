@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // local components
 import Topic from './Topic';
 
-const Topics = ({ dbTopics, selectedTopics, toggleTopic }) => {
+const Topics = ({ dbTopics, selectedTopics, getTopicToggler }) => {
   const theme = useTheme();
 
   const getColor = (topicName) => {
@@ -26,7 +26,7 @@ const Topics = ({ dbTopics, selectedTopics, toggleTopic }) => {
           color={getColor(topic.main)}
           contents={topic}
           selectedTopics={selectedTopics}
-          toggleTopic={toggleTopic}
+          getTopicToggler={getTopicToggler}
         />
       ))}
     </StyledTopics>
@@ -36,7 +36,7 @@ const Topics = ({ dbTopics, selectedTopics, toggleTopic }) => {
 Topics.propTypes = {
   dbTopics: PropTypes.array,
   selectedTopics: PropTypes.array,
-  toggleTopic: PropTypes.func,
+  getTopicToggler: PropTypes.func,
 };
 
 export const StyledTopics = styled.div`

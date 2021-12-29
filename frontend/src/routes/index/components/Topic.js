@@ -8,7 +8,7 @@ import HeadingFakeHidden from '../../../components/HeadingFakeHidden';
 const Topic = ({
   contents: { main, secondary, inactive },
   selectedTopics,
-  toggleTopic,
+  getTopicToggler,
   color,
 }) => {
   const labels = [main, ...secondary];
@@ -28,7 +28,7 @@ const Topic = ({
           key={idx}
           text={label}
           color={isTopicInactive(label) ? null : color}
-          onClick={toggleTopic}
+          onClick={getTopicToggler(label)}
         />
       ))}
     </StyledTopic>
@@ -41,7 +41,7 @@ const Topic = ({
 Topic.propTypes = {
   contents: PropTypes.object,
   selectedTopics: PropTypes.array,
-  toggleTopic: PropTypes.func,
+  getTopicToggler: PropTypes.func,
   color: PropTypes.object,
 };
 

@@ -19,7 +19,7 @@ const dbTopics = [
     main: 'javascript',
     secondary: ['internals', 'objects', 'functions', 'dom', 'web data'],
     inactive: [
-      'javaScript',
+      'javascript',
       'internals',
       'objects',
       'functions',
@@ -35,11 +35,9 @@ const dbTopics = [
 ];
 
 // gets the topic object by topic
-const getTopicInfo = (topic) =>
+const getTopicInfo = (topicName) =>
   dbTopics.find(
-    (t) =>
-      t.main.toLowerCase() === topic ||
-      t.secondary.map((st) => st.toLowerCase()).includes(topic)
+    (topic) => topic.main === topicName || topic.secondary.includes(topicName)
   );
 
 export { dbTopics, getTopicInfo };
