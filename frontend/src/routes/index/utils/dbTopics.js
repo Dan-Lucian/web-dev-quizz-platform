@@ -1,39 +1,40 @@
 const dbTopics = [
   {
-    main: 'Internet',
-    secondary: ['Websites', 'HTTP', 'Security'],
-    inactive: ['Internet', 'Websites', 'HTTP', 'Security'],
+    main: 'internet',
+    secondary: ['websites', 'http', 'security'],
+    inactive: ['internet', 'websites', 'http', 'security'],
     colorText: '#fff',
     colorBg: '#2DD4A0',
   },
   {
-    main: 'HTML',
-    secondary: ['General', 'Tags', 'Attributes', 'Forms', 'Accessibility'],
+    main: 'html',
+    secondary: ['general', 'tags', 'attributes', 'forms', 'accessibility'],
   },
   {
-    main: 'CSS',
-    secondary: ['Selectors', 'Properties', 'Values', 'Layout'],
-    inactive: ['Values', 'Layout'],
+    main: 'css',
+    secondary: ['selectors', 'properties', 'values', 'layout'],
+    inactive: ['values', 'layout'],
   },
   {
-    main: 'JavaScript',
-    secondary: ['Internals', 'Objects', 'Functions', 'DOM', 'Web data'],
+    main: 'javascript',
+    secondary: ['internals', 'objects', 'functions', 'dom', 'web data'],
     inactive: [
-      'JavaScript',
-      'Internals',
-      'Objects',
-      'Functions',
-      'DOM',
-      'Web data',
+      'javaScript',
+      'internals',
+      'objects',
+      'functions',
+      'dom',
+      'web data',
     ],
   },
   {
-    main: 'React',
-    secondary: ['Concepts', 'Classes', 'Hooks', 'CRA'],
-    inactive: ['React', 'Concepts', 'Classes', 'Hooks', 'CRA'],
+    main: 'react',
+    secondary: ['concepts', 'classes', 'hooks', 'cra'],
+    inactive: ['react', 'concepts', 'classes', 'hooks', 'cra'],
   },
 ];
 
+// gets the topic object by topic
 const getTopicInfo = (topic) =>
   dbTopics.find(
     (t) =>
