@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const Playground = ({ children }) => (
   <StyledPlayground>
     <div />
+    {children}
   </StyledPlayground>
 );
 

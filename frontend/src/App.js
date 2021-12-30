@@ -2,6 +2,7 @@
 /* eslint-disable import/no-named-as-default */
 import { ThemeProvider } from 'styled-components';
 import { Link, Outlet } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import GlobalStyle from './Global.style';
 import Wrapper from './components/Wrapper';
@@ -11,9 +12,6 @@ import Footer from './components/Footer';
 import Socials from './components/Socials';
 import Links from './components/Links';
 import Hamburger from './components/Hamburger';
-
-// shared hooks
-import { useToggle } from './hooks/useToggle';
 
 const theme = {
   color: {
@@ -44,10 +42,10 @@ const theme = {
 
 // renders nav, outlet, footer
 const App = () => {
-  const [isMenuOpen, toggleMenuOpen] = useToggle(false);
-
-  theme.isTouch =
-    !!('ontouchstart' in window) || window.navigator.msMaxTouchPoints > 0;
+  useEffect(() => {
+    theme.isTouch =
+      !!('ontouchstart' in window) || window.navigator.msMaxTouchPoints > 0;
+  });
 
   return (
     <ThemeProvider theme={theme}>
@@ -63,14 +61,7 @@ const App = () => {
               <Link to="/about">_About</Link>
             </li>
           </Links>
-          <Hamburger isMenuOpen={isMenuOpen} toggleMenuOpen={toggleMenuOpen}>
-            <Link onClick={toggleMenuOpen} to="/">
-              Home
-            </Link>
-            <Link onClick={toggleMenuOpen} to="/about">
-              About
-            </Link>
-          </Hamburger>
+          <Hamburger />
         </Nav>
 
         <Outlet />
