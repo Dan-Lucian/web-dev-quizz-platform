@@ -1,5 +1,16 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
+const Links = () => (
+  <StyledLinks>
+    <li>
+      <Link to="/">_Home</Link>
+    </li>
+    <li>
+      <Link to="/about">_About</Link>
+    </li>
+  </StyledLinks>
+);
 
 const StyledLinks = styled.ul`
   justify-content: flex-end;
@@ -25,11 +36,5 @@ const StyledLinks = styled.ul`
     background-color: ${(p) => p.theme.color.text};
   }
 `;
-
-const Links = ({ children }) => <StyledLinks>{children}</StyledLinks>;
-
-Links.propTypes = {
-  children: PropTypes.node,
-};
 
 export default Links;

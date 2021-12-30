@@ -53,14 +53,7 @@ const App = () => {
       <Wrapper>
         <Nav>
           <Logo />
-          <Links>
-            <li>
-              <Link to="/">_Home</Link>
-            </li>
-            <li>
-              <Link to="/about">_About</Link>
-            </li>
-          </Links>
+          <Links />
           <Hamburger />
         </Nav>
 
