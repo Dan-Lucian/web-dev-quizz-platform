@@ -10,8 +10,9 @@ List.propTypes = {
 const StyledList = styled.ul`
   padding-left: 40px;
   list-style-type: disc;
+  margin-bottom: 2em;
 
-  & > li {
+  & > li:not(:last-child) {
     margin-bottom: 0.7em;
   }
 `;

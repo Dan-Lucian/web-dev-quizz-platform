@@ -50,32 +50,26 @@ const PageAbout = () => (
             then the chosen questions will be presented in a form of a test.
           </Text>
           <Text>Instructions:</Text>
-          <Text>
-            <List>
-              <li>
-                Each topic has a main topic (ex: javascript) and some respective
-                subtopics (ex: functions).
-              </li>
-              <li>
-                In case you select a main topic (ex: javascript) the questions
-                will be about the whole topic.
-              </li>
-              <li>
-                In case you select a subtopic (ex: objects) the questions will
-                be only about that subtopic.
-              </li>
-              <li>
-                But it is not possible to choose a main topic and a subtopic at
-                the same time.
-              </li>
-              <li>
-                It is possible to mix subtopics from different main topics.
-              </li>
-              <li>
-                It is possible to choose ALL main topics or ALL subtopics.
-              </li>
-            </List>
-          </Text>
+          <List>
+            <li>
+              Each topic has a main topic (ex: javascript) and some respective
+              subtopics (ex: functions).
+            </li>
+            <li>
+              In case you select a main topic (ex: javascript) the questions
+              will be about the whole topic.
+            </li>
+            <li>
+              In case you select a subtopic (ex: objects) the questions will be
+              only about that subtopic.
+            </li>
+            <li>
+              But it is not possible to choose a main topic and a subtopic at
+              the same time.
+            </li>
+            <li>It is possible to mix subtopics from different main topics.</li>
+            <li>It is possible to choose ALL main topics or ALL subtopics.</li>
+          </List>
           <Text>
             Notice: This is not intended for learning purposes, but for periodic
             refreshments of your memory.
