@@ -13,7 +13,6 @@ import Links from './components/Links';
 import Hamburger from './components/Hamburger';
 
 // shared hooks
-import { useScrollDirection } from './hooks/useScrollDirection';
 import { useToggle } from './hooks/useToggle';
 
 const theme = {
@@ -43,10 +42,9 @@ const theme = {
   isTouch: false,
 };
 
-// renders nav, oulet, footer
+// renders nav, outlet, footer
 const App = () => {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
-  const scrollDirection = useScrollDirection('up');
 
   theme.isTouch =
     !!('ontouchstart' in window) || window.navigator.msMaxTouchPoints > 0;
@@ -55,7 +53,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Wrapper>
-        <Nav hidden={scrollDirection === 'down'}>
+        <Nav>
           <Logo />
           <Links>
             <li>

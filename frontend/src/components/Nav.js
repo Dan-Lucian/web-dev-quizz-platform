@@ -1,15 +1,26 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Nav = ({ children, hidden }) => {
-  if (hidden) return <StyledHiddenNav>{children}</StyledHiddenNav>;
+// shared hooks
+import { useScrollDirection } from '../hooks/useScrollDirection';
 
-  return <StyledNav>{children}</StyledNav>;
+const Nav = ({ children }) => {
+  const scrollDirection = useScrollDirection('up');
+
+  return (
+    <StyledNav
+      style={{
+        '--nav-opacity': scrollDirection === 'down' ? '0' : '1',
+        '--nav-pointer-events': scrollDirection === 'down' ? 'none' : 'auto',
+      }}
+    >
+      {children}
+    </StyledNav>
+  );
 };
 
 Nav.propTypes = {
   children: PropTypes.array,
-  hidden: PropTypes.bool,
 };
 
 const StyledNav = styled.nav`
@@ -22,10 +33,9 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   background-color: ${(p) => p.theme.color.bg};
-`;
-
-const StyledHiddenNav = styled(StyledNav)`
-  display: none;
+  opacity: var(--nav-opacity);
+  pointer-events: var(--nav-pointer-events);
+  transition: opacity 100ms ease-in-out;
 `;
 
 export default Nav;
