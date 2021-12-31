@@ -17,7 +17,7 @@ Text.propTypes = {
 };
 
 const StyledText = styled.p`
-  line-height: 1.6;
+  line-height: 1.5;
 
   &:not(:last-child) {
     margin-bottom: 2em;
