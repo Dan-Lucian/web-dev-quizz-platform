@@ -12,40 +12,32 @@ import LinkInternal from './components/LinkInternal';
 
 // get the text depending on the correctly answered questions
 const getMarkTest = (number) => {
-  let text;
-
   if (number === 10) {
-    text = 'Perfect!';
-  } else if (number >= 8) {
-    text = 'Good job';
-  } else if (number >= 5) {
-    text = 'Poor job';
-  } else if (number >= 2) {
-    text = 'Very bad';
-  } else {
-    text = 'Awful';
+    return 'Perfect!';
   }
-
-  return text;
+  if (number >= 8) {
+    return 'Good job';
+  }
+  if (number >= 5) {
+    return 'Poor job';
+  }
+  if (number >= 2) {
+    return 'Very bad';
+  }
+  return 'Awful';
 };
 
 const PageResults = () => {
   const { state: results } = useLocation();
 
-  const stats = { correct: 0, wrong: 0 };
-  results.forEach((question) => {
-    if (question.passed) {
-      stats.correct += 1;
-    } else {
-      stats.wrong += 1;
-    }
-  });
+  const correctAnswers = results.filter((result) => result.passed).length;
+  const mark = getMarkTest(correctAnswers);
 
   return (
     <HCenter>
       <Wrapper>
         <Heading>
-          {getMarkTest(stats.correct)} <br /> {`You got ${stats.correct}/10`}
+          {mark} <br /> {`You got ${correctAnswers}/10`}
         </Heading>
 
         <WrapperQuestions>

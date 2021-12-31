@@ -24,25 +24,21 @@ const PageTest = () => {
     setIsRevealed((prev) => !prev);
   };
 
-  const nextQuestion = (delay) => {
+  const moveOntoNextQuestion = (delay) => {
     setTimeout(() => {
-      toggleRevealAnswers();
-
       if (currentQuestionNumber + 1 === questions.length) {
         console.log('questions ended');
         navigate('/results', { state: results.current });
         return;
       }
 
+      toggleRevealAnswers();
       setCurrentQuestionNumber((prev) => prev + 1);
+      setShowFail(false);
     }, delay);
   };
 
-  const hideFailWindow = () => {
-    setShowFail(false);
-  };
-
-  const handleButtonClick = (isCorrect) => {
+  const getButtonHandler = (isCorrect) => {
     const failQuestion = () => {
       results.current[currentQuestionNumber].passed = false;
     };
@@ -59,7 +55,7 @@ const PageTest = () => {
       return () => {
         toggleRevealAnswers();
         passQuestion();
-        nextQuestion(1000);
+        moveOntoNextQuestion(1000);
       };
 
     return () => {
@@ -84,7 +80,7 @@ const PageTest = () => {
             <Button
               key={idx}
               text={answer.answer}
-              onClick={handleButtonClick(answer.correct)}
+              onClick={getButtonHandler(answer.correct)}
               isCorrect={answer.correct}
               isRevealed={isRevealed}
             />
@@ -94,8 +90,7 @@ const PageTest = () => {
         {showFail && (
           <PopupFail
             moreInfo={questions[currentQuestionNumber].moreInfo}
-            nextQuestion={nextQuestion}
-            hideFailWindow={hideFailWindow}
+            moveOntoNextQuestion={moveOntoNextQuestion}
           />
         )}
       </WrapperPage>

@@ -8,28 +8,19 @@ import Text from './Text';
 // styles
 import { StyledPopupFail } from './PopupFail.styles';
 
-const PopupFail = ({ moreInfo, nextQuestion, hideFailWindow }) => {
-  const handleClick = () => {
-    hideFailWindow();
-    nextQuestion();
-  };
-
-  return (
-    <StyledPopupFail open>
-      <Button text="Next question" onClick={handleClick} />
-      <Text>Seems like you need to recheck this.</Text>
-      <Text>
-        Here you can find{' '}
-        <LinkExternal text="more information" href={moreInfo} />
-      </Text>
-    </StyledPopupFail>
-  );
-};
+const PopupFail = ({ moreInfo, moveOntoNextQuestion }) => (
+  <StyledPopupFail open>
+    <Button text="Next question" onClick={moveOntoNextQuestion} />
+    <Text>Seems like you need to recheck this.</Text>
+    <Text>
+      Here you can find <LinkExternal text="more information" href={moreInfo} />
+    </Text>
+  </StyledPopupFail>
+);
 
 PopupFail.propTypes = {
   moreInfo: PropTypes.string,
-  nextQuestion: PropTypes.func,
-  hideFailWindow: PropTypes.func,
+  moveOntoNextQuestion: PropTypes.func,
 };
 
 export default PopupFail;

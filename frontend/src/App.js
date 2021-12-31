@@ -1,17 +1,48 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable import/no-named-as-default */
 import { ThemeProvider } from 'styled-components';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 
 import GlobalStyle from './Global.style';
-import Wrapper from './components/Wrapper';
+import WrapperApp from './components/WrapperApp';
 import Nav from './components/Nav';
 import Logo from './components/Logo';
 import Footer from './components/Footer';
 import Socials from './components/Socials';
 import Links from './components/Links';
 import Hamburger from './components/Hamburger';
+
+// renders nav, outlet, footer
+const App = () => {
+  useEffect(() => {
+    theme.isTouch =
+      !!('ontouchstart' in window) || window.navigator.msMaxTouchPoints > 0;
+  });
+
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <WrapperApp>
+        <Nav>
+          <Logo />
+          <Links />
+          <Hamburger />
+        </Nav>
+
+        <Outlet />
+
+        <Footer>
+          <address>
+            <p>Author: </p>
+            <Socials />
+          </address>
+        </Footer>
+      </WrapperApp>
+    </ThemeProvider>
+  );
+};
 
 const theme = {
   color: {
@@ -38,36 +69,6 @@ const theme = {
     xlg: '1800px',
   },
   isTouch: false,
-};
-
-// renders nav, outlet, footer
-const App = () => {
-  useEffect(() => {
-    theme.isTouch =
-      !!('ontouchstart' in window) || window.navigator.msMaxTouchPoints > 0;
-  });
-
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Wrapper>
-        <Nav>
-          <Logo />
-          <Links />
-          <Hamburger />
-        </Nav>
-
-        <Outlet />
-
-        <Footer>
-          <address>
-            <p>Author: </p>
-            <Socials />
-          </address>
-        </Footer>
-      </Wrapper>
-    </ThemeProvider>
-  );
 };
 
 export default App;

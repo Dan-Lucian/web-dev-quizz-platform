@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Wrapper = ({ children }) => <StyledWrapper>{children}</StyledWrapper>;
+const WrapperApp = ({ children }) => (
+  <StyledWrapperApp>{children}</StyledWrapperApp>
+);
 
-Wrapper.propTypes = {
+WrapperApp.propTypes = {
   children: PropTypes.node,
 };
 
-const StyledWrapper = styled.div`
+const StyledWrapperApp = styled.div`
   @media (min-width: ${(props) => props.theme.screen.med}) {
     font-size: 20px;
   }
@@ -21,4 +23,4 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default Wrapper;
+export default WrapperApp;
