@@ -11,6 +11,7 @@ const StyledList = styled.ul`
   padding-left: 40px;
   list-style-type: disc;
   margin-bottom: 2em;
+  line-height: 1.6;
 
   & > li:not(:last-child) {
     margin-bottom: 0.7em;

@@ -17,16 +17,14 @@ Text.propTypes = {
 };
 
 const StyledText = styled.p`
+  line-height: 1.6;
+
   &:not(:last-child) {
     margin-bottom: 2em;
   }
 `;
 
-const StyledTextCenter = styled.p`
-  &:not(:last-child) {
-    margin-bottom: 2em;
-  }
-
+const StyledTextCenter = styled(StyledText)`
   text-align: center;
 `;
 
