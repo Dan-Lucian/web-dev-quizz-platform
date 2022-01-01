@@ -19,7 +19,7 @@ const PageAbout = () => (
       <Playground />
       <Section>
         <HeadingStripe color="green">Idea</HeadingStripe>
-        <WrapperText color="green">
+        <WrapperText colorBorder="green">
           <Text>
             We are living in the Google era and it is fairly easy to find stuff
             online, but you cannot search for what you don’t even remember.
@@ -44,7 +44,7 @@ const PageAbout = () => (
 
       <Section>
         <HeadingStripe color="red">Mechanics</HeadingStripe>
-        <WrapperText color="red">
+        <WrapperText colorBorder="red">
           <Text>
             10 questions will be chosen at random based on the selected topics,
             then the chosen questions will be presented in a form of a test.
