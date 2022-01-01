@@ -42,7 +42,13 @@ const PageResults = () => {
 
         <WrapperQuestions>
           {results.map((result, idx) => (
-            <Question result={result} key={idx} number={idx + 1} />
+            <Question
+              number={idx + 1}
+              passed={result.passed}
+              question={result.question}
+              moreInfo={result.moreInfo}
+              key={idx}
+            />
           ))}
         </WrapperQuestions>
 
