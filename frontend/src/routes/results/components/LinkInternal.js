@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const LinkInternal = ({ children }) => (
-  <StyledLinkInternal>{children}</StyledLinkInternal>
+const LinkInternal = ({ to, children }) => (
+  <StyledLinkInternal>
+    <Link to={to}>{children}</Link>
+  </StyledLinkInternal>
 );
 
 LinkInternal.propTypes = {
+  to: PropTypes.string,
   children: PropTypes.node,
 };
 
-const StyledLinkInternal = styled.ul`
+const StyledLinkInternal = styled.div`
   display: flex;
   margin: 2em auto;
   justify-content: flex-end;

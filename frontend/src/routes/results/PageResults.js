@@ -10,7 +10,7 @@ import WrapperQuestions from './components/WrapperQuestions';
 import Wrapper from './components/Wrapper';
 import LinkInternal from './components/LinkInternal';
 
-// get the text depending on the correctly answered questions
+// get result text by the nr of correct answers
 const getMarkTest = (number) => {
   if (number === 10) {
     return 'Perfect!';
@@ -46,9 +46,7 @@ const PageResults = () => {
           ))}
         </WrapperQuestions>
 
-        <LinkInternal>
-          <Link to="/">Return to homepage</Link>
-        </LinkInternal>
+        <LinkInternal to="/">Return to homepage</LinkInternal>
       </Wrapper>
     </HCenter>
   );
