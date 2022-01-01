@@ -1,15 +1,9 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Text = ({ children, textAlign }) => {
-  switch (textAlign) {
-    case 'center':
-      return <StyledTextCenter>{children}</StyledTextCenter>;
-
-    default:
-      return <StyledText>{children}</StyledText>;
-  }
-};
+const Text = ({ children, textAlign = 'left' }) => (
+  <StyledText textAlign={textAlign}>{children}</StyledText>
+);
 
 Text.propTypes = {
   children: PropTypes.node,
@@ -18,14 +12,11 @@ Text.propTypes = {
 
 const StyledText = styled.p`
   line-height: 1.5;
+  text-align: ${(p) => p.textAlign};
 
   &:not(:last-child) {
     margin-bottom: 2em;
   }
-`;
-
-const StyledTextCenter = styled(StyledText)`
-  text-align: center;
 `;
 
 export default Text;
