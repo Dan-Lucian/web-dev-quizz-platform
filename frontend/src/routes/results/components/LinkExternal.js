@@ -1,24 +1,8 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-const LinkExternal = ({ colorBorder, href, children }) => {
-  const props = {
-    target: '_blank',
-    rel: 'noopener noreferrer',
-    href,
-    colorBorder,
-  };
+import LinkExternal from '../../../components/LinkExternal';
 
-  return <StyledLinkExternal {...props}>{children}</StyledLinkExternal>;
-};
-
-LinkExternal.propTypes = {
-  colorBorder: PropTypes.string,
-  href: PropTypes.string,
-  children: PropTypes.node,
-};
-
-const StyledLinkExternal = styled.a`
+const StyledLinkExternal = styled(LinkExternal)`
   text-decoration: none;
   display: inline-block;
   font-size: 0.9em;
@@ -40,4 +24,4 @@ const StyledLinkExternal = styled.a`
   }
 `;
 
-export default LinkExternal;
+export default StyledLinkExternal;

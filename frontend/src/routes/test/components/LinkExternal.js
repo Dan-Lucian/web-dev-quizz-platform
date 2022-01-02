@@ -1,18 +1,8 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-const LinkExternal = ({ text, href }) => (
-  <StyledLinkExternal target="_blank" rel="noopener noreferrer" href={href}>
-    {text}
-  </StyledLinkExternal>
-);
+import LinkExternal from '../../../components/LinkExternal';
 
-LinkExternal.propTypes = {
-  text: PropTypes.string,
-  href: PropTypes.string,
-};
-
-const StyledLinkExternal = styled.a`
+const StyledLinkExternal = styled(LinkExternal)`
   background: ${(p) => p.theme.color.bg};
   text-decoration: none;
   display: inline-block;
@@ -33,4 +23,4 @@ const StyledLinkExternal = styled.a`
   }
 `;
 
-export default LinkExternal;
+export default StyledLinkExternal;

@@ -13,7 +13,8 @@ const PopupFail = ({ moreInfo, moveOntoNextQuestion }) => (
     <Button text="Next question" onClick={moveOntoNextQuestion} />
     <Text>Seems like you need to recheck this.</Text>
     <Text>
-      Here you can find <LinkExternal text="more information" href={moreInfo} />
+      Here you can find{' '}
+      <LinkExternal href={moreInfo}>more information</LinkExternal>
     </Text>
   </StyledPopupFail>
 );
