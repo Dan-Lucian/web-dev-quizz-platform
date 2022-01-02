@@ -3,7 +3,7 @@ import LogoPath from '../img/Logo.png';
 
 const Logo = () => {
   const scrollToTop = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
