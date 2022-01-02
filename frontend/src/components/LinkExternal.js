@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types';
 
+// shared components
+import IconLinkExternal from './IconLinkExternal';
+
 // className given by styled-components library when extending
 const LinkExternal = ({ children, href, className }) => {
   const props = {
@@ -9,7 +12,12 @@ const LinkExternal = ({ children, href, className }) => {
     className,
   };
 
-  return <a {...props}>{children}</a>;
+  return (
+    <a {...props}>
+      {children}
+      <IconLinkExternal />
+    </a>
+  );
 };
 
 LinkExternal.propTypes = {

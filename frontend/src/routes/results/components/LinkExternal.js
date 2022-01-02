@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import LinkExternal from '../../../components/LinkExternal';
 
 const StyledLinkExternal = styled(LinkExternal)`
-  text-decoration: none;
+  text-decoration: underline;
   display: inline-block;
   font-size: 0.9em;
   padding: 0.7em 1.8em;
