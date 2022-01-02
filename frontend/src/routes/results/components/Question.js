@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import ExternalLink from '../../../components/ExternalLink';
+
+// local components
+import LinkExternal from './LinkExternal';
 
 const Question = ({ number, passed, question, moreInfo }) => (
   <StyledWrapperQuestion>
@@ -8,7 +10,9 @@ const Question = ({ number, passed, question, moreInfo }) => (
       <span>{number}.</span>
       {question}
     </StyledQuestion>
-    <ExternalLink text="learn more" type="green" href={moreInfo} />
+    <LinkExternal colorBorder={passed ? 'green' : 'red'} href={moreInfo}>
+      learn more
+    </LinkExternal>
   </StyledWrapperQuestion>
 );
 
