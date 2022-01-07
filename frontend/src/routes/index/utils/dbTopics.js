@@ -13,7 +13,7 @@ const dbTopics = [
   {
     main: 'css',
     secondary: ['selectors', 'properties', 'values', 'layout'],
-    inactive: ['values', 'layout'],
+    inactive: ['layout'],
   },
   {
     main: 'javascript',
