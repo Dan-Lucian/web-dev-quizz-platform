@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 
+// shared components
 import GlobalStyle from './Global.style';
 import WrapperApp from './components/WrapperApp';
 import Nav from './components/Nav';

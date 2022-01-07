@@ -39,14 +39,15 @@ export const StyledButtonShared = styled.button`
   background-color: ${(p) => p.color.bg};
   color: ${(p) => p.color.text};
 
+  @media (min-width: ${(props) => props.theme.screen.med}) {
+    font-weight: 400;
+  }
+
+  // fixes sticky hover on mobile
   @media (hover: hover) {
     &:hover {
       opacity: ${(p) => (p.theme.isTouch ? 'none' : '1')};
     }
-  }
-
-  @media (min-width: ${(props) => props.theme.screen.med}) {
-    font-weight: 400;
   }
 `;
 

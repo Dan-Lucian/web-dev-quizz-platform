@@ -19,6 +19,8 @@ const Topic = ({
     return inactive.find((inactiveTopic) => topic === inactiveTopic);
   };
 
+  // used Button instead of input type="checkbox" because it's easier to
+  // insert text inside <button> than checkbox
   return (
     <StyledTopic>
       <HeadingFakeHidden>Topics related to {main}</HeadingFakeHidden>
