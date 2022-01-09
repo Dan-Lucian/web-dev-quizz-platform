@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import { useLocation } from 'react-router-dom';
 
 // shared components
@@ -10,23 +11,6 @@ import WrapperQuestions from './components/WrapperQuestions';
 import Wrapper from './components/Wrapper';
 import LinkInternal from './components/LinkInternal';
 import WrapperLinkInternal from './components/WrapperLinkInternal';
-
-// get result text by the nr of correct answers
-const getMarkTest = (number) => {
-  if (number === 10) {
-    return 'Perfect!';
-  }
-  if (number >= 8) {
-    return 'Good job';
-  }
-  if (number >= 5) {
-    return 'Poor job';
-  }
-  if (number >= 2) {
-    return 'Very bad';
-  }
-  return 'Awful';
-};
 
 const PageResults = () => {
   const { state: results } = useLocation();
@@ -59,6 +43,23 @@ const PageResults = () => {
       </Wrapper>
     </HCenter>
   );
+};
+
+// get result text by the nr of correct answers
+const getMarkTest = (number) => {
+  if (number === 10) {
+    return 'Perfect!';
+  }
+  if (number >= 8) {
+    return 'Good job';
+  }
+  if (number >= 5) {
+    return 'Poor job';
+  }
+  if (number >= 2) {
+    return 'Very bad';
+  }
+  return 'Awful';
 };
 
 export default PageResults;
