@@ -8,7 +8,7 @@ import Heading from './components/Heading';
 import Question from './components/Question';
 import WrapperQuestions from './components/WrapperQuestions';
 import Wrapper from './components/Wrapper';
-import StyledLinkInternal from './components/LinkInternal.styles';
+import LinkInternal from './components/LinkInternal';
 import WrapperLinkInternal from './components/WrapperLinkInternal';
 
 // get result text by the nr of correct answers
@@ -54,7 +54,7 @@ const PageResults = () => {
         </WrapperQuestions>
 
         <WrapperLinkInternal>
-          <StyledLinkInternal to="/">Return to homepage</StyledLinkInternal>
+          <LinkInternal to="/">Return to homepage</LinkInternal>
         </WrapperLinkInternal>
       </Wrapper>
     </HCenter>
