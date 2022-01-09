@@ -1,4 +1,4 @@
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 // shared components
 import HCenter from '../../components/HCenter';
@@ -8,7 +8,8 @@ import Heading from './components/Heading';
 import Question from './components/Question';
 import WrapperQuestions from './components/WrapperQuestions';
 import Wrapper from './components/Wrapper';
-import LinkInternal from './components/LinkInternal';
+import StyledLinkInternal from './components/LinkInternal.styles';
+import WrapperLinkInternal from './components/WrapperLinkInternal';
 
 // get result text by the nr of correct answers
 const getMarkTest = (number) => {
@@ -52,7 +53,9 @@ const PageResults = () => {
           ))}
         </WrapperQuestions>
 
-        <LinkInternal to="/">Return to homepage</LinkInternal>
+        <WrapperLinkInternal>
+          <StyledLinkInternal to="/">Return to homepage</StyledLinkInternal>
+        </WrapperLinkInternal>
       </Wrapper>
     </HCenter>
   );
