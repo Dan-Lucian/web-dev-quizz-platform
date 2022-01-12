@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 // shared components
@@ -12,8 +12,7 @@ import { useOutsideClick } from '../hooks/useOutsideClick';
 
 const Hamburger = () => {
   const [isMenuOpen, toggleMenuOpen] = useToggle(false);
-  const refHamburger = useRef(null);
-  const isClickOutside = useOutsideClick(refHamburger);
+  const [refHamburger, isClickOutside] = useOutsideClick();
 
   useEffect(() => {
     if (isClickOutside) toggleMenuOpen(false);
