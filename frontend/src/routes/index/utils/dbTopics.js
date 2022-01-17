@@ -9,11 +9,12 @@ const dbTopics = [
   {
     main: 'html',
     secondary: ['general', 'tags', 'attributes', 'forms', 'accessibility'],
+    inactive: [],
   },
   {
     main: 'css',
     secondary: ['selectors', 'properties', 'values', 'layout'],
-    inactive: ['layout'],
+    inactive: [],
   },
   {
     main: 'javascript',
