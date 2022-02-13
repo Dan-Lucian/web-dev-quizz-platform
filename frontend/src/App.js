@@ -16,6 +16,7 @@ import Links from './components/Links';
 import Hamburger from './components/Hamburger';
 import ErrorBoundary from './components/ErrorBoundary';
 import FallbackErrorRoute from './components/FallbackRouteError';
+import Loader from './components/Loader';
 
 // renders nav, outlet, footer
 const App = () => {
@@ -35,7 +36,7 @@ const App = () => {
         </Nav>
 
         <ErrorBoundary FallbackComponent={FallbackErrorRoute}>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loader />}>
             <Outlet />
           </Suspense>
         </ErrorBoundary>
