@@ -3,7 +3,7 @@
 /* eslint-disable import/no-named-as-default */
 import { ThemeProvider } from 'styled-components';
 import { Outlet } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 
 // shared components
 import GlobalStyle from './Global.style';
@@ -14,6 +14,8 @@ import Footer from './components/Footer';
 import Socials from './components/Socials';
 import Links from './components/Links';
 import Hamburger from './components/Hamburger';
+import ErrorBoundary from './components/ErrorBoundary';
+import FallbackErrorRoute from './components/FallbackRouteError';
 
 // renders nav, outlet, footer
 const App = () => {
@@ -32,7 +34,11 @@ const App = () => {
           <Hamburger />
         </Nav>
 
-        <Outlet />
+        <ErrorBoundary FallbackComponent={FallbackErrorRoute}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Outlet />
+          </Suspense>
+        </ErrorBoundary>
 
         <Footer>
           <address>

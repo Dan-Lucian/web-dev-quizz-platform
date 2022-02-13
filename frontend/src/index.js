@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import App from './App';
 import PageIndex from './routes/index/PageIndex';
-import PageAbout from './routes/about/PageAbout';
-import PageTest from './routes/test/PageTest';
-import PageResults from './routes/results/PageResults';
-import PageNotFound from './routes/PageNotFound';
 import ScrollToTop from './components/ScrollToTop';
-import PageSubmit from './routes/submit/PageSubmit';
+
+// lazy-loaded components
+const PageAbout = lazy(() => import('./routes/about/PageAbout'));
+const PageTest = lazy(() => import('./routes/test/PageTest'));
+const PageResults = lazy(() => import('./routes/results/PageResults'));
+const PageNotFound = lazy(() => import('./routes/PageNotFound'));
+const PageSubmit = lazy(() => import('./routes/submit/PageSubmit'));
 
 ReactDOM.render(
   <BrowserRouter>
