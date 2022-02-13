@@ -1,14 +1,11 @@
 /* eslint-disable no-use-before-define */
 import { useLocation } from 'react-router-dom';
 
-// shared components
-import HCenter from '../../components/HCenter';
-
 // local components
 import Heading from './components/Heading';
 import Question from './components/Question';
 import WrapperQuestions from './components/WrapperQuestions';
-import Wrapper from './components/Wrapper';
+import WrapperPage from './components/WrapperPage';
 import LinkInternal from './components/LinkInternal';
 import WrapperLinkInternal from './components/WrapperLinkInternal';
 
@@ -19,29 +16,27 @@ const PageResults = () => {
   const mark = getMarkTest(correctAnswers);
 
   return (
-    <HCenter>
-      <Wrapper>
-        <Heading>
-          {mark} <br /> {`You got ${correctAnswers}/10`}
-        </Heading>
+    <WrapperPage>
+      <Heading>
+        {mark} <br /> {`You got ${correctAnswers}/10`}
+      </Heading>
 
-        <WrapperQuestions>
-          {results.map((result, idx) => (
-            <Question
-              number={idx + 1}
-              passed={result.passed}
-              question={result.question}
-              moreInfo={result.moreInfo}
-              key={idx}
-            />
-          ))}
-        </WrapperQuestions>
+      <WrapperQuestions>
+        {results.map((result, idx) => (
+          <Question
+            number={idx + 1}
+            passed={result.passed}
+            question={result.question}
+            moreInfo={result.moreInfo}
+            key={idx}
+          />
+        ))}
+      </WrapperQuestions>
 
-        <WrapperLinkInternal>
-          <LinkInternal to="/">Return to homepage</LinkInternal>
-        </WrapperLinkInternal>
-      </Wrapper>
-    </HCenter>
+      <WrapperLinkInternal>
+        <LinkInternal to="/">Return to homepage</LinkInternal>
+      </WrapperLinkInternal>
+    </WrapperPage>
   );
 };
 

@@ -95,40 +95,38 @@ const PageIndex = () => {
   };
 
   return (
-    <HCenter>
-      <WrapperPage>
-        <HCenter>
-          <Header>
-            <Heading level={1} style={{ marginBottom: '50px' }}>
-              Welcome there fellow believer
-            </Heading>
-            <ButtonStart onClick={startTest} text="Start the test" />
-            <StatusRequest
-              selectedTopics={selectedTopics}
-              status={status}
-              error={error}
-              data={receivedQuestions}
-            />
-          </Header>
-
-          <Heading
-            level={2}
-            style={{
-              marginBottom: '20px',
-              width: '100%',
-            }}
-          >
-            Choose your topics
+    <WrapperPage>
+      <HCenter>
+        <Header>
+          <Heading level={1} style={{ marginBottom: '50px' }}>
+            Welcome there fellow believer
           </Heading>
-
-          <Topics
-            dbTopics={dbTopics}
+          <ButtonStart onClick={startTest} text="Start the test" />
+          <StatusRequest
             selectedTopics={selectedTopics}
-            getTopicToggler={getTopicToggler}
+            status={status}
+            error={error}
+            data={receivedQuestions}
           />
-        </HCenter>
-      </WrapperPage>
-    </HCenter>
+        </Header>
+
+        <Heading
+          level={2}
+          style={{
+            marginBottom: '20px',
+            width: '100%',
+          }}
+        >
+          Choose your topics
+        </Heading>
+
+        <Topics
+          dbTopics={dbTopics}
+          selectedTopics={selectedTopics}
+          getTopicToggler={getTopicToggler}
+        />
+      </HCenter>
+    </WrapperPage>
   );
 };
 

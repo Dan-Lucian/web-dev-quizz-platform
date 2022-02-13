@@ -12,6 +12,7 @@ WrapperPage.propTypes = {
 const StyledWrapperPage = styled.main`
   width: 100%;
   padding: 8em 0;
+  margin: 0 auto;
 
   @media (min-width: ${(p) => p.theme.screen.med}) {
     width: 725px;

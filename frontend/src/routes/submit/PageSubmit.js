@@ -1,8 +1,5 @@
 import { useState } from 'react';
 
-// shared components
-import HCenter from '../../components/HCenter';
-
 // local components
 import WrapperPage from './components/WrapperPage';
 import Heading from './components/Heading';
@@ -74,59 +71,57 @@ const PageSubmit = () => {
   };
 
   return (
-    <HCenter>
-      <WrapperPage>
-        <Heading>Submit the question</Heading>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="question">Question</label>
-          <textarea
-            onChange={(e) => setQuestion(e.target.value)}
-            value={question}
-            id="question"
-          />
-          <label htmlFor="answer-correct">Correct answer</label>
-          <input
-            onChange={(e) => setAnswerCorrect(e.target.value)}
-            value={answerCorrect}
-            id="answer-correct"
-          />
-          <label htmlFor="answer-wrong">Wrong answer</label>
-          <input
-            onChange={(e) => setAnswerWrong1(e.target.value)}
-            value={answerWrong1}
-            id="answer-wrong"
-          />
-          <label htmlFor="answer-wrong">Wrong answer</label>
-          <input
-            onChange={(e) => setAnswerWrong2(e.target.value)}
-            value={answerWrong2}
-            id="answer-wrong"
-          />
-          <label htmlFor="answer-wrong">Wrong answer</label>
-          <input
-            onChange={(e) => setAnswerWrong3(e.target.value)}
-            value={answerWrong3}
-            id="answer-wrong"
-          />
-          <label htmlFor="topics">Topics (comma delimited, lower case)</label>
-          <input
-            onChange={(e) => setTopics(e.target.value)}
-            value={topics}
-            id="topics"
-          />
-          <label htmlFor="more-info">More info (link)</label>
-          <input
-            onChange={(e) => setMoreInfo(e.target.value)}
-            value={moreInfo}
-            id="more-info"
-          />
-          <input type="submit" value="Submit" />
-          <input type="reset" value="Reset" onClick={resetForm} />
-          <p>Status: {status}</p>
-          <p>Reponse: {JSON.stringify(receivedData)}</p>
-        </form>
-      </WrapperPage>
-    </HCenter>
+    <WrapperPage>
+      <Heading>Submit the question</Heading>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="question">Question</label>
+        <textarea
+          onChange={(e) => setQuestion(e.target.value)}
+          value={question}
+          id="question"
+        />
+        <label htmlFor="answer-correct">Correct answer</label>
+        <input
+          onChange={(e) => setAnswerCorrect(e.target.value)}
+          value={answerCorrect}
+          id="answer-correct"
+        />
+        <label htmlFor="answer-wrong">Wrong answer</label>
+        <input
+          onChange={(e) => setAnswerWrong1(e.target.value)}
+          value={answerWrong1}
+          id="answer-wrong"
+        />
+        <label htmlFor="answer-wrong">Wrong answer</label>
+        <input
+          onChange={(e) => setAnswerWrong2(e.target.value)}
+          value={answerWrong2}
+          id="answer-wrong"
+        />
+        <label htmlFor="answer-wrong">Wrong answer</label>
+        <input
+          onChange={(e) => setAnswerWrong3(e.target.value)}
+          value={answerWrong3}
+          id="answer-wrong"
+        />
+        <label htmlFor="topics">Topics (comma delimited, lower case)</label>
+        <input
+          onChange={(e) => setTopics(e.target.value)}
+          value={topics}
+          id="topics"
+        />
+        <label htmlFor="more-info">More info (link)</label>
+        <input
+          onChange={(e) => setMoreInfo(e.target.value)}
+          value={moreInfo}
+          id="more-info"
+        />
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" onClick={resetForm} />
+        <p>Status: {status}</p>
+        <p>Reponse: {JSON.stringify(receivedData)}</p>
+      </form>
+    </WrapperPage>
   );
 };
 
