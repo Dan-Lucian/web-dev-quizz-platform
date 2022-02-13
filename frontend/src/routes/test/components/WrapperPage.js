@@ -13,6 +13,7 @@ const StyledWrapperPage = styled.main`
   padding: 6em 0 10em 0;
   width: 85vw;
   max-width: 1320px;
+  margin: 0 auto;
 
   @media (min-width: ${(p) => p.theme.screen.med}) {
     width: 75vw;
@@ -24,3 +25,6 @@ const StyledWrapperPage = styled.main`
 `;
 
 export default WrapperPage;
+
+// exported to Footer.js to position footer absolute and at window bottom
+export { StyledWrapperPage };

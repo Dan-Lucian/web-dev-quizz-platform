@@ -68,33 +68,31 @@ const PageTest = () => {
   if (!questions) return <PageNotFound />;
 
   return (
-    <HCenter>
-      <WrapperPage>
-        <Question level={1}>
-          <span>{currentQuestionNumber + 1}.</span>
-          {questions[currentQuestionNumber].question}
-        </Question>
+    <WrapperPage>
+      <Question level={1}>
+        <span>{currentQuestionNumber + 1}.</span>
+        {questions[currentQuestionNumber].question}
+      </Question>
 
-        <WrapperAnswers>
-          {questions[currentQuestionNumber].answers.map((answer, idx) => (
-            <Button
-              key={idx}
-              text={answer.answer}
-              onClick={getButtonHandler(answer.correct)}
-              isCorrect={answer.correct}
-              isRevealed={isRevealed}
-            />
-          ))}
-        </WrapperAnswers>
-
-        {showFail && (
-          <PopupFail
-            moreInfo={questions[currentQuestionNumber].moreInfo}
-            moveOntoNextQuestion={moveOntoNextQuestion}
+      <WrapperAnswers>
+        {questions[currentQuestionNumber].answers.map((answer, idx) => (
+          <Button
+            key={idx}
+            text={answer.answer}
+            onClick={getButtonHandler(answer.correct)}
+            isCorrect={answer.correct}
+            isRevealed={isRevealed}
           />
-        )}
-      </WrapperPage>
-    </HCenter>
+        ))}
+      </WrapperAnswers>
+
+      {showFail && (
+        <PopupFail
+          moreInfo={questions[currentQuestionNumber].moreInfo}
+          moveOntoNextQuestion={moveOntoNextQuestion}
+        />
+      )}
+    </WrapperPage>
   );
 };
 
