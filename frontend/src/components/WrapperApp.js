@@ -10,6 +10,9 @@ WrapperApp.propTypes = {
 };
 
 const StyledWrapperApp = styled.div`
+  min-height: 100%;
+  position: relative;
+
   @media (min-width: ${(props) => props.theme.screen.med}) {
     font-size: 20px;
   }

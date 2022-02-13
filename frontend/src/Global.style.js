@@ -28,6 +28,10 @@ const global = `
     color: #fff;
     background: #545E75;
   }
+
+  html, body, #root {
+    height: 100%;
+  }
 `;
 
 const reset = `

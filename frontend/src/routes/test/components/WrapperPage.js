@@ -25,6 +25,3 @@ const StyledWrapperPage = styled.main`
 `;
 
 export default WrapperPage;
-
-// exported to Footer.js to position footer absolute and at window bottom
-export { StyledWrapperPage };
