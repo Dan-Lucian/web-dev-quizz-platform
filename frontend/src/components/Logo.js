@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+// assets
 import LogoPath from '../img/Logo.png';
 
 const Logo = () => {
@@ -7,13 +10,15 @@ const Logo = () => {
   };
 
   return (
-    <StyledLogo
-      onClick={scrollToTop}
-      width="50px"
-      height="50px"
-      src={LogoPath}
-      alt="logo"
-    />
+    <Link to="/">
+      <StyledLogo
+        onClick={scrollToTop}
+        width="50px"
+        height="50px"
+        src={LogoPath}
+        alt="logo"
+      />
+    </Link>
   );
 };
 
