@@ -21,7 +21,7 @@ app.use(express.static('build'));
 app.use(express.json());
 app.use(morgan('tiny'));
 
-app.use('/', routerQuestions);
+app.use('/api/questions', routerQuestions);
 
 app.use(endpointUknown);
 app.use(handlerError);

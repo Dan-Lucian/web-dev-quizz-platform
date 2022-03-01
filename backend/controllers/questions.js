@@ -30,7 +30,7 @@ routerQuestions.post('/', (req, res) => {
 });
 
 // add the received obj in the db as a question
-routerQuestions.post('/submit', (req, res) => {
+routerQuestions.post('/', (req, res) => {
   const { body } = req;
 
   const question = new Question(body);

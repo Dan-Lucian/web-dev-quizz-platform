@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-const baseUrl = '';
+const urlApi = '/api/questions';
 
 const get = () => {
-  const request = axios.get(`${baseUrl}`);
+  const request = axios.get(`${urlApi}`);
   return request.then((res) => res.data);
 };
 
 const send = (newObject) => {
-  const request = axios.post(baseUrl, newObject);
+  const request = axios.post(urlApi, newObject);
   return request.then((res) => res.data);
 };
 
