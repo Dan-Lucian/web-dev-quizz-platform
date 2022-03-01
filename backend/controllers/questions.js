@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { Question } from '../models/question.js';
 import { getRandomInts } from '../utils/getRandomInts.js';
+import { SUBMIT_PASSWORD } from '../utils/config.js';
 
 const routerQuestions = Router();
 
@@ -41,14 +42,22 @@ routerQuestions.get('/', (req, res) => {
 
 // add the received obj in the db as a question
 routerQuestions.post('/', (req, res) => {
-  const { body } = req;
+  const { password } = req.query;
 
+  if (password !== SUBMIT_PASSWORD) {
+    res.status(401).end();
+    return;
+  }
+
+  const { body } = req;
   const question = new Question(body);
 
   question
     .save()
-    .then(() => res.json({ status: 'created successfuly' }))
-    .catch((err) => res.json({ status: 'create error', error: err }));
+    .then(() => res.status(201).json({ status: 'created successfuly' }))
+    .catch((err) =>
+      res.status(500).json({ status: 'create error', error: err })
+    );
 });
 
 export default routerQuestions;
