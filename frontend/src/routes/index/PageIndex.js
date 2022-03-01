@@ -49,7 +49,7 @@ const PageIndex = () => {
 
   const startTest = () => {
     if (selectedTopics.length === 0) return;
-    run(questions.send(selectedTopics));
+    run(questions.get(selectedTopics, 10));
   };
 
   // returns button toggler func that either

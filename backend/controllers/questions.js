@@ -4,11 +4,21 @@ import { getRandomInts } from '../utils/getRandomInts.js';
 
 const routerQuestions = Router();
 
-// search the db for the questions based on the received topics obj
-routerQuestions.post('/', (req, res) => {
-  const { body } = req;
+routerQuestions.get('/', (req, res) => {
+  const limit = parseInt(req.query.limit) || 10;
+  const topics = req.query.topics
+    ? JSON.parse(decodeURIComponent(req.query.topics))
+    : null;
 
-  Question.find({ topics: { $in: body } })
+  if (!topics) {
+    Question.find({}).then((result) => {
+      res.json(result);
+    });
+
+    return;
+  }
+
+  Question.find({ topics: { $in: topics } })
     .then((result) => {
       if (result.length === 0) {
         res.status(404).send('No question found');
@@ -16,15 +26,15 @@ routerQuestions.post('/', (req, res) => {
       }
 
       // get array of 10 random numbers to select the questions later
-      const randomNumbers = getRandomInts(10, 0, result.length - 1);
+      const randomNumbers = getRandomInts(limit, 0, result.length - 1);
       if (!randomNumbers) {
-        res.status(500).send(`Not enough questions: ${result.length}`);
+        res.status(404).send(`Not enough questions: ${result.length}`);
         return;
       }
 
       // select questions based on the random numbers found earlier
       const randomQuestions = randomNumbers.map((number) => result[number]);
-      res.json(randomQuestions);
+      res.status(200).json(randomQuestions);
     })
     .catch(() => res.json({ error: { message: 'Received empty array' } }));
 });

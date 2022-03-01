@@ -2,8 +2,12 @@ import axios from 'axios';
 
 const urlApi = '/api/questions';
 
-const get = () => {
-  const request = axios.get(`${urlApi}`);
+const get = (topics, limit) => {
+  const params = `?topics=${encodeURIComponent(
+    JSON.stringify(topics)
+  )}&limit=${limit}`;
+
+  const request = axios.get(`${urlApi}${params}`);
   return request.then((res) => res.data);
 };
 
