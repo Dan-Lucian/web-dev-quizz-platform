@@ -1,4 +1,3 @@
-import { expect } from '@jest/globals';
 import { getUniqueRandomInts } from '../utils/getUniqueRandomInts';
 
 describe('Getting array of random numbers', () => {
