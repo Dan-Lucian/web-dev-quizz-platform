@@ -13,6 +13,7 @@ import questions from '../../services/questions';
 // shared utils
 import { getTopicInfo } from '../index/utils/dbTopics';
 
+// this page is purely functional, no user has acces to it
 const PageSubmit = () => {
   const [question, setQuestion] = useState('');
   const [answerCorrect, setAnswerCorrect] = useState('');
@@ -21,6 +22,7 @@ const PageSubmit = () => {
   const [answerWrong3, setAnswerWrong3] = useState('');
   const [topics, setTopics] = useState('');
   const [moreInfo, setMoreInfo] = useState('');
+  const [password, setPassword] = useState('');
 
   const { data: receivedData, status, run } = useAsync();
 
@@ -44,7 +46,8 @@ const PageSubmit = () => {
       answerWrong2.length === 0 ||
       answerWrong3.length === 0 ||
       topics.length === 0 ||
-      moreInfo.length === 0
+      moreInfo.length === 0 ||
+      password.length === 0
     ) {
       throw new Error('one input was empty');
     }
@@ -67,7 +70,7 @@ const PageSubmit = () => {
     };
 
     console.log('data', data);
-    run(questions.send(data));
+    run(questions.send(data, password));
   };
 
   return (
@@ -115,6 +118,12 @@ const PageSubmit = () => {
           onChange={(e) => setMoreInfo(e.target.value)}
           value={moreInfo}
           id="more-info"
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+          id="password"
         />
         <input type="submit" value="Submit" />
         <input type="reset" value="Reset" onClick={resetForm} />

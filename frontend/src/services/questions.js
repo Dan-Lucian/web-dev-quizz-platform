@@ -11,8 +11,8 @@ const get = (topics, limit) => {
   return request.then((res) => res.data);
 };
 
-const send = (newObject) => {
-  const request = axios.post(urlApi, newObject);
+const send = (dataToSend, password) => {
+  const request = axios.post(`${urlApi}?password=${password}`, dataToSend);
   return request.then((res) => res.data);
 };
 
