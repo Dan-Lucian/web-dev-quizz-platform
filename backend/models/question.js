@@ -1,21 +1,7 @@
-/* eslint-disable linebreak-style */
 import mongoose from 'mongoose';
 import uniqueValidator from 'mongoose-unique-validator';
 
-// eslint-disable-next-line no-undef
-const url = process.env.MONGODB_URI;
-
-console.log(`Connecting to ${url}`);
-mongoose
-  .connect(url)
-  .then(() => {
-    console.log('Connected to MongoDB');
-  })
-  .catch((err) => {
-    console.log('Error connecting to MongoDB', err.message);
-  });
-
-const questionSchema = new mongoose.Schema({
+const schemaQuestion = new mongoose.Schema({
   question: {
     type: String,
     required: true,
@@ -41,9 +27,9 @@ const questionSchema = new mongoose.Schema({
     required: true,
   },
 });
-questionSchema.plugin(uniqueValidator);
+schemaQuestion.plugin(uniqueValidator);
 
-questionSchema.set('toJSON', {
+schemaQuestion.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString();
     delete returnedObject._id;
@@ -51,6 +37,6 @@ questionSchema.set('toJSON', {
   },
 });
 
-const Question = mongoose.model('Question', questionSchema);
+const Question = mongoose.model('Question', schemaQuestion);
 
 export { Question };
