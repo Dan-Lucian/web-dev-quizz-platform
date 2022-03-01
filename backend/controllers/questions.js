@@ -40,6 +40,18 @@ routerQuestions.get('/', (req, res) => {
     .catch(() => res.json({ error: { message: 'Received empty array' } }));
 });
 
+routerQuestions.get('/:id', (req, res, next) => {
+  Question.findById(req.params.id)
+    .then((question) => {
+      if (question) {
+        res.json(question.toJSON());
+      } else {
+        res.status(404).end();
+      }
+    })
+    .catch((error) => next(error));
+});
+
 // add the received obj in the db as a question
 routerQuestions.post('/', (req, res) => {
   const { password } = req.query;
