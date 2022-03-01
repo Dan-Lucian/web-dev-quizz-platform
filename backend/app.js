@@ -4,16 +4,17 @@ import mongoose from 'mongoose';
 import { handlerError, endpointUknown } from './utils/middleware.js';
 import { MONGODB_URI } from './utils/config.js';
 import routerQuestions from './controllers/questions.js';
+import logger from './utils/logger.js';
 
 const app = express();
 
 mongoose
   .connect(MONGODB_URI)
   .then(() => {
-    console.log('Connected to MongoDB');
+    logger.info('Connected to MongoDB');
   })
   .catch((error) => {
-    console.log('Error connecting to MongoDB', error.message);
+    logger.info('Error connecting to MongoDB', error.message);
   });
 
 app.use(express.static('build'));

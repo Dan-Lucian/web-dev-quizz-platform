@@ -1,8 +1,9 @@
 import { getRandomInt } from './getRandomInt.js';
+import logger from './logger.js';
 
 const getRandomInts = (amount, min, max) => {
   if (amount > max + 1 - min) {
-    console.log('amount bigger than max - min');
+    logger.error('amount bigger than max - min');
     return;
   }
 
