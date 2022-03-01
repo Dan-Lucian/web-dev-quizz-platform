@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { Question } from '../models/question.js';
-import { getRandomInts } from '../utils/getRandomInts.js';
+import { getUniqueRandomInts } from '../utils/getUniqueRandomInts.js';
 import { SUBMIT_PASSWORD } from '../utils/config.js';
 
 const routerQuestions = Router();
@@ -27,7 +27,7 @@ routerQuestions.get('/', (req, res) => {
       }
 
       // get array of 10 random numbers to select the questions later
-      const randomNumbers = getRandomInts(limit, 0, result.length - 1);
+      const randomNumbers = getUniqueRandomInts(limit, 0, result.length - 1);
       if (!randomNumbers) {
         res.status(404).send(`Not enough questions: ${result.length}`);
         return;
