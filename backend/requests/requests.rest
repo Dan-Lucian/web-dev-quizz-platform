@@ -6,3 +6,6 @@ GET http://localhost:3001/api/questions/621e3abd4525033942727c7
 
 POST http://localhost:3001/api/questions
 ###
+
+DELETE http://localhost:3001/api/questions/621e3abd4525033942727c7
+###

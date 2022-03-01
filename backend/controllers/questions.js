@@ -72,4 +72,12 @@ routerQuestions.post('/', (req, res) => {
     );
 });
 
+routerQuestions.delete('/:id', (req, res, next) => {
+  Question.findByIdAndDelete(req.params.id)
+    .then(() => {
+      res.status(204).end();
+    })
+    .catch((error) => next(error));
+});
+
 export default routerQuestions;
