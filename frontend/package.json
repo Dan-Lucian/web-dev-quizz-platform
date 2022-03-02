@@ -1,7 +1,10 @@
 {
-  "name": "frontend",
+  "name": "webdev-tests-frontend",
   "version": "0.1.0",
   "private": true,
+  "author": "Gaina Dan-Lucian",
+  "license": "MIT",
+  "homepage": "https://github.com/Dan-Lucian/web-dev-tests#readme",
   "proxy": "http://localhost:3001",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
