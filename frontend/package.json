@@ -1,7 +1,6 @@
 {
   "name": "webdev-tests-frontend",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "author": "Gaina Dan-Lucian",
   "license": "MIT",
   "homepage": "https://github.com/Dan-Lucian/web-dev-tests#readme",

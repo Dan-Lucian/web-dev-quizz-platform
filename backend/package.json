@@ -1,5 +1,8 @@
 {
   "name": "webdev-tests-backend",
+  "author": "Gaina Dan-Lucian",
+  "license": "MIT",
+  "homepage": "https://github.com/Dan-Lucian/web-dev-tests#readme",
   "version": "1.0.0",
   "description": "The node server for the webdev tests platform.",
   "main": "index.js",
@@ -12,10 +15,6 @@
     "logs:prod": "heroku logs --app afternoon-falls-38174 --tail",
     "lint": "eslint ."
   },
-  "keywords": [],
-  "author": "Gaina Dan-Lucian",
-  "license": "MIT",
-  "homepage": "https://github.com/Dan-Lucian/web-dev-tests#readme",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.15.4",
