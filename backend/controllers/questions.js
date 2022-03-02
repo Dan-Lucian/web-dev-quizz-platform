@@ -53,7 +53,7 @@ routerQuestions.get('/:id', (req, res, next) => {
 });
 
 // add the received obj in the db as a question
-routerQuestions.post('/', (req, res) => {
+routerQuestions.post('/', (req, res, next) => {
   const { password } = req.query;
 
   if (password !== SUBMIT_PASSWORD) {
@@ -67,9 +67,7 @@ routerQuestions.post('/', (req, res) => {
   question
     .save()
     .then(() => res.status(201).json({ status: 'created successfuly' }))
-    .catch((err) =>
-      res.status(500).json({ status: 'create error', error: err })
-    );
+    .catch((err) => next(err));
 });
 
 routerQuestions.delete('/:id', (req, res, next) => {
