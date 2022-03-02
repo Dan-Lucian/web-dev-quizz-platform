@@ -10,7 +10,7 @@ const Logo = () => {
   };
 
   return (
-    <Link to="/">
+    <StyledLinkInternal to="/">
       <StyledLogo
         onClick={scrollToTop}
         width="50px"
@@ -18,9 +18,17 @@ const Logo = () => {
         src={LogoPath}
         alt="logo"
       />
-    </Link>
+    </StyledLinkInternal>
   );
 };
+
+const StyledLinkInternal = styled(Link)`
+  font-size: 0;
+
+  &:hover {
+    background-color: ${(p) => p.theme.color.text};
+  }
+`;
 
 const StyledLogo = styled.img`
   cursor: pointer;

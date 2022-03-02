@@ -26,13 +26,13 @@ Nav.propTypes = {
 const StyledNav = styled.nav`
   position: fixed;
   z-index: 100;
-  padding: 16px 6%;
+  padding: 6px 6%;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${(p) => p.theme.color.bg};
+  background-color: ${(p) => p.theme.color.bgAccent};
   opacity: var(--nav-opacity);
   pointer-events: var(--nav-pointer-events);
   transition: opacity 100ms ease-in-out;
