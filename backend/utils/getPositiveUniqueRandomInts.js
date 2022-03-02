@@ -22,8 +22,8 @@ const getPositiveUniqueRandomInts = (amount, min, max) => {
     return null;
   }
 
-  if (min < 0 || max < 0) {
-    logger.error('both min and max should be positive numbers');
+  if (min < 0 || max < 0 || amount < 0) {
+    logger.error('All parameters should be positive numbers');
     return null;
   }
 
