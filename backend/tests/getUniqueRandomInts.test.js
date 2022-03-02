@@ -41,12 +41,17 @@ describe('Getting array of random numbers', () => {
     });
   });
 
-  test('returns null if arguments are invalid', () => {
+  test.only('returns null if arguments are invalid', () => {
     expect(getPositiveUniqueRandomInts(5, 1, 3)).toBeNull();
     expect(getPositiveUniqueRandomInts(3, 5, 1)).toBeNull();
     expect(getPositiveUniqueRandomInts(3, 1, 1)).toBeNull();
     expect(getPositiveUniqueRandomInts(3)).toBeNull();
     expect(getPositiveUniqueRandomInts()).toBeNull();
+    expect(getPositiveUniqueRandomInts(-1, 1, 3)).toBeNull();
+    expect(getPositiveUniqueRandomInts(1, -1, 3)).toBeNull();
+    expect(getPositiveUniqueRandomInts(1, 1, -3)).toBeNull();
+    expect(getPositiveUniqueRandomInts(1, -1, -3)).toBeNull();
+    expect(getPositiveUniqueRandomInts(-1, -1, -3)).toBeNull();
   });
 
   test('there are no repeating values (1000 checks)', () => {
