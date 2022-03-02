@@ -17,6 +17,15 @@ const getPositiveUniqueRandomInts = (amount, min, max) => {
     return null;
   }
 
+  if (
+    typeof amount !== 'number' ||
+    typeof max !== 'number' ||
+    typeof min !== 'number'
+  ) {
+    logger.error('All parameters should be of type number');
+    return null;
+  }
+
   if (min >= max) {
     logger.error('min should be smaller than max');
     return null;

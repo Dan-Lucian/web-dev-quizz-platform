@@ -52,6 +52,9 @@ describe('Getting array of random numbers', () => {
     expect(getPositiveUniqueRandomInts(1, 1, -3)).toBeNull();
     expect(getPositiveUniqueRandomInts(1, -1, -3)).toBeNull();
     expect(getPositiveUniqueRandomInts(-1, -1, -3)).toBeNull();
+    expect(getPositiveUniqueRandomInts('22', 1, 3)).toBeNull();
+    expect(getPositiveUniqueRandomInts(1, true, 3)).toBeNull();
+    expect(getPositiveUniqueRandomInts(-1, 1, '3')).toBeNull();
   });
 
   test('there are no repeating values (1000 checks)', () => {
