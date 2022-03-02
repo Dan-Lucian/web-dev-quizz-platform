@@ -1,0 +1,2 @@
+(this["webpackJsonpwebdev-tests-frontend"]=this["webpackJsonpwebdev-tests-frontend"]||[]).push([[5],{69:function(e,t,n){"use strict";n.r(t);var s=n(22),c=n(15),d=n(1);t.default=function(){return Object(d.jsx)("main",{children:Object(d.jsx)(s.b,{style:{paddingTop:"8em"},children:Object(d.jsx)(c.a,{level:2,children:"No such page :("})})})}}}]);
+//# sourceMappingURL=5.db1da1dc.chunk.js.map
