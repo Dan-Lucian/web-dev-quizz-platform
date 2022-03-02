@@ -1,9 +1,5 @@
 import logger from './logger.js';
 
-const endpointUknown = (req, res) => {
-  res.status(404).send({ error: 'unknown endpoint' });
-};
-
 const handlerError = (error, req, res, next) => {
   logger.error(error.message);
 
@@ -18,4 +14,4 @@ const handlerError = (error, req, res, next) => {
   next(error);
 };
 
-export { endpointUknown, handlerError };
+export { handlerError };
