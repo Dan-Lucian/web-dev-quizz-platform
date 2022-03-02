@@ -1,13 +1,13 @@
 import { getRandomInt } from './getRandomInt.js';
 import logger from './logger.js';
 
-const getUniqueRandomInts = (amount, min, max) => {
+const getPositiveUniqueRandomInts = (amount, min, max) => {
   if (!amount) {
     logger.error('No amount provided');
     return null;
   }
 
-  if (!min) {
+  if (!min && min !== 0) {
     logger.error('No min provided');
     return null;
   }
@@ -19,6 +19,11 @@ const getUniqueRandomInts = (amount, min, max) => {
 
   if (min >= max) {
     logger.error('min should be smaller than max');
+    return null;
+  }
+
+  if (min < 0 || max < 0) {
+    logger.error('both min and max should be positive numbers');
     return null;
   }
 
@@ -37,4 +42,4 @@ const getUniqueRandomInts = (amount, min, max) => {
   return randomNumbers;
 };
 
-export { getUniqueRandomInts };
+export { getPositiveUniqueRandomInts };
