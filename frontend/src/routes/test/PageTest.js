@@ -3,7 +3,6 @@ import { useState, useRef } from 'react';
 
 // shared components
 import PageNotFound from '../PageNotFound';
-import HCenter from '../../components/HCenter';
 
 // local components
 import PopupFail from './components/PopupFail';
@@ -27,7 +26,6 @@ const PageTest = () => {
   const moveOntoNextQuestion = (delay) => {
     setTimeout(() => {
       if (currentQuestionNumber + 1 === questions.length) {
-        console.log('questions ended');
         navigate('/results', { state: results.current });
         return;
       }
