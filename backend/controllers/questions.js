@@ -73,6 +73,13 @@ routerQuestions.post('/', (req, res) => {
 });
 
 routerQuestions.delete('/:id', (req, res, next) => {
+  const { password } = req.query;
+
+  if (password !== SUBMIT_PASSWORD) {
+    res.status(401).end();
+    return;
+  }
+
   Question.findByIdAndDelete(req.params.id)
     .then(() => {
       res.status(204).end();
