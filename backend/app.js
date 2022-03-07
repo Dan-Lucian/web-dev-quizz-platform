@@ -11,8 +11,6 @@ const routerQuestions = require('./features/questions/question.controller');
 
 const app = express();
 
-console.log('_dirname: ', __dirname);
-
 app.use(express.static('build'));
 app.use(express.json());
 app.use(morgan('tiny'));
