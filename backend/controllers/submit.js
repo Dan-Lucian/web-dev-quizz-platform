@@ -1,10 +1,6 @@
-import { Router } from 'express';
-import { fileURLToPath } from 'url';
-import path from 'path';
-import { SUBMIT_PASSWORD } from '../utils/config.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const { Router } = require('express');
+const path = require('path');
+const { SUBMIT_PASSWORD } = require('../utils/config');
 
 const routerSubmit = Router();
 
@@ -19,4 +15,4 @@ routerSubmit.get('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
 });
 
-export default routerSubmit;
+module.exports = routerSubmit;

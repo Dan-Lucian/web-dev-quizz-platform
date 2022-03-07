@@ -1,14 +1,14 @@
-import mongoose from 'mongoose';
-import supertest from 'supertest';
-import { Question } from '../models/question.js';
-import app from '../app.js';
-import {
+const mongoose = require('mongoose');
+const supertest = require('supertest');
+const Question = require('../models/question');
+const app = require('../app');
+const {
   questionsInitial,
   getQuestionsFromDb,
   getIdNonExistent,
   questionNew,
-} from './helper.js';
-import { SUBMIT_PASSWORD } from '../utils/config.js';
+} = require('./helper');
+const { SUBMIT_PASSWORD } = require('../utils/config');
 
 const api = supertest(app);
 

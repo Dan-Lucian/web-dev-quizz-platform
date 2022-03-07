@@ -1,12 +1,12 @@
-import express from 'express';
-import morgan from 'morgan';
-import mongoose from 'mongoose';
-import logger from './utils/logger.js';
-import { handlerError } from './utils/middleware.js';
-import { MONGODB_URI } from './utils/config.js';
-import routerSubmit from './controllers/submit.js';
-import routerQuestions from './controllers/questions.js';
-import routerWild from './controllers/wild.js';
+const express = require('express');
+const morgan = require('morgan');
+const mongoose = require('mongoose');
+const logger = require('./utils/logger');
+const { handlerError } = require('./utils/middleware');
+const { MONGODB_URI } = require('./utils/config');
+const routerSubmit = require('./controllers/submit');
+const routerQuestions = require('./controllers/questions');
+const routerWild = require('./controllers/wild');
 
 const app = express();
 
@@ -29,4 +29,4 @@ app.use('*', routerWild);
 
 app.use(handlerError);
 
-export default app;
+module.exports = app;

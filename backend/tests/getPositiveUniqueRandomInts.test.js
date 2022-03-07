@@ -1,4 +1,6 @@
-import { getPositiveUniqueRandomInts } from '../utils/getPositiveUniqueRandomInts.js';
+const {
+  getPositiveUniqueRandomInts,
+} = require('../utils/getPositiveUniqueRandomInts');
 
 describe('Getting array of random numbers', () => {
   test('returns type array', () => {

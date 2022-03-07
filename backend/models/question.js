@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import uniqueValidator from 'mongoose-unique-validator';
+const mongoose = require('mongoose');
+const uniqueValidator = require('mongoose-unique-validator');
 
 const schemaQuestion = new mongoose.Schema({
   question: {
@@ -39,4 +39,4 @@ schemaQuestion.set('toJSON', {
 
 const Question = mongoose.model('Question', schemaQuestion);
 
-export { Question };
+module.exports = Question;

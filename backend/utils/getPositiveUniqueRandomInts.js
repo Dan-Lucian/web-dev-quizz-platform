@@ -1,5 +1,5 @@
-import { getRandomInt } from './getRandomInt.js';
-import logger from './logger.js';
+const getRandomInt = require('./getRandomInt');
+const logger = require('./logger');
 
 const getPositiveUniqueRandomInts = (amount, min, max) => {
   if (!amount) {
@@ -51,4 +51,4 @@ const getPositiveUniqueRandomInts = (amount, min, max) => {
   return randomNumbers;
 };
 
-export { getPositiveUniqueRandomInts };
+module.exports = getPositiveUniqueRandomInts;

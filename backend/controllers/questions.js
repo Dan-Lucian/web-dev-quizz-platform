@@ -1,7 +1,7 @@
-import { Router } from 'express';
-import { Question } from '../models/question.js';
-import { getPositiveUniqueRandomInts } from '../utils/getPositiveUniqueRandomInts.js';
-import { SUBMIT_PASSWORD } from '../utils/config.js';
+const { Router } = require('express');
+const Question = require('../models/question');
+const getPositiveUniqueRandomInts = require('../utils/getPositiveUniqueRandomInts');
+const { SUBMIT_PASSWORD } = require('../utils/config');
 
 const routerQuestions = Router();
 
@@ -89,4 +89,4 @@ routerQuestions.delete('/:id', (req, res, next) => {
     .catch((error) => next(error));
 });
 
-export default routerQuestions;
+module.exports = routerQuestions;

@@ -1,4 +1,4 @@
-import { Question } from '../models/question';
+const Question = require('../models/question');
 
 const questionsInitial = [
   {
@@ -86,4 +86,9 @@ const getIdNonExistent = async () => {
   return question._id.toString();
 };
 
-export { questionsInitial, getQuestionsFromDb, getIdNonExistent, questionNew };
+module.exports = {
+  questionsInitial,
+  getQuestionsFromDb,
+  getIdNonExistent,
+  questionNew,
+};
