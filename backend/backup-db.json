@@ -1,0 +1,3394 @@
+[
+  {
+    "question": "Which html tag is used to define a browser tab name?",
+    "answers": [
+      {
+        "answer": "<title>My custom name</title>",
+        "correct": true,
+        "_id": "61aa2c5333b1141bf8ef8356"
+      },
+      {
+        "answer": "<tabname>My custom name</tabname>",
+        "correct": false,
+        "_id": "61aa2c5333b1141bf8ef8357"
+      },
+      {
+        "answer": "<meta name=\"tabname\" content=\"My custom name\">",
+        "correct": false,
+        "_id": "61aa2c5333b1141bf8ef8358"
+      },
+      {
+        "answer": "You can do so only with javascript",
+        "correct": false,
+        "_id": "61aa2c5333b1141bf8ef8359"
+      }
+    ],
+    "topics": ["html", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title",
+    "id": "61aa2c5333b1141bf8ef8355"
+  },
+  {
+    "question": "What tag is essential for responsive web design?",
+    "answers": [
+      {
+        "answer": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+        "correct": true,
+        "_id": "61aa30af33b1141bf8ef835d"
+      },
+      {
+        "answer": "<meta name=\"responsive\" content=\"mobile\">",
+        "correct": false,
+        "_id": "61aa30af33b1141bf8ef835e"
+      },
+      {
+        "answer": "<meta name=\"viewport\" content=\"mobile\">",
+        "correct": false,
+        "_id": "61aa30af33b1141bf8ef835f"
+      },
+      {
+        "answer": "<meta name=\"settings\" content=\"responsive=mobile\", mobile-scale=1.0>",
+        "correct": false,
+        "_id": "61aa30af33b1141bf8ef8360"
+      }
+    ],
+    "topics": ["html", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag",
+    "id": "61aa30af33b1141bf8ef835c"
+  },
+  {
+    "question": "How do you make a link open in a new tab?",
+    "answers": [
+      {
+        "answer": "<a target=\"_blank\" ...",
+        "correct": true,
+        "_id": "61aa328c33b1141bf8ef8364"
+      },
+      {
+        "answer": "<a target=\"_newtab\" ...",
+        "correct": false,
+        "_id": "61aa328c33b1141bf8ef8365"
+      },
+      {
+        "answer": "<a open=\"_newtab\" ...",
+        "correct": false,
+        "_id": "61aa328c33b1141bf8ef8366"
+      },
+      {
+        "answer": "<a target=\"_self\" ...",
+        "correct": false,
+        "_id": "61aa328c33b1141bf8ef8367"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a",
+    "id": "61aa328c33b1141bf8ef8363"
+  },
+  {
+    "question": "How do you define an html only tooltip?",
+    "answers": [
+      {
+        "answer": "<p title=\"some text\">",
+        "correct": true,
+        "_id": "61aa336533b1141bf8ef836b"
+      },
+      {
+        "answer": "<p tooltip=\"some text\">",
+        "correct": false,
+        "_id": "61aa336533b1141bf8ef836c"
+      },
+      {
+        "answer": "<p text=\"some text\">",
+        "correct": false,
+        "_id": "61aa336533b1141bf8ef836d"
+      },
+      {
+        "answer": "<p hover=\"some text\">",
+        "correct": false,
+        "_id": "61aa336533b1141bf8ef836e"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title",
+    "id": "61aa336533b1141bf8ef836a"
+  },
+  {
+    "question": "What does the \"alt\" attribute do for images?",
+    "answers": [
+      {
+        "answer": "Shows an alternate text for an inaccessible image.",
+        "correct": true,
+        "_id": "61aa343b33b1141bf8ef8372"
+      },
+      {
+        "answer": "Shows the source link.",
+        "correct": false,
+        "_id": "61aa343b33b1141bf8ef8373"
+      },
+      {
+        "answer": "Shows the author name and gives the credits.",
+        "correct": false,
+        "_id": "61aa343b33b1141bf8ef8374"
+      },
+      {
+        "answer": "Defines a backup image.",
+        "correct": false,
+        "_id": "61aa343b33b1141bf8ef8375"
+      }
+    ],
+    "topics": ["html", "attributes", "accessibility"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img",
+    "id": "61aa343b33b1141bf8ef8371"
+  },
+  {
+    "question": "How do you link an element on the same page?",
+    "answers": [
+      {
+        "answer": "<a href=\"#section\">",
+        "correct": true,
+        "_id": "61aa351c33b1141bf8ef8379"
+      },
+      {
+        "answer": "<a internal=\"#section\">",
+        "correct": false,
+        "_id": "61aa351c33b1141bf8ef837a"
+      },
+      {
+        "answer": "<a href=\"section\">",
+        "correct": false,
+        "_id": "61aa351c33b1141bf8ef837b"
+      },
+      {
+        "answer": "<a link=\"#section\">",
+        "correct": false,
+        "_id": "61aa351c33b1141bf8ef837c"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a",
+    "id": "61aa351c33b1141bf8ef8378"
+  },
+  {
+    "question": "What is <label> generally used for?",
+    "answers": [
+      {
+        "answer": "Associate text with input.",
+        "correct": true,
+        "_id": "61aa35bb33b1141bf8ef8380"
+      },
+      {
+        "answer": "Names an image.",
+        "correct": false,
+        "_id": "61aa35bb33b1141bf8ef8381"
+      },
+      {
+        "answer": "Used with currency.",
+        "correct": false,
+        "_id": "61aa35bb33b1141bf8ef8382"
+      },
+      {
+        "answer": "Links to an external resource.",
+        "correct": false,
+        "_id": "61aa35bb33b1141bf8ef8383"
+      }
+    ],
+    "topics": ["html", "tags", "accessibility"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label",
+    "id": "61aa35bb33b1141bf8ef837f"
+  },
+  {
+    "question": "How do you associate a label with an input?",
+    "answers": [
+      {
+        "answer": "Give input an \"id\" and write that id in the label's \"for\" attribute.",
+        "correct": true,
+        "_id": "61aa366f33b1141bf8ef8387"
+      },
+      {
+        "answer": "Give input a \"name\" and write that id in the label's \"for\" attribute.",
+        "correct": false,
+        "_id": "61aa366f33b1141bf8ef8388"
+      },
+      {
+        "answer": "Give input an \"id\" and write that id in the label's \"link\" attribute.",
+        "correct": false,
+        "_id": "61aa366f33b1141bf8ef8389"
+      },
+      {
+        "answer": "Give input an \"id\" and write that id in the label's \"htmlFor\" attribute.",
+        "correct": false,
+        "_id": "61aa366f33b1141bf8ef838a"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label",
+    "id": "61aa366f33b1141bf8ef8386"
+  },
+  {
+    "question": "How do you show a text inside an <input> that has no value?",
+    "answers": [
+      {
+        "answer": "<input placeholder=\"some text\" ...>",
+        "correct": true,
+        "_id": "61aa37a233b1141bf8ef838e"
+      },
+      {
+        "answer": "<input initial=\"some text\" ...>",
+        "correct": false,
+        "_id": "61aa37a233b1141bf8ef838f"
+      },
+      {
+        "answer": "<input untouched=\"some text\" ...>",
+        "correct": false,
+        "_id": "61aa37a233b1141bf8ef8390"
+      },
+      {
+        "answer": "<input text=\"some text\" ...>",
+        "correct": false,
+        "_id": "61aa37a233b1141bf8ef8391"
+      }
+    ],
+    "topics": ["html", "attributes", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input",
+    "id": "61aa37a233b1141bf8ef838d"
+  },
+  {
+    "question": "Which group of tags are all inline elements?",
+    "answers": [
+      {
+        "answer": "<input>, <img>, <textarea>, <br>, <iframe>",
+        "correct": true,
+        "_id": "61aa397133b1141bf8ef8395"
+      },
+      {
+        "answer": "<input>, <a>, <em>, <form>, <sub>",
+        "correct": false,
+        "_id": "61aa397133b1141bf8ef8396"
+      },
+      {
+        "answer": "<i>, <table>, <article>, <span>, <canvas>",
+        "correct": false,
+        "_id": "61aa397133b1141bf8ef8397"
+      },
+      {
+        "answer": "<b>, <img>, <p>, <br>, <li>",
+        "correct": false,
+        "_id": "61aa397133b1141bf8ef8398"
+      }
+    ],
+    "topics": ["html", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements",
+    "id": "61aa397133b1141bf8ef8394"
+  },
+  {
+    "question": "Describe an inline html element.",
+    "answers": [
+      {
+        "answer": "Does not start on a new line and only takes up as much width as necessary.",
+        "correct": true,
+        "_id": "61aa3a9533b1141bf8ef83c1"
+      },
+      {
+        "answer": "Does not start on a new line and takes up the remaining width.",
+        "correct": false,
+        "_id": "61aa3a9533b1141bf8ef83c2"
+      },
+      {
+        "answer": "Starts on a new line and adds margins.",
+        "correct": false,
+        "_id": "61aa3a9533b1141bf8ef83c3"
+      },
+      {
+        "answer": "Starts on a new line and does not add any margins.",
+        "correct": false,
+        "_id": "61aa3a9533b1141bf8ef83c4"
+      }
+    ],
+    "topics": ["html", "general"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements",
+    "id": "61aa3a9533b1141bf8ef83c0"
+  },
+  {
+    "question": "Which group of tags are all block elements?",
+    "answers": [
+      {
+        "answer": "<article>, <form>, <nav>, <section>, <pre>",
+        "correct": true,
+        "_id": "61aa3e3133b1141bf8ef841e"
+      },
+      {
+        "answer": "<footer>, <div>, <p>, <iframe>, <table>",
+        "correct": false,
+        "_id": "61aa3e3133b1141bf8ef841f"
+      },
+      {
+        "answer": "<section>, <header>, <h1>, <canvas>, <main>",
+        "correct": false,
+        "_id": "61aa3e3133b1141bf8ef8420"
+      },
+      {
+        "answer": "<aside>, <figure>, <img>, <li>, <ul>",
+        "correct": false,
+        "_id": "61aa3e3133b1141bf8ef8421"
+      }
+    ],
+    "topics": ["html", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements",
+    "id": "61aa3e3133b1141bf8ef841d"
+  },
+  {
+    "question": "Describe a block html element.",
+    "answers": [
+      {
+        "answer": " Always starts on a new line, takes up the full width available.",
+        "correct": true,
+        "_id": "61aa3f6e33b1141bf8ef8425"
+      },
+      {
+        "answer": " Always starts on a new line, takes only the necessary width.",
+        "correct": false,
+        "_id": "61aa3f6e33b1141bf8ef8426"
+      },
+      {
+        "answer": " Never starts on a new line.",
+        "correct": false,
+        "_id": "61aa3f6e33b1141bf8ef8427"
+      },
+      {
+        "answer": "Never starts on a new line, takes the full width available.",
+        "correct": false,
+        "_id": "61aa3f6e33b1141bf8ef8428"
+      }
+    ],
+    "topics": ["html", "general"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements",
+    "id": "61aa3f6e33b1141bf8ef8424"
+  },
+  {
+    "question": "What attribute automatically focuses an element on page load?",
+    "answers": [
+      {
+        "answer": "autofocus",
+        "correct": true,
+        "_id": "61aa402233b1141bf8ef842c"
+      },
+      {
+        "answer": "instantfocus",
+        "correct": false,
+        "_id": "61aa402233b1141bf8ef842d"
+      },
+      {
+        "answer": "defaultfocus",
+        "correct": false,
+        "_id": "61aa402233b1141bf8ef842e"
+      },
+      { "answer": "focus", "correct": false, "_id": "61aa402233b1141bf8ef842f" }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autofocus",
+    "id": "61aa402233b1141bf8ef842b"
+  },
+  {
+    "question": "What attribute is used to disable an input/button?",
+    "answers": [
+      {
+        "answer": "disabled",
+        "correct": true,
+        "_id": "61aa444633b1141bf8ef8433"
+      },
+      {
+        "answer": "closed",
+        "correct": false,
+        "_id": "61aa444633b1141bf8ef8434"
+      },
+      {
+        "answer": "false",
+        "correct": false,
+        "_id": "61aa444633b1141bf8ef8435"
+      },
+      {
+        "answer": "stopped",
+        "correct": false,
+        "_id": "61aa444633b1141bf8ef8436"
+      }
+    ],
+    "topics": ["html", "forms", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/disabled",
+    "id": "61aa444633b1141bf8ef8432"
+  },
+  {
+    "question": "How to include special html special chars (<, >, \") inside a page's text?",
+    "answers": [
+      {
+        "answer": "Use html entities (ex: &lt;).",
+        "correct": true,
+        "_id": "61aa4a0733b1141bf8ef843a"
+      },
+      {
+        "answer": "Just write the char, the browser will figure that out.",
+        "correct": false,
+        "_id": "61aa4a0733b1141bf8ef843b"
+      },
+      {
+        "answer": "enclose the char in curly braces.",
+        "correct": false,
+        "_id": "61aa4a0733b1141bf8ef843c"
+      },
+      {
+        "answer": "escape the char using slash char.",
+        "correct": false,
+        "_id": "61aa4a0733b1141bf8ef843d"
+      }
+    ],
+    "topics": ["html", "general"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#entity_references_including_special_characters_in_html",
+    "id": "61aa4a0733b1141bf8ef8439"
+  },
+  {
+    "question": "What tag is used to display text if JavaScript is disabled?",
+    "answers": [
+      {
+        "answer": "<noscript>",
+        "correct": true,
+        "_id": "61aa5cbd33b1141bf8ef8441"
+      },
+      {
+        "answer": "<jsdisabled>",
+        "correct": false,
+        "_id": "61aa5cbd33b1141bf8ef8442"
+      },
+      {
+        "answer": "<scriptdisabled>",
+        "correct": false,
+        "_id": "61aa5cbd33b1141bf8ef8443"
+      },
+      {
+        "answer": "<nojs>",
+        "correct": false,
+        "_id": "61aa5cbd33b1141bf8ef8444"
+      }
+    ],
+    "topics": ["html", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript",
+    "id": "61aa5cbd33b1141bf8ef8440"
+  },
+  {
+    "question": "How to add a page description to show in the search engines results page?",
+    "answers": [
+      {
+        "answer": "<meta name=\"description\" content=\"some text\">",
+        "correct": true,
+        "_id": "61aa5e5233b1141bf8ef8448"
+      },
+      {
+        "answer": "<meta name=\"description\">some text</meta>",
+        "correct": false,
+        "_id": "61aa5e5233b1141bf8ef8449"
+      },
+      {
+        "answer": "<enginedesc content=\"some text\">",
+        "correct": false,
+        "_id": "61aa5e5233b1141bf8ef844a"
+      },
+      {
+        "answer": "<description type=\"engine\">some text</description>",
+        "correct": false,
+        "_id": "61aa5e5233b1141bf8ef844b"
+      }
+    ],
+    "topics": ["html", "tags", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#active_learning_the_descriptions_use_in_search_engines",
+    "id": "61aa5e5233b1141bf8ef8447"
+  },
+  {
+    "question": "Which group of tags are all used without a closing tag pair?",
+    "answers": [
+      {
+        "answer": "<img>, <br>, <hr>, <link>, <meta>",
+        "correct": true,
+        "_id": "61aa5fab33b1141bf8ef844f"
+      },
+      {
+        "answer": "<br>, <hr>, <textarea>, <link>, <meta>",
+        "correct": false,
+        "_id": "61aa5fab33b1141bf8ef8450"
+      },
+      {
+        "answer": "<input>, <br>, <hr>, <picture>, <meta>",
+        "correct": false,
+        "_id": "61aa5fab33b1141bf8ef8451"
+      },
+      {
+        "answer": "<link>, <br>, <hr>, <a>, <img>",
+        "correct": false,
+        "_id": "61aa5fab33b1141bf8ef8452"
+      }
+    ],
+    "topics": ["html", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Glossary/Empty_element",
+    "id": "61aa5fab33b1141bf8ef844e"
+  },
+  {
+    "question": "If inside the html code there is space/br between a closing tag from one element and an opening tag but from another element, will this space show in the browser?",
+    "answers": [
+      { "answer": "Yes", "correct": true, "_id": "61aa620833b1141bf8ef84e1" },
+      { "answer": "No", "correct": false, "_id": "61aa620833b1141bf8ef84e2" },
+      {
+        "answer": "It's a trick question",
+        "correct": false,
+        "_id": "61aa620833b1141bf8ef84e3"
+      },
+      {
+        "answer": "Depends on whether it's a space or a break line",
+        "correct": false,
+        "_id": "61aa620833b1141bf8ef84e4"
+      }
+    ],
+    "topics": ["html", "tags", "general"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace",
+    "id": "61aa620833b1141bf8ef84e0"
+  },
+  {
+    "question": "Which group of tags are all referred to as semantic html?",
+    "answers": [
+      {
+        "answer": "<header>, <nav>, <section>, <article>, <footer>",
+        "correct": true,
+        "_id": "61aa652433b1141bf8ef84e8"
+      },
+      {
+        "answer": "<header>, <main>, <p>, <pre>, <footer>",
+        "correct": false,
+        "_id": "61aa652433b1141bf8ef84e9"
+      },
+      {
+        "answer": "<header>, <aside>, <nav>, <div>, <footer>",
+        "correct": false,
+        "_id": "61aa652433b1141bf8ef84ea"
+      },
+      {
+        "answer": "<main>, <a>, <article>, <section>, <footer>",
+        "correct": false,
+        "_id": "61aa652433b1141bf8ef84eb"
+      }
+    ],
+    "topics": ["html", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantics_in_html",
+    "id": "61aa652433b1141bf8ef84e7"
+  },
+  {
+    "question": "What attribute is used to start from a specific number inside <ol>?",
+    "answers": [
+      {
+        "answer": "<ol start=\"5\">",
+        "correct": true,
+        "_id": "61aa660c33b1141bf8ef84ef"
+      },
+      {
+        "answer": "<ol default=\"5\">",
+        "correct": false,
+        "_id": "61aa660c33b1141bf8ef84f0"
+      },
+      {
+        "answer": "<ol value=\"5\">",
+        "correct": false,
+        "_id": "61aa660c33b1141bf8ef84f1"
+      },
+      {
+        "answer": "<ol initial=\"5\">",
+        "correct": false,
+        "_id": "61aa660c33b1141bf8ef84f2"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol#attr-start",
+    "id": "61aa660c33b1141bf8ef84ee"
+  },
+  {
+    "question": "What group of tags form the elements of a table?",
+    "answers": [
+      {
+        "answer": "<table>, <caption>, <tr>, <td>, <th>",
+        "correct": true,
+        "_id": "61aa66f933b1141bf8ef84f6"
+      },
+      {
+        "answer": "<table>, <tr>, <td>, <dd>, <th>",
+        "correct": false,
+        "_id": "61aa66f933b1141bf8ef84f7"
+      },
+      {
+        "answer": "<table>, <tr>, <br>, <td>, <th>",
+        "correct": false,
+        "_id": "61aa66f933b1141bf8ef84f8"
+      },
+      {
+        "answer": "<table>, <tr>, <dt>, <td>, <th>",
+        "correct": false,
+        "_id": "61aa66f933b1141bf8ef84f9"
+      }
+    ],
+    "topics": ["html", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table",
+    "id": "61aa66f933b1141bf8ef84f5"
+  },
+  {
+    "question": "What attributes can be used to merge table cells?",
+    "answers": [
+      {
+        "answer": "<td colspan=\"2\" rowspan=\"2\">",
+        "correct": true,
+        "_id": "61aa680e33b1141bf8ef84fd"
+      },
+      {
+        "answer": "<td rightmerge=\"2\" bottommerge=\"2\" >",
+        "correct": false,
+        "_id": "61aa680e33b1141bf8ef84fe"
+      },
+      {
+        "answer": "<td horizontal=\"2\" vertical=\"2\">",
+        "correct": false,
+        "_id": "61aa680e33b1141bf8ef84ff"
+      },
+      {
+        "answer": "<td colexpand=\"2\" rowexpand=\"2\" >",
+        "correct": false,
+        "_id": "61aa680e33b1141bf8ef8500"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attributes",
+    "id": "61aa680e33b1141bf8ef84fc"
+  },
+  {
+    "question": "Which group of attributes can all be used with the <audio> tag? ",
+    "answers": [
+      {
+        "answer": "<audio controls autoplay muted loop src=\"...\">",
+        "correct": true,
+        "_id": "61aa6a0233b1141bf8ef8504"
+      },
+      {
+        "answer": "<audio autoplay muted loop href=\"...\">",
+        "correct": false,
+        "_id": "61aa6a0233b1141bf8ef8505"
+      },
+      {
+        "answer": "<audio controls autoplay disabled src=\"...\">",
+        "correct": false,
+        "_id": "61aa6a0233b1141bf8ef8506"
+      },
+      {
+        "answer": "<audio controls autoplay start=\"50s\" src=\"...\">",
+        "correct": false,
+        "_id": "61aa6a0233b1141bf8ef8507"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attributes",
+    "id": "61aa6a0233b1141bf8ef8503"
+  },
+  {
+    "question": "Which one of these affirmations is wrong about using the <img> tag?",
+    "answers": [
+      {
+        "answer": "Always close the <img> tag",
+        "correct": true,
+        "_id": "61aa6b2233b1141bf8ef850b"
+      },
+      {
+        "answer": "Always specify the \"alt\" attribute",
+        "correct": false,
+        "_id": "61aa6b2233b1141bf8ef850c"
+      },
+      {
+        "answer": "Always specify the \"width\" and \"height\" attributes",
+        "correct": false,
+        "_id": "61aa6b2233b1141bf8ef850d"
+      },
+      {
+        "answer": "Always specify the \"src\" attribute",
+        "correct": false,
+        "_id": "61aa6b2233b1141bf8ef850e"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img",
+    "id": "61aa6b2233b1141bf8ef850a"
+  },
+  {
+    "question": "Which tag is used to create a drop-down list?",
+    "answers": [
+      {
+        "answer": "<select> and <option>",
+        "correct": true,
+        "_id": "61ab22a99cb9ddc4eca7b67f"
+      },
+      {
+        "answer": "<drop> and <option>",
+        "correct": false,
+        "_id": "61ab22a99cb9ddc4eca7b680"
+      },
+      {
+        "answer": "<list> and <li>",
+        "correct": false,
+        "_id": "61ab22a99cb9ddc4eca7b681"
+      },
+      {
+        "answer": "<dropdown> and <item>",
+        "correct": false,
+        "_id": "61ab22a99cb9ddc4eca7b682"
+      }
+    ],
+    "topics": ["html", "forms", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select",
+    "id": "61ab22a99cb9ddc4eca7b67e"
+  },
+  {
+    "question": "How do you make a drop-down option be selected by default?",
+    "answers": [
+      {
+        "answer": "<option selected ...>",
+        "correct": true,
+        "_id": "61ab233e9cb9ddc4eca7b686"
+      },
+      {
+        "answer": "<option default ...>",
+        "correct": false,
+        "_id": "61ab233e9cb9ddc4eca7b687"
+      },
+      {
+        "answer": "<option initial ...>",
+        "correct": false,
+        "_id": "61ab233e9cb9ddc4eca7b688"
+      },
+      {
+        "answer": "<option show ...>",
+        "correct": false,
+        "_id": "61ab233e9cb9ddc4eca7b689"
+      }
+    ],
+    "topics": ["html", "attributes", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#basic_select",
+    "id": "61ab233e9cb9ddc4eca7b685"
+  },
+  {
+    "question": "What tag is used to create a recommendation of values for an <input list=\"my-custom-list\" ...>",
+    "answers": [
+      {
+        "answer": "<datalist> and <option>",
+        "correct": true,
+        "_id": "61ab243d9cb9ddc4eca7b68d"
+      },
+      {
+        "answer": "<select> and <option>",
+        "correct": false,
+        "_id": "61ab243d9cb9ddc4eca7b68e"
+      },
+      {
+        "answer": "<fieldset> and <option>",
+        "correct": false,
+        "_id": "61ab243d9cb9ddc4eca7b68f"
+      },
+      {
+        "answer": "<collection> and <option>",
+        "correct": false,
+        "_id": "61ab243d9cb9ddc4eca7b690"
+      }
+    ],
+    "topics": ["html", "tags", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist",
+    "id": "61ab243d9cb9ddc4eca7b68c"
+  },
+  {
+    "question": "What does the <fieldset> tag do?",
+    "answers": [
+      {
+        "answer": "Groups elements of an html form.",
+        "correct": true,
+        "_id": "61ab25c09cb9ddc4eca7b694"
+      },
+      {
+        "answer": "Creates a drawable square.",
+        "correct": false,
+        "_id": "61ab25c09cb9ddc4eca7b695"
+      },
+      {
+        "answer": "Defines a clickable portion of an image inside a form.",
+        "correct": false,
+        "_id": "61ab25c09cb9ddc4eca7b696"
+      },
+      {
+        "answer": "Links a text to an input.",
+        "correct": false,
+        "_id": "61ab25c09cb9ddc4eca7b697"
+      }
+    ],
+    "topics": ["html", "tags", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset",
+    "id": "61ab25c09cb9ddc4eca7b693"
+  },
+  {
+    "question": "What tag is used to explain an abbreviation?",
+    "answers": [
+      {
+        "answer": "<abbr>",
+        "correct": true,
+        "_id": "61ab27389cb9ddc4eca7b69b"
+      },
+      {
+        "answer": "<short>",
+        "correct": false,
+        "_id": "61ab27389cb9ddc4eca7b69c"
+      },
+      {
+        "answer": "<abbreviation>",
+        "correct": false,
+        "_id": "61ab27389cb9ddc4eca7b69d"
+      },
+      {
+        "answer": "<title>",
+        "correct": false,
+        "_id": "61ab27389cb9ddc4eca7b69e"
+      }
+    ],
+    "topics": ["html", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr",
+    "id": "61ab27389cb9ddc4eca7b69a"
+  },
+  {
+    "question": "How do you invert a text direction from the default \"left to right\" to \"right to left\"?",
+    "answers": [
+      {
+        "answer": "<bdo dir=\"rtl\">some text</bdo>",
+        "correct": true,
+        "_id": "61ab28bf9cb9ddc4eca7b6a2"
+      },
+      {
+        "answer": "<p dir=\"rtl\">some text</p>",
+        "correct": false,
+        "_id": "61ab28bf9cb9ddc4eca7b6a3"
+      },
+      {
+        "answer": "<p direction=\"rtl\">some text</p>",
+        "correct": false,
+        "_id": "61ab28bf9cb9ddc4eca7b6a4"
+      },
+      {
+        "answer": "<invert>some text</invert>",
+        "correct": false,
+        "_id": "61ab28bf9cb9ddc4eca7b6a5"
+      }
+    ],
+    "topics": ["html", "tags", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo",
+    "id": "61ab28bf9cb9ddc4eca7b6a1"
+  },
+  {
+    "question": "What attribute is used to put restrictions on the contents of an iframe?",
+    "answers": [
+      {
+        "answer": "<iframe sandbox ...>",
+        "correct": true,
+        "_id": "61ab2b919cb9ddc4eca7b6b0"
+      },
+      {
+        "answer": "<iframe restricted ...>",
+        "correct": false,
+        "_id": "61ab2b919cb9ddc4eca7b6b1"
+      },
+      {
+        "answer": "<iframe allowed=\"false\" ...>",
+        "correct": false,
+        "_id": "61ab2b919cb9ddc4eca7b6b2"
+      },
+      {
+        "answer": "<iframe restrict ...>",
+        "correct": false,
+        "_id": "61ab2b919cb9ddc4eca7b6b3"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox",
+    "id": "61ab2b919cb9ddc4eca7b6af"
+  },
+  {
+    "question": "Why big websites deny your <iframe> connection?",
+    "answers": [
+      {
+        "answer": "It's can be exploited by tricking users to click on an invisible <iframe>.",
+        "correct": true,
+        "_id": "61ab2df29cb9ddc4eca7b6b7"
+      },
+      {
+        "answer": "They don't want their content on your platform.",
+        "correct": false,
+        "_id": "61ab2df29cb9ddc4eca7b6b8"
+      },
+      {
+        "answer": "They actually don't block it, it's default behavior.",
+        "correct": false,
+        "_id": "61ab2df29cb9ddc4eca7b6b9"
+      },
+      {
+        "answer": "There are limited amount of <iframe> connections which they can handle.",
+        "correct": false,
+        "_id": "61ab2df29cb9ddc4eca7b6ba"
+      }
+    ],
+    "topics": ["internet", "websites", "security"],
+    "moreInfo": "https://javascript.info/clickjacking",
+    "id": "61ab2df29cb9ddc4eca7b6b6"
+  },
+  {
+    "question": "Why it is good to have the rel=\"noopener\" attribute on your links?",
+    "answers": [
+      {
+        "answer": "To not grant the new browser context access to the document that opened it.",
+        "correct": true,
+        "_id": "61ab31599cb9ddc4eca7b6be"
+      },
+      {
+        "answer": "It's a trick question, it is bad to have that attribute on your links.",
+        "correct": false,
+        "_id": "61ab31599cb9ddc4eca7b6bf"
+      },
+      {
+        "answer": "To not download anything from the new browser context.",
+        "correct": false,
+        "_id": "61ab31599cb9ddc4eca7b6c0"
+      },
+      {
+        "answer": "To have a secure https connection.",
+        "correct": false,
+        "_id": "61ab31599cb9ddc4eca7b6c1"
+      }
+    ],
+    "topics": ["html", "attributes", "general"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/noopener",
+    "id": "61ab31599cb9ddc4eca7b6bd"
+  },
+  {
+    "question": "How to you tell search engines the language of your website?",
+    "answers": [
+      {
+        "answer": "<html lang=\"en\">",
+        "correct": true,
+        "_id": "61ab32569cb9ddc4eca7b6c5"
+      },
+      {
+        "answer": "<div lang=\"en\">",
+        "correct": false,
+        "_id": "61ab32569cb9ddc4eca7b6c6"
+      },
+      {
+        "answer": "<html language=\"english\">",
+        "correct": false,
+        "_id": "61ab32569cb9ddc4eca7b6c7"
+      },
+      {
+        "answer": "<meta name=\"language\" content=\"en\">",
+        "correct": false,
+        "_id": "61ab32569cb9ddc4eca7b6c8"
+      }
+    ],
+    "topics": ["html", "attributes", "general"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang",
+    "id": "61ab32569cb9ddc4eca7b6c4"
+  },
+  {
+    "question": "What is the default behaviour of a <button> without the \"type\" attribute?",
+    "answers": [
+      {
+        "answer": "submit",
+        "correct": true,
+        "_id": "61ab33419cb9ddc4eca7b6cc"
+      },
+      {
+        "answer": "reset",
+        "correct": false,
+        "_id": "61ab33419cb9ddc4eca7b6cd"
+      },
+      {
+        "answer": "button",
+        "correct": false,
+        "_id": "61ab33419cb9ddc4eca7b6ce"
+      },
+      {
+        "answer": "None of these",
+        "correct": false,
+        "_id": "61ab33419cb9ddc4eca7b6cf"
+      }
+    ],
+    "topics": ["html", "attributes", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type",
+    "id": "61ab33419cb9ddc4eca7b6cb"
+  },
+  {
+    "question": "Is there any difference between semantic html elements (<main>, <header>) and generic ones (<div>)?",
+    "answers": [
+      {
+        "answer": "Yes, the semantic elements have default accessibility values for the \"role\" attribute.",
+        "correct": true,
+        "_id": "61ab38569cb9ddc4eca7b6d3"
+      },
+      {
+        "answer": "No, they just read better.",
+        "correct": false,
+        "_id": "61ab38569cb9ddc4eca7b6d4"
+      },
+      {
+        "answer": "Yes, the semantic elements are neither block nor inline elements.",
+        "correct": false,
+        "_id": "61ab38569cb9ddc4eca7b6d5"
+      },
+      {
+        "answer": "Yes, the semantic elements are slower to render than simple ones.",
+        "correct": false,
+        "_id": "61ab38569cb9ddc4eca7b6d6"
+      }
+    ],
+    "topics": ["html", "tags", "general", "accessibility"],
+    "moreInfo": "https://css-tricks.com/random-interesting-facts-htmlsvg-usage/#a11y",
+    "id": "61ab38569cb9ddc4eca7b6d2"
+  },
+  {
+    "question": "What attribute is used to hide an element for screen readers but preserve it visually?",
+    "answers": [
+      {
+        "answer": "aria-hidden=\"true\"",
+        "correct": true,
+        "_id": "61ab3a649cb9ddc4eca7b6da"
+      },
+      {
+        "answer": "hidden",
+        "correct": false,
+        "_id": "61ab3a649cb9ddc4eca7b6db"
+      },
+      {
+        "answer": "hide-for-readers=\"true\"",
+        "correct": false,
+        "_id": "61ab3a649cb9ddc4eca7b6dc"
+      },
+      {
+        "answer": "invisible=\"true\"",
+        "correct": false,
+        "_id": "61ab3a649cb9ddc4eca7b6dd"
+      }
+    ],
+    "topics": ["html", "attributes", "accessibility"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute",
+    "id": "61ab3a649cb9ddc4eca7b6d9"
+  },
+  {
+    "question": "What attribute is reserved for developers to store some information about an element without the risk of having that attribute overridden in the future?",
+    "answers": [
+      {
+        "answer": "data-*",
+        "correct": true,
+        "_id": "61ab3b599cb9ddc4eca7b6e1"
+      },
+      {
+        "answer": "dev-*",
+        "correct": false,
+        "_id": "61ab3b599cb9ddc4eca7b6e2"
+      },
+      {
+        "answer": "safe-*",
+        "correct": false,
+        "_id": "61ab3b599cb9ddc4eca7b6e3"
+      },
+      {
+        "answer": "storage-*",
+        "correct": false,
+        "_id": "61ab3b599cb9ddc4eca7b6e4"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*",
+    "id": "61ab3b599cb9ddc4eca7b6e0"
+  },
+  {
+    "question": "Why it is good to have \"width\" and \"height\" attributes for your <img> elements?",
+    "answers": [
+      {
+        "answer": "The browser will allocate that much space even before <img> is loaded.",
+        "correct": true,
+        "_id": "61ab40a99cb9ddc4eca7b6e8"
+      },
+      {
+        "answer": "It is a trick question, there's no such recommandation.",
+        "correct": false,
+        "_id": "61ab40a99cb9ddc4eca7b6e9"
+      },
+      {
+        "answer": "If not then the <img> will not show at all.",
+        "correct": false,
+        "_id": "61ab40a99cb9ddc4eca7b6ea"
+      },
+      {
+        "answer": "The <img> dimensions cannot be controlled in any other way than with these attributes.",
+        "correct": false,
+        "_id": "61ab40a99cb9ddc4eca7b6eb"
+      }
+    ],
+    "topics": ["html", "attributes", "tags", "general"],
+    "moreInfo": "https://gtmetrix.com/use-explicit-width-and-height-on-image-elements.html",
+    "id": "61ab40a99cb9ddc4eca7b6e7"
+  },
+  {
+    "question": "What does the <script>'s \"defer\" attribute do? ",
+    "answers": [
+      {
+        "answer": "Runs the JavaScript only after the DOM has been parsed.",
+        "correct": true,
+        "_id": "61ab479d9cb9ddc4eca7b882"
+      },
+      {
+        "answer": "Specifies the directory of the external script file.",
+        "correct": false,
+        "_id": "61ab479d9cb9ddc4eca7b883"
+      },
+      {
+        "answer": "Tells the browser to ingore this tag.",
+        "correct": false,
+        "_id": "61ab479d9cb9ddc4eca7b884"
+      },
+      {
+        "answer": "Runs the JavaScript as soon as the browser sees this tag.",
+        "correct": false,
+        "_id": "61ab479d9cb9ddc4eca7b885"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer",
+    "id": "61ab479d9cb9ddc4eca7b881"
+  },
+  {
+    "question": "What does the <script>'s \"async\" attribute do? ",
+    "answers": [
+      {
+        "answer": "The script will be fetched in paralled to parsing and will run as soon as it is available.",
+        "correct": true,
+        "_id": "61ab48849cb9ddc4eca7b889"
+      },
+      {
+        "answer": "The script will wait for DOM parsing and only then will run.",
+        "correct": false,
+        "_id": "61ab48849cb9ddc4eca7b88a"
+      },
+      {
+        "answer": "Schedules the script to run after a specified delay.",
+        "correct": false,
+        "_id": "61ab48849cb9ddc4eca7b88b"
+      },
+      {
+        "answer": "The browser will stop the parsing until the script is fetched and evaluated.",
+        "correct": false,
+        "_id": "61ab48849cb9ddc4eca7b88c"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async",
+    "id": "61ab48849cb9ddc4eca7b888"
+  },
+  {
+    "question": "What attribute is used to provide a default save filename for a file downloaded using the <a> tag?",
+    "answers": [
+      {
+        "answer": "download=\"nice-img.jpg\"",
+        "correct": true,
+        "_id": "61ab58929cb9ddc4eca7b9b3"
+      },
+      {
+        "answer": "default=\"nice-img.jpg\"",
+        "correct": false,
+        "_id": "61ab58929cb9ddc4eca7b9b4"
+      },
+      {
+        "answer": "name=\"nice-img.jpg\"",
+        "correct": false,
+        "_id": "61ab58929cb9ddc4eca7b9b5"
+      },
+      {
+        "answer": "defaultname=\"nice-img.jpg\"",
+        "correct": false,
+        "_id": "61ab58929cb9ddc4eca7b9b6"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#use_the_download_attribute_when_linking_to_a_download",
+    "id": "61ab58929cb9ddc4eca7b9b2"
+  },
+  {
+    "question": "What is the proper semantic tag to wrap around contact information inside a <footer>?",
+    "answers": [
+      {
+        "answer": "<address>",
+        "correct": true,
+        "_id": "61ab73879cb9ddc4eca7b9ba"
+      },
+      {
+        "answer": "<div>",
+        "correct": false,
+        "_id": "61ab73879cb9ddc4eca7b9bb"
+      },
+      { "answer": "<p>", "correct": false, "_id": "61ab73879cb9ddc4eca7b9bc" },
+      {
+        "answer": "<main>",
+        "correct": false,
+        "_id": "61ab73879cb9ddc4eca7b9bd"
+      }
+    ],
+    "topics": ["html", "tags", "accessibility"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#marking_up_contact_details",
+    "id": "61ab73879cb9ddc4eca7b9b9"
+  },
+  {
+    "question": "What semantic tags are used to show an image and it's caption?",
+    "answers": [
+      {
+        "answer": "<figure>, <img>, <figcaption>",
+        "correct": true,
+        "_id": "61ab8cc59cb9ddc4eca7ba8b"
+      },
+      {
+        "answer": "<picture>, <img>, <figcaption>",
+        "correct": false,
+        "_id": "61ab8cc59cb9ddc4eca7ba8c"
+      },
+      {
+        "answer": "<img> and <figcaption>",
+        "correct": false,
+        "_id": "61ab8cc59cb9ddc4eca7ba8d"
+      },
+      {
+        "answer": "<figure>, <img> and <label>",
+        "correct": false,
+        "_id": "61ab8cc59cb9ddc4eca7ba8e"
+      }
+    ],
+    "topics": ["html", "tags", "accessibility"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#annotating_images_with_figures_and_figure_captions",
+    "id": "61ab8cc59cb9ddc4eca7ba8a"
+  },
+  {
+    "question": "What tag is used for adding subtitles file to a <video>?",
+    "answers": [
+      {
+        "answer": "<track>",
+        "correct": true,
+        "_id": "61aba34c9cb9ddc4eca7ba92"
+      },
+      {
+        "answer": "<caption>",
+        "correct": false,
+        "_id": "61aba34c9cb9ddc4eca7ba93"
+      },
+      {
+        "answer": "<subtitle>",
+        "correct": false,
+        "_id": "61aba34c9cb9ddc4eca7ba94"
+      },
+      { "answer": "<vtt>", "correct": false, "_id": "61aba34c9cb9ddc4eca7ba95" }
+    ],
+    "topics": ["html", "tags", "accessibility"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track",
+    "id": "61aba34c9cb9ddc4eca7ba91"
+  },
+  {
+    "question": "What is the purpose of the \"Content Security Policy\"?",
+    "answers": [
+      {
+        "answer": "To tell the browser which domains can be considered trusted sources to download files from.",
+        "correct": true,
+        "_id": "61abada99cb9ddc4eca7ba99"
+      },
+      {
+        "answer": "To forbid the use of copyright content.",
+        "correct": false,
+        "_id": "61abada99cb9ddc4eca7ba9a"
+      },
+      {
+        "answer": "To forbid the use of third party cookies.",
+        "correct": false,
+        "_id": "61abada99cb9ddc4eca7ba9b"
+      },
+      {
+        "answer": "To recommend the users a strong password when they register. ",
+        "correct": false,
+        "_id": "61abada99cb9ddc4eca7ba9c"
+      }
+    ],
+    "topics": ["internet", "security", "websites"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP",
+    "id": "61abada99cb9ddc4eca7ba98"
+  },
+  {
+    "question": "How do you setup the CSP (Content security policy) within html?",
+    "answers": [
+      {
+        "answer": "<meta http-equiv=\"Content-Security-Policy\" content=\"...\" >",
+        "correct": true,
+        "_id": "61abaf639cb9ddc4eca7baa0"
+      },
+      {
+        "answer": "<meta csp=\"true\" content=\"...\" >",
+        "correct": false,
+        "_id": "61abaf639cb9ddc4eca7baa1"
+      },
+      {
+        "answer": "<meta name=\"Content-Security-Policy\" content=\"...\" >",
+        "correct": false,
+        "_id": "61abaf639cb9ddc4eca7baa2"
+      },
+      {
+        "answer": "<meta name=\"csp\" content=\"...\" >",
+        "correct": false,
+        "_id": "61abaf639cb9ddc4eca7baa3"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP",
+    "id": "61abaf639cb9ddc4eca7ba9f"
+  },
+  {
+    "question": "Why is it better to implement responsive images with html than to do it with css or js?",
+    "answers": [
+      {
+        "answer": "By the time css and js will be executed, the image will be already downloaded.",
+        "correct": true,
+        "_id": "61acfbc046e2aa068720615a"
+      },
+      {
+        "answer": "It's a trick question, it's better to use css.",
+        "correct": false,
+        "_id": "61acfbc046e2aa068720615b"
+      },
+      {
+        "answer": "It's a trick question, it's better to use js.",
+        "correct": false,
+        "_id": "61acfbc046e2aa068720615c"
+      },
+      {
+        "answer": "Html offers better controls at defining the breakpoints.",
+        "correct": false,
+        "_id": "61acfbc046e2aa068720615d"
+      }
+    ],
+    "topics": ["html", "general"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#why_cant_we_just_do_this_using_css_or_javascript",
+    "id": "61acfbc046e2aa0687206159"
+  },
+  {
+    "question": "Which group of tags are used when defining responsive images?",
+    "answers": [
+      {
+        "answer": "<picture>, <source>, <img>",
+        "correct": true,
+        "_id": "61acfc7446e2aa0687206161"
+      },
+      {
+        "answer": "<picture>, <srcset>, <img>",
+        "correct": false,
+        "_id": "61acfc7446e2aa0687206162"
+      },
+      {
+        "answer": "<picture>, <img>",
+        "correct": false,
+        "_id": "61acfc7446e2aa0687206163"
+      },
+      {
+        "answer": "<group>, <source>, <img>",
+        "correct": false,
+        "_id": "61acfc7446e2aa0687206164"
+      }
+    ],
+    "topics": ["html", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#art_direction",
+    "id": "61acfc7446e2aa0687206160"
+  },
+  {
+    "question": "What does the \"srcset\" attribute do?",
+    "answers": [
+      {
+        "answer": "Contains paths to multiple images.",
+        "correct": true,
+        "_id": "61acfe3346e2aa0687206168"
+      },
+      {
+        "answer": "Contains keywords for search engines.",
+        "correct": false,
+        "_id": "61acfe3346e2aa0687206169"
+      },
+      {
+        "answer": "Defines the tooltip text for an element.",
+        "correct": false,
+        "_id": "61acfe3346e2aa068720616a"
+      },
+      {
+        "answer": "Specifies a MIME type for an element.",
+        "correct": false,
+        "_id": "61acfe3346e2aa068720616b"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset",
+    "id": "61acfe3346e2aa0687206167"
+  },
+  {
+    "question": "What attribute would you use to provide MIME types to images?",
+    "answers": [
+      {
+        "answer": "type=\"image/jgp\"",
+        "correct": true,
+        "_id": "61ad03cb46e2aa068720616f"
+      },
+      {
+        "answer": "mimetype=\"image/jgp\"",
+        "correct": false,
+        "_id": "61ad03cb46e2aa0687206170"
+      },
+      {
+        "answer": "mime=\"image/jgp\"",
+        "correct": false,
+        "_id": "61ad03cb46e2aa0687206171"
+      },
+      {
+        "answer": "mtype=\"image/jgp\"",
+        "correct": false,
+        "_id": "61ad03cb46e2aa0687206172"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#use_modern_image_formats_boldly",
+    "id": "61ad03cb46e2aa068720616e"
+  },
+  {
+    "question": "Why would you need to specify MIME types (type=\"image/webp\") on images?",
+    "answers": [
+      {
+        "answer": "To tell the browser the format of a file before downloading it.",
+        "correct": true,
+        "_id": "61ad04ee46e2aa0687206176"
+      },
+      {
+        "answer": "To name the file correctly in case a user downloads it manually.",
+        "correct": false,
+        "_id": "61ad04ee46e2aa0687206177"
+      },
+      {
+        "answer": "Without it the image would not be shown at all.",
+        "correct": false,
+        "_id": "61ad04ee46e2aa0687206178"
+      },
+      {
+        "answer": "To optimize the browser algorithm at drawing specific formats.",
+        "correct": false,
+        "_id": "61ad04ee46e2aa0687206179"
+      }
+    ],
+    "topics": ["html", "general"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#use_modern_image_formats_boldly",
+    "id": "61ad04ee46e2aa0687206175"
+  },
+  {
+    "question": "Is this valid syntax for the \"sizes\" <img> attribute?\n<img ... sizes=\"(max-width: 600px) 20%, 80vw\">",
+    "answers": [
+      {
+        "answer": "No, you can't use \"%\".",
+        "correct": true,
+        "_id": "61ad06c346e2aa06872061ca"
+      },
+      {
+        "answer": "No, you can't use css-like media inside html attributes.",
+        "correct": false,
+        "_id": "61ad06c346e2aa06872061cb"
+      },
+      {
+        "answer": "No, you can't use \"vw\".",
+        "correct": false,
+        "_id": "61ad06c346e2aa06872061cc"
+      },
+      { "answer": "Yes", "correct": false, "_id": "61ad06c346e2aa06872061cd" }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes",
+    "id": "61ad06c346e2aa06872061c9"
+  },
+  {
+    "question": "What attribute can you use to provide css-like media queries to a <source> element?",
+    "answers": [
+      {
+        "answer": "media=\"(max-width: 500px)\"",
+        "correct": true,
+        "_id": "61ad083e46e2aa06872061d1"
+      },
+      {
+        "answer": "You can't do it inside an attribute.",
+        "correct": false,
+        "_id": "61ad083e46e2aa06872061d2"
+      },
+      {
+        "answer": "media-query=\"(max-width: 500px)\"",
+        "correct": false,
+        "_id": "61ad083e46e2aa06872061d3"
+      },
+      {
+        "answer": "css-media=\"(max-width: 500px)\"",
+        "correct": false,
+        "_id": "61ad083e46e2aa06872061d4"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://www.w3schools.com/TAGS/att_media.asp",
+    "id": "61ad083e46e2aa06872061d0"
+  },
+  {
+    "question": "What are the <thead>, <tbody>, <tfoot> useful for?",
+    "answers": [
+      {
+        "answer": "Styling with css",
+        "correct": true,
+        "_id": "61aded080e36c203187b9b3a"
+      },
+      {
+        "answer": "Accessibility",
+        "correct": false,
+        "_id": "61aded080e36c203187b9b3b"
+      },
+      {
+        "answer": "Scripting with js",
+        "correct": false,
+        "_id": "61aded080e36c203187b9b3c"
+      },
+      {
+        "answer": "These add some dafault styles from the brower.",
+        "correct": false,
+        "_id": "61aded080e36c203187b9b3d"
+      }
+    ],
+    "topics": ["html", "accessibility", "tags"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#adding_structure_with_thead_tfoot_and_tbody",
+    "id": "61aded080e36c203187b9b39"
+  },
+  {
+    "question": "What attribute do you use on the <th> element to define a column or a row for accessibility reasons?",
+    "answers": [
+      {
+        "answer": "scope=\"row\"",
+        "correct": true,
+        "_id": "61adf5cd0e36c203187b9b41"
+      },
+      {
+        "answer": "dir=\"row\"",
+        "correct": false,
+        "_id": "61adf5cd0e36c203187b9b42"
+      },
+      {
+        "answer": "direction=\"row\"",
+        "correct": false,
+        "_id": "61adf5cd0e36c203187b9b43"
+      },
+      {
+        "answer": "aria-direction=\"row\"",
+        "correct": false,
+        "_id": "61adf5cd0e36c203187b9b44"
+      }
+    ],
+    "topics": ["html", "attributes", "accessibility"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope",
+    "id": "61adf5cd0e36c203187b9b40"
+  },
+  {
+    "question": "How do you make a <table> more accessible?",
+    "answers": [
+      {
+        "answer": "use <thead>, <tbody>, <tfoot>",
+        "correct": false,
+        "_id": "61adf7ad0e36c203187b9b48"
+      },
+      {
+        "answer": "use <caption>, <th scope=\"col\">, <th scope=\"row\">",
+        "correct": true,
+        "_id": "61adf7ad0e36c203187b9b49"
+      },
+      {
+        "answer": "use <ul>, <li>",
+        "correct": false,
+        "_id": "61adf7ad0e36c203187b9b4a"
+      },
+      {
+        "answer": "use the \"title\" attribute on each <td>",
+        "correct": false,
+        "_id": "61adf7ad0e36c203187b9b4b"
+      }
+    ],
+    "topics": ["html", "tags", "attributes", "accessibility"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users",
+    "id": "61adf7ad0e36c203187b9b47"
+  },
+  {
+    "question": "Which group of values are all valid <input> types?",
+    "answers": [
+      {
+        "answer": "button, color, date, file, hidden.",
+        "correct": true,
+        "_id": "61ae17ae0e36c203187b9bba"
+      },
+      {
+        "answer": "text, checkbox, mobile, radio, reset.",
+        "correct": false,
+        "_id": "61ae17ae0e36c203187b9bbb"
+      },
+      {
+        "answer": "password, date, url, model, number.",
+        "correct": false,
+        "_id": "61ae17ae0e36c203187b9bbc"
+      },
+      {
+        "answer": "submit, range, email, embed, submit.",
+        "correct": false,
+        "_id": "61ae17ae0e36c203187b9bbd"
+      }
+    ],
+    "topics": ["html", "forms", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input",
+    "id": "61ae17ae0e36c203187b9bb9"
+  },
+  {
+    "question": "What does the \"accept\" <input type=\"file\">'s attribute do?",
+    "answers": [
+      {
+        "answer": "Hints at what file types are accepted.",
+        "correct": true,
+        "_id": "61ae1a720e36c203187b9bc1"
+      },
+      {
+        "answer": "Validates the file types to match the desired types.",
+        "correct": false,
+        "_id": "61ae1a720e36c203187b9bc2"
+      },
+      {
+        "answer": "Doesn't load files if the types mismatch.",
+        "correct": false,
+        "_id": "61ae1a720e36c203187b9bc3"
+      },
+      {
+        "answer": "Disables the <input>.",
+        "correct": false,
+        "_id": "61ae1a720e36c203187b9bc4"
+      }
+    ],
+    "topics": ["html", "forms", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input",
+    "id": "61ae1a720e36c203187b9bc0"
+  },
+  {
+    "question": "What attribute would you use to make a form field mandatory?",
+    "answers": [
+      {
+        "answer": "required",
+        "correct": true,
+        "_id": "61ae1b4e0e36c203187b9bc8"
+      },
+      {
+        "answer": "mandatory",
+        "correct": false,
+        "_id": "61ae1b4e0e36c203187b9bc9"
+      },
+      {
+        "answer": "non-empty",
+        "correct": false,
+        "_id": "61ae1b4e0e36c203187b9bca"
+      },
+      {
+        "answer": "necessary",
+        "correct": false,
+        "_id": "61ae1b4e0e36c203187b9bcb"
+      }
+    ],
+    "topics": ["html", "attributes", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input",
+    "id": "61ae1b4e0e36c203187b9bc7"
+  },
+  {
+    "question": "How you do NOT use the \"autocomplete\" <input>'s attribute?",
+    "answers": [
+      {
+        "answer": "It's a boolean value, if you just write it, the autocomplete will work.",
+        "correct": true,
+        "_id": "61ae21990e36c203187b9c81"
+      },
+      {
+        "answer": "Specify what type of information should be there (autocomplete=\"name\").",
+        "correct": false,
+        "_id": "61ae21990e36c203187b9c82"
+      },
+      {
+        "answer": "Specify whether it should be on or off (autocomplete=\"off\").",
+        "correct": false,
+        "_id": "61ae21990e36c203187b9c83"
+      },
+      {
+        "answer": "You can use it on password type input.",
+        "correct": false,
+        "_id": "61ae21990e36c203187b9c84"
+      }
+    ],
+    "topics": ["html", "attributes", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete",
+    "id": "61ae21990e36c203187b9c80"
+  },
+  {
+    "question": "Is the \"autofocus\" attribute recommended for better accessibility?",
+    "answers": [
+      {
+        "answer": "No, it teleports to the element without explaining the page.",
+        "correct": true,
+        "_id": "61ae235f0e36c203187b9c88"
+      },
+      {
+        "answer": "Yes, it shows where to type.",
+        "correct": false,
+        "_id": "61ae235f0e36c203187b9c89"
+      },
+      {
+        "answer": "Yes, people won't have to scroll to the element.",
+        "correct": false,
+        "_id": "61ae235f0e36c203187b9c8a"
+      },
+      {
+        "answer": "It doesn't matter, screen readers ignore it.",
+        "correct": false,
+        "_id": "61ae235f0e36c203187b9c8b"
+      }
+    ],
+    "topics": ["html", "accessibility", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus",
+    "id": "61ae235f0e36c203187b9c87"
+  },
+  {
+    "question": "Can you associate an <input> that is outside of a <form> with that same <form>?",
+    "answers": [
+      {
+        "answer": "Yes, using the <input>'s \"form\" attribute with the <form>'s \"id\" as the value.",
+        "correct": true,
+        "_id": "61ae25a60e36c203187b9c8f"
+      },
+      { "answer": "No", "correct": false, "_id": "61ae25a60e36c203187b9c90" },
+      {
+        "answer": "Yes, using the <label> tag.",
+        "correct": false,
+        "_id": "61ae25a60e36c203187b9c91"
+      },
+      {
+        "answer": "Yes, using <form>'s \"inputs\" attribute with the <input>'s id as the value.",
+        "correct": false,
+        "_id": "61ae25a60e36c203187b9c92"
+      }
+    ],
+    "topics": ["html", "attributes", "tags", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-form",
+    "id": "61ae25a60e36c203187b9c8e"
+  },
+  {
+    "question": "What attribute is used to allow uploading multiple files into the same <input type=\"file\">?",
+    "answers": [
+      {
+        "answer": "multiple",
+        "correct": true,
+        "_id": "61ae27810e36c203187b9c96"
+      },
+      {
+        "answer": "numerous=\"allowed\"",
+        "correct": false,
+        "_id": "61ae27810e36c203187b9c97"
+      },
+      {
+        "answer": "numerous",
+        "correct": false,
+        "_id": "61ae27810e36c203187b9c98"
+      },
+      {
+        "answer": "several",
+        "correct": false,
+        "_id": "61ae27810e36c203187b9c99"
+      }
+    ],
+    "topics": ["html", "attributes", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-multiple",
+    "id": "61ae27810e36c203187b9c95"
+  },
+  {
+    "question": "How can you make only one <input type=\"radio\"> be selected at once?",
+    "answers": [
+      {
+        "answer": "Give all inputs the same \"name\".",
+        "correct": true,
+        "_id": "61ae34040e36c203187b9c9d"
+      },
+      {
+        "answer": "Give all inputs the same \"id\".",
+        "correct": false,
+        "_id": "61ae34040e36c203187b9c9e"
+      },
+      {
+        "answer": "Use the \"checked\" attribute.",
+        "correct": false,
+        "_id": "61ae34040e36c203187b9c9f"
+      },
+      {
+        "answer": "You don't do anything, it's default behaviour.",
+        "correct": false,
+        "_id": "61ae34040e36c203187b9ca0"
+      }
+    ],
+    "topics": ["html", "forms", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio",
+    "id": "61ae34040e36c203187b9c9c"
+  },
+  {
+    "question": "What attribute would allow you to use a regular expression for validating an <input type=\"text\">? ",
+    "answers": [
+      {
+        "answer": "pattern=\"[a-z]+\"",
+        "correct": true,
+        "_id": "61ae36f30e36c203187b9ca4"
+      },
+      {
+        "answer": "regexp=\"[a-z]+\"",
+        "correct": false,
+        "_id": "61ae36f30e36c203187b9ca5"
+      },
+      {
+        "answer": "validate=\"[a-z]+\"",
+        "correct": false,
+        "_id": "61ae36f30e36c203187b9ca6"
+      },
+      {
+        "answer": "You can't do it using html attributes.",
+        "correct": false,
+        "_id": "61ae36f30e36c203187b9ca7"
+      }
+    ],
+    "topics": ["html", "attributes", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern",
+    "id": "61ae36f30e36c203187b9ca3"
+  },
+  {
+    "question": "Will the value 2.1 be valid for an <input type=\"number\">?",
+    "answers": [
+      {
+        "answer": "No, default <input>'s \"step\" attribute is equal to 1.",
+        "correct": true,
+        "_id": "61ae3ea00e36c203187b9cab"
+      },
+      { "answer": "Yes", "correct": false, "_id": "61ae3ea00e36c203187b9cac" },
+      {
+        "answer": "No, it should be type=\"float\".",
+        "correct": false,
+        "_id": "61ae3ea00e36c203187b9cad"
+      },
+      {
+        "answer": "No, it missed the \"allow-floats\" attribute.",
+        "correct": false,
+        "_id": "61ae3ea00e36c203187b9cae"
+      }
+    ],
+    "topics": ["html", "attributes", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-step",
+    "id": "61ae3ea00e36c203187b9caa"
+  },
+  {
+    "question": "How do you target <input> which failed to validate?",
+    "answers": [
+      {
+        "answer": ":invalid",
+        "correct": true,
+        "_id": "61ae3f940e36c203187b9cb2"
+      },
+      {
+        "answer": "::invalid",
+        "correct": false,
+        "_id": "61ae3f940e36c203187b9cb3"
+      },
+      {
+        "answer": "::error",
+        "correct": false,
+        "_id": "61ae3f940e36c203187b9cb4"
+      },
+      {
+        "answer": ":not-valid",
+        "correct": false,
+        "_id": "61ae3f940e36c203187b9cb5"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid",
+    "id": "61ae3f940e36c203187b9cb1"
+  },
+  {
+    "question": "What is recommended for accessibility when it comes to explaining an <input>?",
+    "answers": [
+      {
+        "answer": "<label>",
+        "correct": true,
+        "_id": "61ae43c60e36c203187b9cb9"
+      },
+      {
+        "answer": "placeholder=\"...\"",
+        "correct": false,
+        "_id": "61ae43c60e36c203187b9cba"
+      },
+      { "answer": "<p>", "correct": false, "_id": "61ae43c60e36c203187b9cbb" },
+      {
+        "answer": "title=\"...\"",
+        "correct": false,
+        "_id": "61ae43c60e36c203187b9cbc"
+      }
+    ],
+    "topics": ["html", "accessibility", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#labels",
+    "id": "61ae43c60e36c203187b9cb8"
+  },
+  {
+    "question": "Is it better to use <input>'s \"placeholder\" property than <label> for accessibility?",
+    "answers": [
+      {
+        "answer": "No, \"placeholder\" property is not accessibile.",
+        "correct": true,
+        "_id": "61b0a765f4ac9634caae045d"
+      },
+      {
+        "answer": "Yes, an aditional <label> creates confusion.",
+        "correct": false,
+        "_id": "61b0a765f4ac9634caae045e"
+      },
+      {
+        "answer": "No, both are equal for accessibility.",
+        "correct": false,
+        "_id": "61b0a765f4ac9634caae045f"
+      },
+      {
+        "answer": "Yes, \"placeholder\" exists for accessibility purposes.",
+        "correct": false,
+        "_id": "61b0a765f4ac9634caae0460"
+      }
+    ],
+    "topics": ["html", "accessibility"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input#labels",
+    "id": "61b0a765f4ac9634caae045c"
+  },
+  {
+    "question": "How can you access a form's input native validity state?",
+    "answers": [
+      {
+        "answer": "Constraint validation API",
+        "correct": true,
+        "_id": "61b0d8f2f4ac9634caae0579"
+      },
+      {
+        "answer": "document.getElementById('input').validityState",
+        "correct": false,
+        "_id": "61b0d8f2f4ac9634caae057a"
+      },
+      {
+        "answer": "you can't",
+        "correct": false,
+        "_id": "61b0d8f2f4ac9634caae057b"
+      },
+      {
+        "answer": "IsFormValid API",
+        "correct": false,
+        "_id": "61b0d8f2f4ac9634caae057c"
+      }
+    ],
+    "topics": ["javascript", "web data"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation#constraint_validation_interfaces",
+    "id": "61b0d8f2f4ac9634caae0578"
+  },
+  {
+    "question": "What is the difference between <input type=\"submit\"> and <button>?",
+    "answers": [
+      {
+        "answer": "You can nest html inside <button>.",
+        "correct": true,
+        "_id": "61b0e3d5f4ac9634caae0580"
+      },
+      {
+        "answer": "You can nest html inside <input type=\"submit\">.",
+        "correct": false,
+        "_id": "61b0e3d5f4ac9634caae0581"
+      },
+      {
+        "answer": "<button> will not send the form on click.",
+        "correct": false,
+        "_id": "61b0e3d5f4ac9634caae0582"
+      },
+      {
+        "answer": "<input type=\"submit\"> will not send the form on click.",
+        "correct": false,
+        "_id": "61b0e3d5f4ac9634caae0583"
+      }
+    ],
+    "topics": ["html", "tags", "forms", "attributes"],
+    "moreInfo": "https://stackoverflow.com/questions/469059/button-vs-input-type-button-which-to-use",
+    "id": "61b0e3d5f4ac9634caae057f"
+  },
+  {
+    "question": "With which type of <input> is it recommended to use <fieldset> and <legend>?",
+    "answers": [
+      {
+        "answer": "type=\"radio\"",
+        "correct": true,
+        "_id": "61b0e79ff4ac9634caae0587"
+      },
+      {
+        "answer": "type=\"text\"",
+        "correct": false,
+        "_id": "61b0e79ff4ac9634caae0588"
+      },
+      {
+        "answer": "type=\"password\"",
+        "correct": false,
+        "_id": "61b0e79ff4ac9634caae0589"
+      },
+      {
+        "answer": "type=\"checkbox\"",
+        "correct": false,
+        "_id": "61b0e79ff4ac9634caae058a"
+      }
+    ],
+    "topics": ["html", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form#the_fieldset_and_legend_elements",
+    "id": "61b0e79ff4ac9634caae0586"
+  },
+  {
+    "question": "What is FALSE for an <input> of type \"tel\", \"email\", \"number\"?",
+    "answers": [
+      {
+        "answer": "Don't make touch devices display different keypads.",
+        "correct": true,
+        "_id": "61b338452c34e72fefda3f96"
+      },
+      {
+        "answer": "Provide client-side validation.",
+        "correct": false,
+        "_id": "61b338452c34e72fefda3f97"
+      },
+      {
+        "answer": "Make touch devices display different keypads.",
+        "correct": false,
+        "_id": "61b338452c34e72fefda3f98"
+      },
+      {
+        "answer": "Are all valid <input> types.",
+        "correct": false,
+        "_id": "61b338452c34e72fefda3f99"
+      }
+    ],
+    "topics": ["html", "forms"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types",
+    "id": "61b338452c34e72fefda3f95"
+  },
+  {
+    "question": "Which is the proper tag to use when showing a calculation result or the outcome of a user action?",
+    "answers": [
+      {
+        "answer": "<output>",
+        "correct": true,
+        "_id": "61b33bbe2c34e72fefda3f9d"
+      },
+      { "answer": "<p>", "correct": false, "_id": "61b33bbe2c34e72fefda3f9e" },
+      {
+        "answer": "<div>",
+        "correct": false,
+        "_id": "61b33bbe2c34e72fefda3f9f"
+      },
+      { "answer": "<em>", "correct": false, "_id": "61b33bbe2c34e72fefda3fa0" }
+    ],
+    "topics": ["html", "tags", "accessibility"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output",
+    "id": "61b33bbe2c34e72fefda3f9c"
+  },
+  {
+    "question": "Which attribute allows the user to alter the text contents of any tag?",
+    "answers": [
+      {
+        "answer": "contentEditable",
+        "correct": true,
+        "_id": "61b346ab2c34e72fefda3fa7"
+      },
+      {
+        "answer": "textContent",
+        "correct": false,
+        "_id": "61b346ab2c34e72fefda3fa8"
+      },
+      {
+        "answer": "edit=\"user\"",
+        "correct": false,
+        "_id": "61b346ab2c34e72fefda3fa9"
+      },
+      {
+        "answer": "predefined=\"false\"",
+        "correct": false,
+        "_id": "61b346ab2c34e72fefda3faa"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable",
+    "id": "61b346ab2c34e72fefda3fa6"
+  },
+  {
+    "question": "Which group of selectors are all called \"combinators\" (selectors that use relationships)?",
+    "answers": [
+      {
+        "answer": "(space), (>), (+), (~)",
+        "correct": true,
+        "_id": "61b38b092c34e72fefda406c"
+      },
+      {
+        "answer": "(space), (#), (+), (-)",
+        "correct": false,
+        "_id": "61b38b092c34e72fefda406d"
+      },
+      {
+        "answer": "(space), (>), (+), (.)",
+        "correct": false,
+        "_id": "61b38b092c34e72fefda406e"
+      },
+      {
+        "answer": "(space), (>), (*), (~)",
+        "correct": false,
+        "_id": "61b38b092c34e72fefda406f"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators",
+    "id": "61b38b092c34e72fefda406b"
+  },
+  {
+    "question": "Which group of selectors are all called \"pseudo-classes\" (selectors that target special states)?",
+    "answers": [
+      {
+        "answer": ":any-link, :autofill, :focus, :nth-child(2), :root",
+        "correct": true,
+        "_id": "61b396c82c34e72fefda409a"
+      },
+      {
+        "answer": ":nth-of-type(2), :checked, :click, :required, :active",
+        "correct": false,
+        "_id": "61b396c82c34e72fefda409b"
+      },
+      {
+        "answer": ":empty, :not, ::after, ::before, :first-child",
+        "correct": false,
+        "_id": "61b396c82c34e72fefda409c"
+      },
+      {
+        "answer": ":visited, :disabled, :invalid, ::selection, :valid",
+        "correct": false,
+        "_id": "61b396c82c34e72fefda409d"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes",
+    "id": "61b396c82c34e72fefda4099"
+  },
+  {
+    "question": "Which group of selectors are all called \"pseudo-elements\" (selectors that target a specific part)?",
+    "answers": [
+      {
+        "answer": "::before, ::after, ::selection, ::placeholder",
+        "correct": true,
+        "_id": "61b3984d2c34e72fefda40a1"
+      },
+      {
+        "answer": "::before, ::after, :hover, ::marker",
+        "correct": false,
+        "_id": "61b3984d2c34e72fefda40a2"
+      },
+      {
+        "answer": "::before, ::after, :link, ::first-line",
+        "correct": false,
+        "_id": "61b3984d2c34e72fefda40a3"
+      },
+      {
+        "answer": "::before, ::after, ::first-letter, :click",
+        "correct": false,
+        "_id": "61b3984d2c34e72fefda40a4"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements",
+    "id": "61b3984d2c34e72fefda40a0"
+  },
+  {
+    "question": "Is there a selector that can target an invalid <input>, but only if it has anything written inside?",
+    "answers": [
+      {
+        "answer": ":user-invalid",
+        "correct": true,
+        "_id": "61b399a12c34e72fefda40a8"
+      },
+      { "answer": "No", "correct": false, "_id": "61b399a12c34e72fefda40a9" },
+      {
+        "answer": ":invalid",
+        "correct": false,
+        "_id": "61b399a12c34e72fefda40aa"
+      },
+      {
+        "answer": ":optional",
+        "correct": false,
+        "_id": "61b399a12c34e72fefda40ab"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid",
+    "id": "61b399a12c34e72fefda40a7"
+  },
+  {
+    "question": "What is the correct specificity importance order?",
+    "answers": [
+      {
+        "answer": "inline style > id > classes > element",
+        "correct": true,
+        "_id": "61b39b792c34e72fefda40af"
+      },
+      {
+        "answer": "inline style > classes > id > element",
+        "correct": false,
+        "_id": "61b39b792c34e72fefda40b0"
+      },
+      {
+        "answer": "inline style > element > id > classes",
+        "correct": false,
+        "_id": "61b39b792c34e72fefda40b1"
+      },
+      {
+        "answer": "id > inline style > classes > element",
+        "correct": false,
+        "_id": "61b39b792c34e72fefda40b2"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity",
+    "id": "61b39b792c34e72fefda40ae"
+  },
+  {
+    "question": "How would you select an element by it's \"id\" without raising the specificity of the rules?",
+    "answers": [
+      {
+        "answer": "[id=\"my-id\"]",
+        "correct": true,
+        "_id": "61b3a0fa2c34e72fefda40b6"
+      },
+      {
+        "answer": "You can't",
+        "correct": false,
+        "_id": "61b3a0fa2c34e72fefda40b7"
+      },
+      {
+        "answer": "#my-id",
+        "correct": false,
+        "_id": "61b3a0fa2c34e72fefda40b8"
+      },
+      {
+        "answer": ".my-id#",
+        "correct": false,
+        "_id": "61b3a0fa2c34e72fefda40b9"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/",
+    "id": "61b3a0fa2c34e72fefda40b5"
+  },
+  {
+    "question": "How would you safely increase a class selector specificity?",
+    "answers": [
+      {
+        "answer": ".name.name",
+        "correct": true,
+        "_id": "61b3a17c2c34e72fefda40bd"
+      },
+      {
+        "answer": "!important",
+        "correct": false,
+        "_id": "61b3a17c2c34e72fefda40be"
+      },
+      {
+        "answer": "#name",
+        "correct": false,
+        "_id": "61b3a17c2c34e72fefda40bf"
+      },
+      {
+        "answer": "inline styles",
+        "correct": false,
+        "_id": "61b3a17c2c34e72fefda40c0"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/",
+    "id": "61b3a17c2c34e72fefda40bc"
+  },
+  {
+    "question": "Which syntax for using css variables is INVALID?",
+    "answers": [
+      {
+        "answer": "var(--color, --color2, red)",
+        "correct": true,
+        "_id": "61b472252db73fca23fd793c"
+      },
+      {
+        "answer": "var(--color)",
+        "correct": false,
+        "_id": "61b472252db73fca23fd793d"
+      },
+      {
+        "answer": "var(--color, red)",
+        "correct": false,
+        "_id": "61b472252db73fca23fd793e"
+      },
+      {
+        "answer": "var(--color, var(--color2, red))",
+        "correct": false,
+        "_id": "61b472252db73fca23fd793f"
+      }
+    ],
+    "topics": ["css", "values"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values",
+    "id": "61b472252db73fca23fd793b"
+  },
+  {
+    "question": "Which language's spelling is used in css?",
+    "answers": [
+      { "answer": "US", "correct": true, "_id": "61b47c862db73fca23fd7948" },
+      { "answer": "GB", "correct": false, "_id": "61b47c862db73fca23fd7949" },
+      {
+        "answer": "US and GB",
+        "correct": false,
+        "_id": "61b47c862db73fca23fd794a"
+      },
+      {
+        "answer": "All english variations",
+        "correct": false,
+        "_id": "61b47c862db73fca23fd794b"
+      }
+    ],
+    "topics": ["css", "properties"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured#properties_and_values",
+    "id": "61b47c862db73fca23fd7947"
+  },
+  {
+    "question": "Which set of words are all valid \"transform\" functional values?",
+    "answers": [
+      {
+        "answer": "matrix, translate, scale, rotate",
+        "correct": true,
+        "_id": "61b47e3c2db73fca23fd794f"
+      },
+      {
+        "answer": "skew, perspective, size, scale3d",
+        "correct": false,
+        "_id": "61b47e3c2db73fca23fd7950"
+      },
+      {
+        "answer": "matrix3d, rotate3d, translate, opace",
+        "correct": false,
+        "_id": "61b47e3c2db73fca23fd7951"
+      },
+      {
+        "answer": "scale, rotate, stretch, translate",
+        "correct": false,
+        "_id": "61b47e3c2db73fca23fd7952"
+      }
+    ],
+    "topics": ["css", "values"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/transform",
+    "id": "61b47e3c2db73fca23fd794e"
+  },
+  {
+    "question": "In what order are 4-value shorthands applied (ex: margin, padding)?",
+    "answers": [
+      {
+        "answer": "top, right, bottom, left",
+        "correct": true,
+        "_id": "61b47f752db73fca23fd7956"
+      },
+      {
+        "answer": "top, left, bottom, right",
+        "correct": false,
+        "_id": "61b47f752db73fca23fd7957"
+      },
+      {
+        "answer": "top, bottom, left, right",
+        "correct": false,
+        "_id": "61b47f752db73fca23fd7958"
+      },
+      {
+        "answer": "top, bottom, right, left",
+        "correct": false,
+        "_id": "61b47f752db73fca23fd7959"
+      }
+    ],
+    "topics": ["css", "values", "properties"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured#shorthands",
+    "id": "61b47f752db73fca23fd7955"
+  },
+  {
+    "question": "What happens if you omit a value in the shorthand properties?",
+    "answers": [
+      {
+        "answer": "Omitted values are set to \"initial\".",
+        "correct": true,
+        "_id": "61b481aa2db73fca23fd795d"
+      },
+      {
+        "answer": "Omitted values are set to \"inherit\".",
+        "correct": false,
+        "_id": "61b481aa2db73fca23fd795e"
+      },
+      {
+        "answer": "Omitted values are ignored.",
+        "correct": false,
+        "_id": "61b481aa2db73fca23fd795f"
+      },
+      {
+        "answer": "You can't omit values in the shorthands.",
+        "correct": false,
+        "_id": "61b481aa2db73fca23fd7960"
+      }
+    ],
+    "topics": ["css", "values", "properties"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured#shorthands",
+    "id": "61b481aa2db73fca23fd795c"
+  },
+  {
+    "question": "Which unit acts as a multiplier for the parent's \"font-size\"?",
+    "answers": [
+      { "answer": "em", "correct": true, "_id": "61b488e02db73fca23fd7964" },
+      { "answer": "rem", "correct": false, "_id": "61b488e02db73fca23fd7965" },
+      { "answer": "vw", "correct": false, "_id": "61b488e02db73fca23fd7966" },
+      { "answer": "x2", "correct": false, "_id": "61b488e02db73fca23fd7967" }
+    ],
+    "topics": ["css", "values"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems",
+    "id": "61b488e02db73fca23fd7963"
+  },
+  {
+    "question": "Which unit acts as a multiplier for the root's \"font-size\"?",
+    "answers": [
+      { "answer": "rem", "correct": true, "_id": "61b489322db73fca23fd796b" },
+      { "answer": "em", "correct": false, "_id": "61b489322db73fca23fd796c" },
+      { "answer": "ex", "correct": false, "_id": "61b489322db73fca23fd796d" },
+      { "answer": "vh", "correct": false, "_id": "61b489322db73fca23fd796e" }
+    ],
+    "topics": ["css", "values"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#rems",
+    "id": "61b489322db73fca23fd796a"
+  },
+  {
+    "question": "What property is used to reset all element's styles?",
+    "answers": [
+      { "answer": "all", "correct": true, "_id": "61b6058cc9341817dabaf61a" },
+      {
+        "answer": "reset",
+        "correct": false,
+        "_id": "61b6058cc9341817dabaf61b"
+      },
+      {
+        "answer": "unset",
+        "correct": false,
+        "_id": "61b6058cc9341817dabaf61c"
+      },
+      {
+        "answer": "default",
+        "correct": false,
+        "_id": "61b6058cc9341817dabaf61d"
+      }
+    ],
+    "topics": ["css", "properties"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/all",
+    "id": "61b6058cc9341817dabaf619"
+  },
+  {
+    "question": "What value can set an element's styles to the browser defaults?",
+    "answers": [
+      {
+        "answer": "initial",
+        "correct": true,
+        "_id": "61b6068fc9341817dabaf621"
+      },
+      {
+        "answer": "inherit",
+        "correct": false,
+        "_id": "61b6068fc9341817dabaf622"
+      },
+      {
+        "answer": "unset",
+        "correct": false,
+        "_id": "61b6068fc9341817dabaf623"
+      },
+      {
+        "answer": "revert",
+        "correct": false,
+        "_id": "61b6068fc9341817dabaf624"
+      }
+    ],
+    "topics": ["css", "values"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/initial",
+    "id": "61b6068fc9341817dabaf620"
+  },
+  {
+    "question": "Which selector would NOT match <div class=\"box small\">?",
+    "answers": [
+      {
+        "answer": "[class|=\"small\"]",
+        "correct": true,
+        "_id": "61b61432c9341817dabaf628"
+      },
+      {
+        "answer": "[class~=\"small\"]",
+        "correct": false,
+        "_id": "61b61432c9341817dabaf629"
+      },
+      {
+        "answer": "div[class]",
+        "correct": false,
+        "_id": "61b61432c9341817dabaf62a"
+      },
+      {
+        "answer": "[class$=\"small\"]",
+        "correct": false,
+        "_id": "61b61432c9341817dabaf62b"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors",
+    "id": "61b61432c9341817dabaf627"
+  },
+  {
+    "question": "Which one is a case insensitive attribute selector?",
+    "answers": [
+      {
+        "answer": "[class=\"box\" i]",
+        "correct": true,
+        "_id": "61b616e0c9341817dabaf62f"
+      },
+      {
+        "answer": "None of these",
+        "correct": false,
+        "_id": "61b616e0c9341817dabaf630"
+      },
+      {
+        "answer": "[class~\"box\"]",
+        "correct": false,
+        "_id": "61b616e0c9341817dabaf631"
+      },
+      {
+        "answer": "[class<>\"box\"]",
+        "correct": false,
+        "_id": "61b616e0c9341817dabaf632"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#syntax",
+    "id": "61b616e0c9341817dabaf62e"
+  },
+  {
+    "question": "What property used on ::after or ::before can insert text in the document?",
+    "answers": [
+      {
+        "answer": "content",
+        "correct": true,
+        "_id": "61b6ffdbc10f330be7f74d36"
+      },
+      { "answer": "text", "correct": false, "_id": "61b6ffdbc10f330be7f74d37" },
+      {
+        "answer": "insert",
+        "correct": false,
+        "_id": "61b6ffdbc10f330be7f74d38"
+      },
+      {
+        "answer": "placeholder",
+        "correct": false,
+        "_id": "61b6ffdbc10f330be7f74d39"
+      }
+    ],
+    "topics": ["css", "properties"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/content",
+    "id": "61b6ffdbc10f330be7f74d35"
+  },
+  {
+    "question": "What selector can target both :link and :visited states of a link?",
+    "answers": [
+      {
+        "answer": ":any-link",
+        "correct": true,
+        "_id": "61b7025ec10f330be7f74d3d"
+      },
+      {
+        "answer": ":linkv",
+        "correct": false,
+        "_id": "61b7025ec10f330be7f74d3e"
+      },
+      {
+        "answer": ":all-links",
+        "correct": false,
+        "_id": "61b7025ec10f330be7f74d3f"
+      },
+      {
+        "answer": ":uni-link",
+        "correct": false,
+        "_id": "61b7025ec10f330be7f74d40"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/:any-link",
+    "id": "61b7025ec10f330be7f74d3c"
+  },
+  {
+    "question": "Which selector would NOT match every other <li> inside a <ul>?",
+    "answers": [
+      {
+        "answer": "li:nth-of-type(n/2)",
+        "correct": true,
+        "_id": "61b70536c10f330be7f74d44"
+      },
+      {
+        "answer": "li:nth-of-type(odd)",
+        "correct": false,
+        "_id": "61b70536c10f330be7f74d45"
+      },
+      {
+        "answer": "li:nth-child(2n-1)",
+        "correct": false,
+        "_id": "61b70536c10f330be7f74d46"
+      },
+      {
+        "answer": "li:nth-of-type(2n-1)",
+        "correct": false,
+        "_id": "61b70536c10f330be7f74d47"
+      }
+    ],
+    "topics": ["css", "selectors"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type",
+    "id": "61b70536c10f330be7f74d43"
+  },
+  {
+    "question": "What is the correct layer order in the box model starting from the inside?",
+    "answers": [
+      {
+        "answer": "content, padding, border, margin",
+        "correct": true,
+        "_id": "61b70a89c10f330be7f74d4b"
+      },
+      {
+        "answer": "content, border, padding, margin",
+        "correct": false,
+        "_id": "61b70a89c10f330be7f74d4c"
+      },
+      {
+        "answer": "content, padding, margin, border",
+        "correct": false,
+        "_id": "61b70a89c10f330be7f74d4d"
+      },
+      {
+        "answer": "padding, content, margin, border",
+        "correct": false,
+        "_id": "61b70a89c10f330be7f74d4e"
+      }
+    ],
+    "topics": ["css", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#what_is_the_css_box_model",
+    "id": "61b70a89c10f330be7f74d4a"
+  },
+  {
+    "question": "How can you make the \"width\" property take \"border\" and \"padding\" sizes into account as well?",
+    "answers": [
+      {
+        "answer": "box-sizing: border-box",
+        "correct": true,
+        "_id": "61b70bf0c10f330be7f74d52"
+      },
+      {
+        "answer": "box-sizing: padding-box",
+        "correct": false,
+        "_id": "61b70bf0c10f330be7f74d53"
+      },
+      {
+        "answer": "box-sizing: content-box",
+        "correct": false,
+        "_id": "61b70bf0c10f330be7f74d54"
+      },
+      {
+        "answer": "box-sizing: outer-box",
+        "correct": false,
+        "_id": "61b70bf0c10f330be7f74d55"
+      }
+    ],
+    "topics": ["css", "properties", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing",
+    "id": "61b70bf0c10f330be7f74d51"
+  },
+  {
+    "question": "What is margin collapsing?",
+    "answers": [
+      {
+        "answer": "If margins of 2 elements touch they will \"collapse\" to the bigger of 2.",
+        "correct": true,
+        "_id": "61b70f66c10f330be7f74d59"
+      },
+      {
+        "answer": "If margins of 2 elements touch they will add up.",
+        "correct": false,
+        "_id": "61b70f66c10f330be7f74d5a"
+      },
+      {
+        "answer": "If margins of 2 elements touch they will subtract from each other.",
+        "correct": false,
+        "_id": "61b70f66c10f330be7f74d5b"
+      },
+      {
+        "answer": "If margins of 2 elements touch they will \"collapse\" and reset to 0.",
+        "correct": false,
+        "_id": "61b70f66c10f330be7f74d5c"
+      }
+    ],
+    "topics": ["css", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing",
+    "id": "61b70f66c10f330be7f74d58"
+  },
+  {
+    "question": "What property can specify where a background image starts from?",
+    "answers": [
+      {
+        "answer": "background-position",
+        "correct": true,
+        "_id": "61b71865c10f330be7f74e2a"
+      },
+      {
+        "answer": "background-start",
+        "correct": false,
+        "_id": "61b71865c10f330be7f74e2b"
+      },
+      {
+        "answer": "background-clip",
+        "correct": false,
+        "_id": "61b71865c10f330be7f74e2c"
+      },
+      {
+        "answer": "background-size",
+        "correct": false,
+        "_id": "61b71865c10f330be7f74e2d"
+      }
+    ],
+    "topics": ["css", "properties"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-position",
+    "id": "61b71865c10f330be7f74e29"
+  },
+  {
+    "question": "Which property is used to add a gradient as a background?",
+    "answers": [
+      {
+        "answer": "background-image",
+        "correct": true,
+        "_id": "61b7193cc10f330be7f74e31"
+      },
+      {
+        "answer": "background-color",
+        "correct": false,
+        "_id": "61b7193cc10f330be7f74e32"
+      },
+      {
+        "answer": "background-gradient",
+        "correct": false,
+        "_id": "61b7193cc10f330be7f74e33"
+      },
+      {
+        "answer": "background-source",
+        "correct": false,
+        "_id": "61b7193cc10f330be7f74e34"
+      }
+    ],
+    "topics": ["css", "properties"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-image",
+    "id": "61b7193cc10f330be7f74e30"
+  },
+  {
+    "question": "What properties preserve an element's size even if changing the \"writing-mode\"?",
+    "answers": [
+      {
+        "answer": "inline-size & block-size",
+        "correct": true,
+        "_id": "61b725d1c10f330be7f74e38"
+      },
+      {
+        "answer": "width & height",
+        "correct": false,
+        "_id": "61b725d1c10f330be7f74e39"
+      },
+      {
+        "answer": "box-sizing",
+        "correct": false,
+        "_id": "61b725d1c10f330be7f74e3a"
+      },
+      {
+        "answer": "object-fit",
+        "correct": false,
+        "_id": "61b725d1c10f330be7f74e3b"
+      }
+    ],
+    "topics": ["css", "properties"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/block-size",
+    "id": "61b725d1c10f330be7f74e37"
+  },
+  {
+    "question": "What property can set a vertical scrollbar for an element?",
+    "answers": [
+      {
+        "answer": "overflow-y",
+        "correct": true,
+        "_id": "61b77a11c10f330be7f74e3f"
+      },
+      {
+        "answer": "overflow",
+        "correct": false,
+        "_id": "61b77a11c10f330be7f74e40"
+      },
+      {
+        "answer": "scrollbar-y",
+        "correct": false,
+        "_id": "61b77a11c10f330be7f74e41"
+      },
+      {
+        "answer": "scrollbar",
+        "correct": false,
+        "_id": "61b77a11c10f330be7f74e42"
+      }
+    ],
+    "topics": ["css", "properties"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y",
+    "id": "61b77a11c10f330be7f74e3e"
+  },
+  {
+    "question": "If an element has \"padding-top: 10%\", what is the \"10%\" relative to?",
+    "answers": [
+      {
+        "answer": "parent element width",
+        "correct": true,
+        "_id": "61b78a79c10f330be7f74e46"
+      },
+      {
+        "answer": "parent element padding-top",
+        "correct": false,
+        "_id": "61b78a79c10f330be7f74e47"
+      },
+      {
+        "answer": "parent element height",
+        "correct": false,
+        "_id": "61b78a79c10f330be7f74e48"
+      },
+      {
+        "answer": "element height",
+        "correct": false,
+        "_id": "61b78a79c10f330be7f74e49"
+      }
+    ],
+    "topics": ["css", "properties", "values"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS#percentage_margins_and_padding",
+    "id": "61b78a79c10f330be7f74e45"
+  },
+  {
+    "question": "Which property can make an <img> behave like a  background image?",
+    "answers": [
+      {
+        "answer": "object-fit",
+        "correct": true,
+        "_id": "61b79860c10f330be7f74f8a"
+      },
+      {
+        "answer": "background-position",
+        "correct": false,
+        "_id": "61b79860c10f330be7f74f8b"
+      },
+      {
+        "answer": "position",
+        "correct": false,
+        "_id": "61b79860c10f330be7f74f8c"
+      },
+      {
+        "answer": "display",
+        "correct": false,
+        "_id": "61b79860c10f330be7f74f8d"
+      }
+    ],
+    "topics": ["css", "properties"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit",
+    "id": "61b79860c10f330be7f74f89"
+  },
+  {
+    "question": "Which property can make the table columns width depend only on the first row cell widths?",
+    "answers": [
+      {
+        "answer": "table-layout: fixed",
+        "correct": true,
+        "_id": "61cee70246cbdcdfd71a1aff"
+      },
+      {
+        "answer": "table-layout: auto",
+        "correct": false,
+        "_id": "61cee70246cbdcdfd71a1b00"
+      },
+      {
+        "answer": "vertical-align: auto",
+        "correct": false,
+        "_id": "61cee70246cbdcdfd71a1b01"
+      },
+      {
+        "answer": "width: auto",
+        "correct": false,
+        "_id": "61cee70246cbdcdfd71a1b02"
+      }
+    ],
+    "topics": ["css", "properties", "values", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout",
+    "id": "61cee70246cbdcdfd71a1afe"
+  },
+  {
+    "question": "How can you make any <li> inside a list be a certain number?",
+    "answers": [
+      {
+        "answer": "<li value=\"3\">",
+        "correct": true,
+        "_id": "61d07b48b153bea7affd6e37"
+      },
+      {
+        "answer": "<li start=\"3\">",
+        "correct": false,
+        "_id": "61d07b48b153bea7affd6e38"
+      },
+      {
+        "answer": "<ol start=\"3\">",
+        "correct": false,
+        "_id": "61d07b48b153bea7affd6e39"
+      },
+      {
+        "answer": "<li ord=\"3\">",
+        "correct": false,
+        "_id": "61d07b48b153bea7affd6e3a"
+      }
+    ],
+    "topics": ["html", "attributes"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attr-value",
+    "id": "61d07b48b153bea7affd6e36"
+  },
+  {
+    "question": "What does the border color defaults to, if no border color specified?",
+    "answers": [
+      {
+        "answer": "current text color",
+        "correct": true,
+        "_id": "61d0823eb153bea7affd6ea8"
+      },
+      {
+        "answer": "black",
+        "correct": false,
+        "_id": "61d0823eb153bea7affd6ea9"
+      },
+      {
+        "answer": "parent border color",
+        "correct": false,
+        "_id": "61d0823eb153bea7affd6eaa"
+      },
+      {
+        "answer": "transparent",
+        "correct": false,
+        "_id": "61d0823eb153bea7affd6eab"
+      }
+    ],
+    "topics": ["css", "values"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/border-color#formal_definition",
+    "id": "61d0823eb153bea7affd6ea7"
+  },
+  {
+    "question": "What property align-content wouldn't work without?",
+    "answers": [
+      {
+        "answer": "flex-wrap",
+        "correct": true,
+        "_id": "61deea1c73eef55f28d04a7a"
+      },
+      {
+        "answer": "align-items",
+        "correct": false,
+        "_id": "61deea1c73eef55f28d04a7b"
+      },
+      {
+        "answer": "justify-content",
+        "correct": false,
+        "_id": "61deea1c73eef55f28d04a7c"
+      },
+      {
+        "answer": "flex-direction",
+        "correct": false,
+        "_id": "61deea1c73eef55f28d04a7d"
+      }
+    ],
+    "topics": ["css", "properties", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-content",
+    "id": "61deea1c73eef55f28d04a79"
+  },
+  {
+    "question": "Which property can stretch all flex children along the cross axis ?",
+    "answers": [
+      {
+        "answer": "align-items",
+        "correct": true,
+        "_id": "61dfe64049474e153297b7b5"
+      },
+      {
+        "answer": "align-content",
+        "correct": false,
+        "_id": "61dfe64049474e153297b7b6"
+      },
+      {
+        "answer": "justify-content",
+        "correct": false,
+        "_id": "61dfe64049474e153297b7b7"
+      },
+      {
+        "answer": "justify-items",
+        "correct": false,
+        "_id": "61dfe64049474e153297b7b8"
+      }
+    ],
+    "topics": ["css", "properties", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-items",
+    "id": "61dfe64049474e153297b7b4"
+  },
+  {
+    "question": "Which property is ignored on flex parents ?",
+    "answers": [
+      {
+        "answer": "justify-items",
+        "correct": true,
+        "_id": "61dfe92b49474e153297b7bc"
+      },
+      {
+        "answer": "flex-flow",
+        "correct": false,
+        "_id": "61dfe92b49474e153297b7bd"
+      },
+      {
+        "answer": "align-content",
+        "correct": false,
+        "_id": "61dfe92b49474e153297b7be"
+      },
+      { "answer": "gap", "correct": false, "_id": "61dfe92b49474e153297b7bf" }
+    ],
+    "topics": ["css", "properties", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items",
+    "id": "61dfe92b49474e153297b7bb"
+  },
+  {
+    "question": "Which value is NOT supported by the flex-direction property?",
+    "answers": [
+      {
+        "answer": "reverse",
+        "correct": true,
+        "_id": "61e038587cf131eb140de599"
+      },
+      { "answer": "row", "correct": false, "_id": "61e038587cf131eb140de59a" },
+      {
+        "answer": "column-reverse",
+        "correct": false,
+        "_id": "61e038587cf131eb140de59b"
+      },
+      {
+        "answer": "column",
+        "correct": false,
+        "_id": "61e038587cf131eb140de59c"
+      }
+    ],
+    "topics": ["css", "values", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction",
+    "id": "61e038587cf131eb140de598"
+  },
+  {
+    "question": "Which property decides how much of the remaining space inside a flex container to assign to a flex item ?",
+    "answers": [
+      {
+        "answer": "flex-grow",
+        "correct": true,
+        "_id": "61e1367d8802a465a0693f62"
+      },
+      {
+        "answer": "flex-basis",
+        "correct": false,
+        "_id": "61e1367d8802a465a0693f63"
+      },
+      {
+        "answer": "width",
+        "correct": false,
+        "_id": "61e1367d8802a465a0693f64"
+      },
+      {
+        "answer": "align-self",
+        "correct": false,
+        "_id": "61e1367d8802a465a0693f65"
+      }
+    ],
+    "topics": ["css", "properties", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow#description",
+    "id": "61e1367d8802a465a0693f61"
+  },
+  {
+    "question": "Which value would disallow a flex items to shrink?",
+    "answers": [
+      {
+        "answer": "flex-shrink: 0",
+        "correct": true,
+        "_id": "61e1374d8802a465a0693fba"
+      },
+      {
+        "answer": "flex-shrink: none",
+        "correct": false,
+        "_id": "61e1374d8802a465a0693fbb"
+      },
+      {
+        "answer": "flex-shrink: auto",
+        "correct": false,
+        "_id": "61e1374d8802a465a0693fbc"
+      },
+      {
+        "answer": "flex-shrink: initial",
+        "correct": false,
+        "_id": "61e1374d8802a465a0693fbd"
+      }
+    ],
+    "topics": ["css", "values", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink",
+    "id": "61e1374d8802a465a0693fb9"
+  },
+  {
+    "question": "Where will be positioned a flex item with the property of \"order: 1\" if the siblings have no \"order\" property?",
+    "answers": [
+      {
+        "answer": "at the end of the main axis",
+        "correct": true,
+        "_id": "61e141608802a465a0693fc1"
+      },
+      {
+        "answer": "at the beginning of the main axis",
+        "correct": false,
+        "_id": "61e141608802a465a0693fc2"
+      },
+      {
+        "answer": "there is no such property",
+        "correct": false,
+        "_id": "61e141608802a465a0693fc3"
+      },
+      {
+        "answer": "position will be the same",
+        "correct": false,
+        "_id": "61e141608802a465a0693fc4"
+      }
+    ],
+    "topics": ["css", "properties", "values", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#ordering_flex_items",
+    "id": "61e141608802a465a0693fc0"
+  },
+  {
+    "question": "Which elements follow the z-index property?",
+    "answers": [
+      {
+        "answer": "all of them",
+        "correct": true,
+        "_id": "61e1a7ac59e701a546b4b297"
+      },
+      {
+        "answer": "grid items",
+        "correct": false,
+        "_id": "61e1a7ac59e701a546b4b298"
+      },
+      {
+        "answer": "flex items",
+        "correct": false,
+        "_id": "61e1a7ac59e701a546b4b299"
+      },
+      {
+        "answer": "positioned elements (position: ...)",
+        "correct": false,
+        "_id": "61e1a7ac59e701a546b4b29a"
+      }
+    ],
+    "topics": ["css", "properties", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/z-index",
+    "id": "61e1a7ac59e701a546b4b296"
+  },
+  {
+    "question": "Which value for the \"grid-template-columns\" would make the browser create as many columns as will fit?",
+    "answers": [
+      {
+        "answer": "repeat(auto-fit, minmax(150px, 1fr))",
+        "correct": true,
+        "_id": "61e1bb1f59e701a546b4b29e"
+      },
+      {
+        "answer": "repeat(auto, 1fr)",
+        "correct": false,
+        "_id": "61e1bb1f59e701a546b4b29f"
+      },
+      {
+        "answer": "1fr 1fr 1fr 1fr",
+        "correct": false,
+        "_id": "61e1bb1f59e701a546b4b2a0"
+      },
+      {
+        "answer": "repeat(fit, minmax(150px, 1fr))",
+        "correct": false,
+        "_id": "61e1bb1f59e701a546b4b2a1"
+      }
+    ],
+    "topics": ["css", "values", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#as_many_columns_as_will_fit",
+    "id": "61e1bb1f59e701a546b4b29d"
+  },
+  {
+    "question": "Which property is NOT a grid item property?",
+    "answers": [
+      {
+        "answer": "grid-auto-flow",
+        "correct": true,
+        "_id": "61e1c12c59e701a546b4b2a5"
+      },
+      {
+        "answer": "grid-row",
+        "correct": false,
+        "_id": "61e1c12c59e701a546b4b2a6"
+      },
+      {
+        "answer": "grid-area",
+        "correct": false,
+        "_id": "61e1c12c59e701a546b4b2a7"
+      },
+      {
+        "answer": "place-self",
+        "correct": false,
+        "_id": "61e1c12c59e701a546b4b2a8"
+      }
+    ],
+    "topics": ["css", "properties", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow",
+    "id": "61e1c12c59e701a546b4b2a4"
+  },
+  {
+    "question": "Which answer would be an invalid value for the \"grid-area\" property?",
+    "answers": [
+      {
+        "answer": "0/ 0/ 3/ 3",
+        "correct": true,
+        "_id": "61e1c2de59e701a546b4b2ac"
+      },
+      {
+        "answer": "1/ 1/ 3/ 3",
+        "correct": false,
+        "_id": "61e1c2de59e701a546b4b2ad"
+      },
+      {
+        "answer": "1/ 1/ span 2/ span 2",
+        "correct": false,
+        "_id": "61e1c2de59e701a546b4b2ae"
+      },
+      {
+        "answer": "dokidoki",
+        "correct": false,
+        "_id": "61e1c2de59e701a546b4b2af"
+      }
+    ],
+    "topics": ["css", "values", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area",
+    "id": "61e1c2de59e701a546b4b2ab"
+  },
+  {
+    "question": "Which property is used to set a grid item's location and size within a grid?",
+    "answers": [
+      {
+        "answer": "grid-area",
+        "correct": true,
+        "_id": "61e1c5ff59e701a546b4b2b3"
+      },
+      { "answer": "grid", "correct": false, "_id": "61e1c5ff59e701a546b4b2b4" },
+      {
+        "answer": "place-items",
+        "correct": false,
+        "_id": "61e1c5ff59e701a546b4b2b5"
+      },
+      {
+        "answer": "place-self",
+        "correct": false,
+        "_id": "61e1c5ff59e701a546b4b2b6"
+      }
+    ],
+    "topics": ["css", "properties", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area",
+    "id": "61e1c5ff59e701a546b4b2b2"
+  },
+  {
+    "question": "Which answer would be an invalid value for the \"grid-template-columns\" property?",
+    "answers": [
+      {
+        "answer": "[1fr] a [2fr]",
+        "correct": true,
+        "_id": "61e1c90159e701a546b4b2ba"
+      },
+      {
+        "answer": "repeat(5, 1fr) 25%",
+        "correct": false,
+        "_id": "61e1c90159e701a546b4b2bb"
+      },
+      {
+        "answer": "[a] 100px [b c]",
+        "correct": false,
+        "_id": "61e1c90159e701a546b4b2bc"
+      },
+      {
+        "answer": "repeat(auto-fit, minmax(150px, 1fr))",
+        "correct": false,
+        "_id": "61e1c90159e701a546b4b2bd"
+      }
+    ],
+    "topics": ["css", "values", "layout"],
+    "moreInfo": "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns",
+    "id": "61e1c90159e701a546b4b2b9"
+  },
+  {
+    "question": "What happens if you pass a prop without assigning it's value to a component? <Btn text/>",
+    "answers": [
+      {
+        "answer": "prop will be true",
+        "correct": true,
+        "_id": "62092167e5138c28410bb5b0"
+      },
+      {
+        "answer": "prop will be null",
+        "correct": false,
+        "_id": "62092167e5138c28410bb5b1"
+      },
+      {
+        "answer": "react will warn with an error",
+        "correct": false,
+        "_id": "62092167e5138c28410bb5b2"
+      },
+      {
+        "answer": "prop will be undefined",
+        "correct": false,
+        "_id": "62092167e5138c28410bb5b3"
+      }
+    ],
+    "topics": ["react"],
+    "moreInfo": "https://reactjs.org/docs/jsx-in-depth.html#props-default-to-true",
+    "id": "62092167e5138c28410bb5af"
+  }
+]

@@ -1,7 +1,7 @@
 const { Router } = require('express');
-const Question = require('../models/question');
-const getPositiveUniqueRandomInts = require('../utils/getPositiveUniqueRandomInts');
-const { SUBMIT_PASSWORD } = require('../utils/config');
+const db = require('../../utils/db');
+const getPositiveUniqueRandomInts = require('../../utils/getPositiveUniqueRandomInts');
+const { SUBMIT_PASSWORD } = require('../../utils/config');
 
 const routerQuestions = Router();
 
@@ -12,14 +12,14 @@ routerQuestions.get('/', (req, res) => {
     : null;
 
   if (!topics) {
-    Question.find({}).then((result) => {
+    db.Question.find({}).then((result) => {
       res.json(result);
     });
 
     return;
   }
 
-  Question.find({ topics: { $in: topics } })
+  db.Question.find({ topics: { $in: topics } })
     .then((result) => {
       if (result.length === 0) {
         res.status(404).send('No question found');
@@ -45,7 +45,7 @@ routerQuestions.get('/', (req, res) => {
 });
 
 routerQuestions.get('/:id', (req, res, next) => {
-  Question.findById(req.params.id)
+  db.Question.findById(req.params.id)
     .then((question) => {
       if (question) {
         res.json(question.toJSON());
@@ -66,7 +66,7 @@ routerQuestions.post('/', (req, res, next) => {
   }
 
   const { body } = req;
-  const question = new Question(body);
+  const question = new db.Question(body);
 
   question
     .save()
@@ -82,7 +82,7 @@ routerQuestions.delete('/:id', (req, res, next) => {
     return;
   }
 
-  Question.findByIdAndDelete(req.params.id)
+  db.Question.findByIdAndDelete(req.params.id)
     .then(() => {
       res.status(204).end();
     })
