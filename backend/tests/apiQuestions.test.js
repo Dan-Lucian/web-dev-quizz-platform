@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const supertest = require('supertest');
-const Question = require('../models/question');
+const db = require('../utils/db');
 const app = require('../app');
 const {
   questionsInitial,
@@ -14,8 +14,8 @@ const api = supertest(app);
 
 describe('When db already has questions', () => {
   beforeEach(async () => {
-    await Question.deleteMany({});
-    await Question.insertMany(questionsInitial);
+    await db.Question.deleteMany({});
+    await db.Question.insertMany(questionsInitial);
   });
 
   test('questions are returned as json', async () => {

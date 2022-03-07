@@ -1,4 +1,4 @@
-const Question = require('../models/question');
+const db = require('../utils/db');
 
 const questionsInitial = [
   {
@@ -74,12 +74,12 @@ const questionNew = {
 };
 
 const getQuestionsFromDb = async () => {
-  const questions = await Question.find({});
+  const questions = await db.Question.find({});
   return questions.map((question) => question.toJSON());
 };
 
 const getIdNonExistent = async () => {
-  const question = new Question(questionNew);
+  const question = new db.Question(questionNew);
   await question.save();
   await question.remove();
 
