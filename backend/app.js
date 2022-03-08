@@ -7,6 +7,7 @@ const path = require('path');
 const handlerError = require('./middleware/handler-error');
 
 // routes
+const routerSubmit = require('./features/submit/submit.controller');
 const routerQuestions = require('./features/questions/question.controller');
 
 const app = express();
@@ -15,7 +16,7 @@ app.use(express.static('build'));
 app.use(express.json());
 app.use(morgan('tiny'));
 
-// app.use('/submit', routerSubmit);
+app.use('/submit', routerSubmit);
 app.use('/api/questions', routerQuestions);
 
 app.get('*', (req, res) => {

@@ -6,7 +6,6 @@ const questionService = require('./question.service');
 const router = Router();
 
 router.get('/', getByTopics);
-router.get('/submit', showSubmitPage);
 router.get('/:id', getById);
 router.post('/', create);
 router.delete('/:id', _delete);
@@ -16,16 +15,6 @@ module.exports = router;
 async function getByTopics(request, response) {
   const questionsFound = await questionService.getByTopics(request);
   response.json(questionsFound);
-}
-
-function showSubmitPage(request, response, next) {
-  const { password } = request.query;
-  if (password !== SUBMIT_PASSWORD) {
-    response.redirect('/');
-    return;
-  }
-
-  response.sendFile(path.join(__dirname, '..', '..', 'build', 'index.html'));
 }
 
 async function getById(request, response, next) {
