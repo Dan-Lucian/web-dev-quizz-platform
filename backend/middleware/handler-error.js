@@ -5,12 +5,14 @@ function errorHandler(error, request, response, next) {
   switch (true) {
     case typeof error === 'string':
       // custom application error
-      const is404 = error.toLowerCase().endsWith('not found');
+      const is404 =
+        error.toLowerCase().endsWith('not found') ||
+        error.toLowerCase().startsWith('not enough questions:');
       const statusCode = is404 ? 404 : 400;
       return response.status(statusCode).json({ message: error });
 
     case error.name === 'CastError':
-      return response.status(400).send({ error: 'malformatted id' });
+      return response.status(400).send({ message: 'malformatted id' });
 
     case error.name === 'ValidationError':
       // mongoose validation error
@@ -23,7 +25,7 @@ function errorHandler(error, request, response, next) {
       return response.status(401).json({ message: 'Unauthorized' });
 
     case error.name === 'JsonWebTokenError':
-      return response.status(401).json({ error: 'invalid token' });
+      return response.status(401).json({ message: 'invalid token' });
 
     default:
       return response

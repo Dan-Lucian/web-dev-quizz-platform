@@ -25,7 +25,7 @@ const StatusRequest = ({ status, error, selectedTopics }) => {
     case 'rejected':
       return (
         <StyledStatusRequestRejected {...props}>
-          {error?.response.data || error.message}
+          {error?.response.data.message || error.message}
         </StyledStatusRequestRejected>
       );
 
