@@ -60,10 +60,10 @@ describe('When db already has questions', () => {
       await api.get(`/api/questions/${idNonExistentValid}`).expect(404);
     });
 
-    test('fails with 400 if id is invalid', async () => {
+    test('fails with 404 if id is invalid', async () => {
       const idInvalid = '123000321s';
 
-      await api.get(`/api/questions/${idInvalid}`).expect(400);
+      await api.get(`/api/questions/${idInvalid}`).expect(404);
     });
   });
 
@@ -142,12 +142,12 @@ describe('When db already has questions', () => {
         .expect(404);
     });
 
-    test('fails with 400 if password correct but id ivalid', async () => {
+    test('fails with 404 if password correct but id ivalid', async () => {
       const idInvalid = '123123123';
 
       await api
         .get(`/api/questions/${idInvalid}?password=${SUBMIT_PASSWORD}`)
-        .expect(400);
+        .expect(404);
     });
   });
 });
