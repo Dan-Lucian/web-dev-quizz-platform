@@ -30,8 +30,8 @@ const dbTopics = [
   },
   {
     main: 'react',
-    secondary: ['concepts', 'classes', 'hooks', 'cra'],
-    inactive: ['react', 'concepts', 'classes', 'hooks', 'cra'],
+    secondary: ['concepts', 'process', 'classes', 'hooks', 'cra'],
+    inactive: ['react', 'concepts', 'process', 'classes', 'hooks', 'cra'],
   },
 ];
 

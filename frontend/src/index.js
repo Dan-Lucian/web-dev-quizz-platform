@@ -14,18 +14,20 @@ const PageNotFound = lazy(() => import('./routes/PageNotFound'));
 const PageSubmit = lazy(() => import('./routes/submit/PageSubmit'));
 
 ReactDOM.render(
-  <BrowserRouter>
-    <ScrollToTop />
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route index element={<PageIndex />} />
-        <Route path="about" element={<PageAbout />} />
-        <Route path="test" element={<PageTest />} />
-        <Route path="results" element={<PageResults />} />
-        <Route path="submit" element={<PageSubmit />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>,
+  <React.StrictMode>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<PageIndex />} />
+          <Route path="about" element={<PageAbout />} />
+          <Route path="test" element={<PageTest />} />
+          <Route path="results" element={<PageResults />} />
+          <Route path="submit" element={<PageSubmit />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>,
   document.getElementById('root')
 );
