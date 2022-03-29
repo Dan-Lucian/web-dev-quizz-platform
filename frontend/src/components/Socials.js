@@ -9,7 +9,7 @@ const Socials = () => (
       </a>
     </li>
     <li>
-      <a href="https://www.linkedin.com/in/dan-lucian-gaina-74789b226/">
+      <a href="https://www.linkedin.com/in/dan-lucian-gaina/">
         <BsLinkedin size={30} />
       </a>
     </li>
