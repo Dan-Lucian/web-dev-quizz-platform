@@ -1,7 +1,7 @@
 const express = require('express');
 require('express-async-errors');
-const morgan = require('morgan');
 const path = require('path');
+const loggerRequest = require('./middleware/loggerRequest');
 
 // middleware
 const handlerError = require('./middleware/handler-error');
@@ -12,13 +12,9 @@ const routerQuestions = require('./features/questions/question.controller');
 
 const app = express();
 
+app.use(loggerRequest);
 app.use(express.static('build'));
 app.use(express.json());
-app.use(
-  morgan(
-    ':remote-addr :remote-user :method :url :status :res[content-length] - :response-time ms'
-  )
-);
 
 app.use('/submit', routerSubmit);
 app.use('/api/questions', routerQuestions);
