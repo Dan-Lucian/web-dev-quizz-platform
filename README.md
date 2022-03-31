@@ -1,4 +1,4 @@
-# [Webdev tests](https://enigmatic-reef-02164.herokuapp.com/)
+# [Webdev tests](https://webdevtest.org/)
 
 ## Table of contents
 
@@ -10,7 +10,7 @@
 
 ## Demo
 
-- [See the app](https://enigmatic-reef-02164.herokuapp.com/)
+- [See the app](https://webdevtest.org/)
 
 ## Description
 
