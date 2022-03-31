@@ -4,6 +4,8 @@ const global = `
 
   html {
     box-sizing: border-box;
+    color-scheme: dark;
+    theme: dark;
   }
 
   *, *:before, *:after {
