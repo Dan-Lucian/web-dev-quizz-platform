@@ -12,13 +12,18 @@ const skipLog = (req, res) => {
   return false;
 };
 
-morgan.token(
-  'ip',
-  (req) => req.headers['x-forwarded-for'] || req.connection.remoteAddress
-);
+morgan.token('time', () => new Date().toLocaleString());
+
+morgan.token('ip', (req) => {
+  // const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  const ip = req.headers['x-real-ip'];
+  // const ipCut = ip.replace('/::ffff:/', '');
+
+  return ip;
+});
 
 const loggerRequest = morgan(
-  ':ip :method :url :status :res[content-length] - :response-time ms',
+  '[:time] [:ip] [:status - :response-time ms] [:method :url]',
   { skip: skipLog }
 );
 
