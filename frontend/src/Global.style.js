@@ -1,14 +1,59 @@
 import { createGlobalStyle } from 'styled-components';
 
-const global = `
+const fonts = `
+  /* ibm-plex-mono-regular - latin */
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/ibm-plex-mono-v12-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+      url('./assets/fonts/ibm-plex-mono-v12-latin-regular.eot?#iefix')
+        format('embedded-opentype'),
+      /* IE6-IE8 */ url('./assets/fonts/ibm-plex-mono-v12-latin-regular.woff2')
+        format('woff2'),
+      /* Super Modern Browsers */
+        url('./assets/fonts/ibm-plex-mono-v12-latin-regular.woff')
+        format('woff'),
+      /* Modern Browsers */
+        url('./assets/fonts/ibm-plex-mono-v12-latin-regular.ttf')
+        format('truetype'),
+      /* Safari, Android, iOS */
+        url('./assets/fonts/ibm-plex-mono-v12-latin-regular.svg#IBMPlexMono')
+        format('svg'); /* Legacy iOS */
+  }
 
+  /* ibm-plex-mono-700 - latin */
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/ibm-plex-mono-v12-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+      url('./assets/fonts/ibm-plex-mono-v12-latin-700.eot?#iefix')
+        format('embedded-opentype'),
+      /* IE6-IE8 */ url('./assets/fonts/ibm-plex-mono-v12-latin-700.woff2')
+        format('woff2'),
+      /* Super Modern Browsers */
+        url('./assets/fonts/ibm-plex-mono-v12-latin-700.woff') format('woff'),
+      /* Modern Browsers */
+        url('./assets/fonts/ibm-plex-mono-v12-latin-700.ttf') format('truetype'),
+      /* Safari, Android, iOS */
+        url('./assets/fonts/ibm-plex-mono-v12-latin-700.svg#IBMPlexMono')
+        format('svg'); /* Legacy iOS */
+  }
+`;
+
+const global = `
   html {
     box-sizing: border-box;
     color-scheme: dark;
     theme: dark;
   }
 
-  *, *:before, *:after {
+  *,
+  *:before,
+  *:after {
     box-sizing: inherit;
   }
 
@@ -20,18 +65,19 @@ const global = `
   input,
   select,
   textarea {
-    font-family : inherit;
-    font-size : 100%;
+    font-family: inherit;
+    font-size: 100%;
   }
-
 
   body {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Mono', serif;
     color: #fff;
-    background: #545E75;
+    background: #545e75;
   }
 
-  html, body, #root {
+  html,
+  body,
+  #root {
     height: 100%;
   }
 `;
@@ -83,6 +129,7 @@ const reset = `
 `;
 
 const GlobalStyle = createGlobalStyle`
+  ${fonts}
   ${reset}
   ${global}
 `;
