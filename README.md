@@ -42,5 +42,5 @@ The purpose of this platform is to remind developers about certain bits of infor
 
 ## Upcoming features
 
-- [x] Add login & authentication.
-- [x] Add questions to make all topics available.
+- [ ] Add login & authentication.
+- [ ] Add questions to make all topics available.
