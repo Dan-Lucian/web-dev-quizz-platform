@@ -29,18 +29,18 @@ The purpose of this platform is to remind developers about certain bits of infor
 
 ## What I have learned
 
-- How to style React applications with [Styled components](https://styled-components.com/).
-- How to use [React Router v6](https://reactrouter.com/docs/en/v6/getting-started/overview) and implement nested routes.
-- How to implement route-based [lazy-loading](https://reactjs.org/docs/code-splitting.html) in React.
-- How to create a basic server with [Express](https://expressjs.com/).
-- How to connect and use [MongoDB Atlas](https://www.mongodb.com/atlas).
-- How to work with [mongoose](https://mongoosejs.com/).
-- How to test backend functions using [Jest](https://jestjs.io/).
-- How to test the backend api using [supertest](https://github.com/visionmedia/supertest).
-- How to setup environment variables using [dotenv](https://github.com/motdotla/dotenv) and [cross-env](https://github.com/kentcdodds/cross-env).
-- How to make a monorepo project.
+- [x] How to style React applications with [Styled components](https://styled-components.com/).
+- [x] How to use [React Router v6](https://reactrouter.com/docs/en/v6/getting-started/overview) and implement nested routes.
+- [x] How to implement route-based [lazy-loading](https://reactjs.org/docs/code-splitting.html) in React.
+- [x] How to create a basic server with [Express](https://expressjs.com/).
+- [x] How to connect and use [MongoDB Atlas](https://www.mongodb.com/atlas).
+- [x] How to work with [mongoose](https://mongoosejs.com/).
+- [x] How to test backend functions using [Jest](https://jestjs.io/).
+- [x] How to test the backend api using [supertest](https://github.com/visionmedia/supertest).
+- [x] How to setup environment variables using [dotenv](https://github.com/motdotla/dotenv) and [cross-env](https://github.com/kentcdodds/cross-env).
+- [x] How to make a monorepo project.
 
 ## Upcoming features
 
-- Add login & authentication.
-- Add questions to make all topics available.
+- [x] Add login & authentication.
+- [x] Add questions to make all topics available.
